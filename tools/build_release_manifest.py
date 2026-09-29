@@ -19,8 +19,12 @@ def main() -> None:
     rows = []
     for relative in paths:
         path = ROOT / relative
-        digest = sha256(path.read_bytes()).hexdigest()
         old = previous.get(relative)
+        content = path.read_bytes()
+        if is_lfs_pointer(content) and old is not None:
+            rows.append(old)
+            continue
+        digest = sha256(content).hexdigest()
         unchanged = old is not None and old["sha256"] == digest
         release = old["release"] if unchanged else CURRENT_RELEASE
         reason = old["reason"] if unchanged else classify(relative)
@@ -40,6 +44,10 @@ def main() -> None:
         writer.writeheader()
         writer.writerows(rows)
     print(f"Wrote {len(rows)} entries to {MANIFEST}")
+
+
+def is_lfs_pointer(content: bytes) -> bool:
+    return content.startswith(b"version https://git-lfs.github.com/spec/v1\n")
 
 
 def load_previous_manifest() -> dict[str, dict[str, str]]:

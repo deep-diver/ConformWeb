@@ -10,6 +10,7 @@ from detoxbench.dsl.compiler import DslCompileError
 from detoxbench.dsl.scenario_sets import discover_scenario_paths, load_scenario_bundles
 from detoxbench.known_bad import assess_known_bad_result, load_known_bad_fixtures
 from detoxbench.target_inventory import discover_target_inventory, summarize_target_inventory
+from tools.build_release_manifest import is_lfs_pointer
 
 
 def test_split_scenario_bundles_are_discovered_and_filtered(tmp_path: Path) -> None:
@@ -222,3 +223,12 @@ def test_evaluate_cli_accepts_failure_only_screenshots() -> None:
     )
 
     assert args.screenshot_policy == "failures"
+
+
+def test_release_manifest_recognizes_lfs_pointer() -> None:
+    assert is_lfs_pointer(
+        b"version https://git-lfs.github.com/spec/v1\n"
+        b"oid sha256:0123456789\n"
+        b"size 42\n"
+    )
+    assert not is_lfs_pointer(b"scenario_id,passed\npublic_01,true\n")

@@ -1,6 +1,6 @@
 archive_path,source_path,size_bytes,sha256,reason,release
 .gitattributes,.gitattributes,182,4a95ac096be33914363482f24f305908d0640051e5673ee4ac99ff5da357bc35,retained public benchmark artifact,2026-05-26-initial-pack
-.github/workflows/ci.yml,.github/workflows/ci.yml,1556,a8c5d6427a011081357ffc6966633b3495f83e9ec75d481a9c3265feb1f6d6e7,continuous integration configuration,2026-09-29-usability-refresh
+.github/workflows/ci.yml,.github/workflows/ci.yml,1556,9ccff50e9b9fb7b70fd43ff07719463d4f5ac8bc705929e090d15a3f49565026,continuous integration configuration,2026-09-29-usability-refresh
 .gitignore,.gitignore,90,b45631a39f1ac0db5272b78e900f1d972bd7451bd4e9daef4868e7b5710598e9,public release metadata and provenance,2026-09-29-usability-refresh
 CITATION.cff,CITATION.cff,996,777f6f8980c9bdeeac59a6e5762d9d487a9d11ffa350f357418d14cc9443f325,public release metadata and provenance,2026-09-29-usability-refresh
 CURRENT_RELEASE.md,CURRENT_RELEASE.md,2961,1ef960bf569c2f5ee49723c0660965fb8f3da4193275cbb64433526ff19a57bc,public release metadata and provenance,2026-09-29-usability-refresh
@@ -541,7 +541,7 @@ tests/test_assertions.py,tests/test_assertions.py,16335,b7f23115307afd471415c9e5
 tests/test_dashboard.py,tests/test_dashboard.py,10112,fcbcb0873cb54cacf7bc52fdf5cfc8439ede2bfe26fde4883f759255bd1767de,evaluator/compiler regression tests,2026-09-29-usability-refresh
 tests/test_dsl_compiler.py,tests/test_dsl_compiler.py,127261,4bc64f431a41bf9dfb35146aa7fab92af64f64b88049ca47601d9b8a97d93281,test suite for evaluator/compiler/scoring,2026-05-26-initial-pack
 tests/test_gallery.py,tests/test_gallery.py,5475,8891de50dd41e85edf58d4ed069f2a04e35d161efd32741f6f18d31a085ae6c9,test suite for evaluator/compiler/scoring,2026-05-26-initial-pack
-tests/test_release_governance.py,tests/test_release_governance.py,7615,cda64c453b48b20c6b6c7fc882131e545d9f5285bc6fbb7e8a84b76c3025b1df,evaluator/compiler regression tests,2026-09-29-usability-refresh
+tests/test_release_governance.py,tests/test_release_governance.py,7949,cda8ad630450c7f6f78f9b904beeb82aaeca7698328d67c4c28ffd00a5bdc654,evaluator/compiler regression tests,2026-09-29-usability-refresh
 tests/test_scoring.py,tests/test_scoring.py,5176,75772badfcd81a2c6177555309ec4505b487ae3c74606982bca9ec5ecac15bc9,test suite for evaluator/compiler/scoring,2026-05-26-initial-pack
 tools/audit_private_admissibility.py,tools/audit_private_admissibility.py,50220,9efdc29c65e52eb93c421a2a2abf449661fc40762fd957a9ad0f64b0aeaff211,reproduction and figure-generation scripts,2026-05-26-initial-pack
 tools/build_conformweb_figure_pack.py,tools/build_conformweb_figure_pack.py,73949,3d2347786f404a4901b9f685328c2b407c296c41d84ff68cbe03e07ef27749b1,reproduction and figure-generation scripts,2026-05-26-initial-pack
@@ -549,7 +549,7 @@ tools/build_conformweb_pair_figure.py,tools/build_conformweb_pair_figure.py,2599
 tools/build_conformweb_poster_asset_pack.py,tools/build_conformweb_poster_asset_pack.py,17750,3454c65188d95f2917188381ef2033fa5019d6fbf35d861527e50866cbb10d14,reproduction and release tooling,2026-09-29-usability-refresh
 tools/build_main_model_experiment_table.py,tools/build_main_model_experiment_table.py,27168,e9d0971c42832e24011ee39790f103de7ed748635887ae17081d526ccca4b29b,reproduction and figure-generation scripts,2026-05-26-initial-pack
 tools/build_paper_visualizations.py,tools/build_paper_visualizations.py,179132,e4ddffc835d1044a8592cc144f7ecea71ccf48c2b756e1de124c0014ae6e0967,reproduction and figure-generation scripts,2026-05-26-initial-pack
-tools/build_release_manifest.py,tools/build_release_manifest.py,3289,e033b133d4f38215c9625319e180a975cdea3f6893d3b4ad700404b1a05357d9,reproduction and release tooling,2026-09-29-usability-refresh
+tools/build_release_manifest.py,tools/build_release_manifest.py,3546,f00066383b21b09195d18a2518399421aeef30f9427d5500b7d5fd152165fe69,reproduction and release tooling,2026-09-29-usability-refresh
 tools/export_conformweb_evidence_assets.py,tools/export_conformweb_evidence_assets.py,29443,f12ada10650e04ef08273b1eb55ef6e8772634fdb1eb6168257a8bca4f600df9,reproduction and figure-generation scripts,2026-05-26-initial-pack
 tools/export_conformweb_figure_source_data.py,tools/export_conformweb_figure_source_data.py,29737,c101040e176f724f974280b8fe38f6bb6a6e980f281ec82887c505e26243b179,reproduction and figure-generation scripts,2026-05-26-initial-pack
 tools/generate_blind_dsl_backend_app.py,tools/generate_blind_dsl_backend_app.py,13808,a10c3038f546c421a5e7a1634ae9d7a6a7a7a22cc260bf3a4e6787e65b678d02,reproduction and release tooling,2026-09-29-usability-refresh
