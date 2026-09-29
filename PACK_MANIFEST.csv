@@ -6,7 +6,7 @@ CITATION.cff,CITATION.cff,996,777f6f8980c9bdeeac59a6e5762d9d487a9d11ffa350f35741
 CURRENT_RELEASE.md,CURRENT_RELEASE.md,2631,b1b48b193decb5bc22f5fb4f50bc069c0703bc125cfcdc4d5253b268f9caa721,public release metadata and provenance,2026-09-29-usability-refresh
 EXCLUDED_PATTERNS.md,EXCLUDED_PATTERNS.md,926,750407b24755402d846f39eb95e7e40f12691f112526af5ab74229c70d57969e,public release metadata and provenance,2026-09-29-refresh
 LICENSE,LICENSE,11357,c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4,retained public benchmark artifact,2026-05-26-initial-pack
-README.md,README.md,6065,c960287e6a3d56153cc1b9dbda2c72595e45256939d648c3391cfb2ecde56b6d,public release metadata and provenance,2026-09-29-usability-refresh
+README.md,README.md,6160,5d561243cbbfd8f99ac636fcaab5cd5dd49f4f2227ef82373773eb3bfb106167,public release metadata and provenance,2026-09-29-usability-refresh
 cohorts/stayflow-tier-b-model-tier-f.yaml,cohorts/stayflow-tier-b-model-tier-f.yaml,4521,3a815e454b0baec8ba04c82dec1e4b77d0110736febac6b846f6b760dac393d6,top-level cohort configs,2026-05-26-initial-pack
 cohorts/stayflow-tier-b-model-tier-m.yaml,cohorts/stayflow-tier-b-model-tier-m.yaml,4034,7fda7e1ec530af5b18d3ce763dcca9f92bb757d74c3c28948bc0bbe943155907,top-level cohort configs,2026-05-26-initial-pack
 cohorts/stayflow-tier-b-model-tier-t.yaml,cohorts/stayflow-tier-b-model-tier-t.yaml,4126,68b32a6bf71ab4c85ae10e52618aff1600903bc477c07f0e06dd797f15906d6e,top-level cohort configs,2026-05-26-initial-pack
@@ -34,6 +34,7 @@ detoxbench/web/__init__.py,detoxbench/web/__init__.py,35,392f9362753cd6b48e9d8da
 detoxbench/web/evaluator.py,detoxbench/web/evaluator.py,23615,707d889ff78d0c084077b27b7c4afa381c5701243c9083cf21e7f7ad93ea29c9,core ConformWeb evaluator/compiler source,2026-09-29-usability-refresh
 detoxbench/web/local_server.py,detoxbench/web/local_server.py,1715,0b84635716f4d3a67bbc2faf193f09c3d992bf5a6e6923484cb4b7a9baefa1ef,core ConformWeb evaluator/compiler source,2026-05-26-initial-pack
 docs/architecture.md,docs/architecture.md,7042,d5885fe26f9330379b761fe1fa979239b0f26cc173bfe6b170b48227b0fddfdf,public protocol and usage documentation,2026-09-29-usability-refresh
+docs/assets/conformweb-overview.png,docs/assets/conformweb-overview.png,1673228,65b245495a9e78ca282a5bd99de38718c5b96c609023a08b31a0c0f68c8473e0,public protocol and usage documentation,2026-09-29-usability-refresh
 docs/authoring.md,docs/authoring.md,15866,e49403c731856ca4708b66f96c882c0d7770290172ef4bf775c8bc9d77e937e1,public protocol and usage documentation,2026-09-29-usability-refresh
 docs/candidate-workflow.md,docs/candidate-workflow.md,7212,9c8ce531e8729b85fa78225b2bd6d19c42ce7a14830904be81e3a6ca0ef66dce,public protocol and usage documentation,2026-09-29-usability-refresh
 docs/dashboard.md,docs/dashboard.md,2857,78f55ddbce85971936dc844f82cac41e15e0a5ee9b81a20c92937cb2f03fe80c,project design documentation,2026-05-26-initial-pack
