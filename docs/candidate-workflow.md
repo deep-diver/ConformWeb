@@ -1,12 +1,13 @@
 # Candidate Workflow
 
-This document describes how to generate and evaluate LLM-created web apps in
-the DSL-first DetoxBench mainline.
+This document describes the camera-ready ConformWeb protocol for generating and
+evaluating LLM-created web apps.
 
 ## 1. Publish The Public Contract
 
-Give the candidate builder the product/task description and the complete
-`contract.dsl.yaml`.
+Give the candidate builder the product/task premise, the complete
+`contract.dsl.yaml`, the disclosed `scenarios.public.dsl.yaml`, and the fixed
+DSL interpretation instructions in the released generator prompt.
 
 The contract must include the full public behavior surface:
 
@@ -33,22 +34,23 @@ The contract must include the full public behavior surface:
 - declared role/session semantics when the target uses `runtime.session`,
   `allowed_roles`, or `unauthorized_effects`
 
-The candidate builder must not receive `scenarios.dsl.yaml`,
-`scenarios.public.dsl.yaml`, `scenarios.private.dsl.yaml`, run artifacts,
-reference source, screenshots from evaluator runs, or private scenario data.
-Public scenarios may be release examples, but they are still not candidate
-generation input.
+The candidate builder must not receive `scenarios.private.dsl.yaml`, run
+artifacts, evaluator traces, screenshots, failure feedback, reference source, or
+expected private trajectories. Public scenarios are model-visible examples in
+the single-shot, backend-backed, and public-feedback repair protocols.
 
 ## 2. Generate Or Collect Candidate Apps
 
-Candidate source layout is unrestricted:
+The primary single-shot protocol requires exactly:
 
-- one static HTML file
-- separate HTML, CSS, and JS files
-- a framework app served from a local URL
-- generated assets or local helper modules
+- `index.html`
+- `styles.css`
+- `app.js`
 
-DetoxBench does not score source layout. It scores browser-observable behavior:
+The general evaluator can also score a static directory, framework app, or
+backend-backed app served at a URL; this broader evaluator mode is not the
+paper's fixed three-file generation intervention. ConformWeb scores
+browser-observable behavior:
 declared controls must be actionable, public state must be exposed through the
 declared probe, browser routes must match the declared page contract when
 present, async pending/completion state must match the declared lifecycle when
@@ -74,22 +76,21 @@ When a target has split scenario files, the evaluator loads
 For a static candidate:
 
 ```bash
-python3 -m detoxbench evaluate-dsl \
+conformweb evaluate-dsl \
   --target targets/web/stayflow_concierge/tier_a \
-  --static-dir targets/web/stayflow_concierge/tier_a/generated_candidate_app \
+  --static-dir /absolute/path/to/generated_candidate_app \
   --run-subject generated_candidate_app \
-  --scenario-set private \
-  --headless
+  --scenario-set public
 ```
 
 For an already running app:
 
 ```bash
-python3 -m detoxbench evaluate-dsl \
+conformweb evaluate-dsl \
   --target targets/web/stayflow_concierge/tier_a \
   --app-url http://127.0.0.1:5173 \
   --run-subject candidate_001 \
-  --headless
+  --scenario-set public
 ```
 
 Every run writes `summary.json`, `events.jsonl`, and screenshots under:
@@ -137,13 +138,13 @@ to update the public contract or downgrade the check to diagnostic status.
 Build the per-target dashboard:
 
 ```bash
-python3 -m detoxbench dashboard --target targets/web/stayflow_concierge/tier_a
+conformweb dashboard --target targets/web/stayflow_concierge/tier_a
 ```
 
 Build the suite gallery:
 
 ```bash
-python3 -m detoxbench gallery --targets-root targets/web --output reports/gallery/index.html
+conformweb gallery --targets-root targets/web --output reports/gallery/index.html
 ```
 
 The dashboard shows selected subjects side by side, scenario progress, first
@@ -157,14 +158,14 @@ remains readable.
 Use cohort manifests to record model generation conditions:
 
 ```bash
-python3 -m detoxbench cohort-info --manifest cohorts/stayflow-tier-b-model-tier-m.yaml
+conformweb cohort-info --manifest cohorts/stayflow-tier-b-model-tier-m.yaml
 ```
 
 Use known-bad fixtures to confirm that the evaluator still catches established
 defects:
 
 ```bash
-python3 -m detoxbench known-bad --target targets/web/<target-with-known-bad-fixtures>
+conformweb known-bad --target targets/web/<target-with-known-bad-fixtures>
 ```
 
 These commands are not replacements for candidate evaluation. They are

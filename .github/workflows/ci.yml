@@ -1,0 +1,50 @@
+name: ConformWeb CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install ConformWeb
+        run: pip install -e ".[dev]"
+      - name: Run unit tests
+        run: pytest -q
+      - name: Verify release manifest
+        run: |
+          python tools/build_release_manifest.py
+          git diff --exit-code PACK_MANIFEST.csv
+      - name: Validate released target definitions
+        shell: bash
+        run: |
+          set -euo pipefail
+          conformweb list-targets
+          for target in targets/web/*/tier_*; do
+            if [[ ! -f "$target/contract.dsl.yaml" ]]; then
+              continue
+            fi
+            scenario_set=all
+            if [[ ! -f "$target/scenarios.private.dsl.yaml" ]]; then
+              scenario_set=public
+            fi
+            conformweb validate-target \
+              --target "$target" \
+              --scenario-set "$scenario_set" >/dev/null
+          done
+      - name: Install Chromium
+        run: playwright install --with-deps chromium
+      - name: Run browser smoke test
+        run: |
+          conformweb evaluate-dsl \
+            --target targets/web/stayflow_concierge/tier_a \
+            --scenario-set public \
+            --static-dir targets/web/stayflow_concierge/tier_a/reference_app \
+            --run-subject ci-reference-smoke \
+            --output .conformweb-runs/ci-reference-smoke

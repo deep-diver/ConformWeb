@@ -318,7 +318,7 @@ This pack contains poster-ready actual browser screens and contract/private-scen
 - Compiled preconditions/checks: {audit['compiled_checks']}
 - Compile errors: {audit['compile_errors']}
 
-Correct poster claim: `Refs(private scenarios) subset-of Declarations(public contract)`. There is no separate private contract. Public scenario examples are not exhaustive, and candidate generation does not receive either public or private scenario files.
+Correct poster claim: `Refs(private scenarios) subset-of Declarations(public contract)`. There is no separate private contract. Public scenario examples are disclosed generation inputs but are not exhaustive; private scenarios remain hidden from candidate generation.
 
 ## Additional choices
 

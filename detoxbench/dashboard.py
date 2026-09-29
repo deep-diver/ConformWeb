@@ -570,8 +570,12 @@ def normalize_step(step: dict[str, Any], asset_base_dir: Path, run_dir: Path) ->
     after_state = step.get("after_state", {})
     screenshots = step.get("screenshots", {})
     assertions = step.get("assertions", [])
-    before_screenshot = resolve_run_artifact(Path(screenshots["before"]), run_dir)
-    after_screenshot = resolve_run_artifact(Path(screenshots["after"]), run_dir)
+    before_screenshot = normalize_screenshot_ref(
+        screenshots.get("before"), asset_base_dir, run_dir
+    )
+    after_screenshot = normalize_screenshot_ref(
+        screenshots.get("after"), asset_base_dir, run_dir
+    )
     return {
         "scenario_id": step["scenario_id"],
         "step_index": step["step_index"],
@@ -582,11 +586,18 @@ def normalize_step(step: dict[str, Any], asset_base_dir: Path, run_dir: Path) ->
         "after_state": after_state,
         "state_diff": diff_states(before_state, after_state),
         "screenshots": {
-            "before": relative_ref(before_screenshot, asset_base_dir),
-            "after": relative_ref(after_screenshot, asset_base_dir),
+            "before": before_screenshot,
+            "after": after_screenshot,
         },
         "assertions": assertions,
     }
+
+
+def normalize_screenshot_ref(value: Any, asset_base_dir: Path, run_dir: Path) -> str | None:
+    if not isinstance(value, str) or not value:
+        return None
+    screenshot = resolve_run_artifact(Path(value), run_dir)
+    return relative_ref(screenshot, asset_base_dir)
 
 
 def resolve_run_artifact(path: Path, run_dir: Path) -> Path:
@@ -663,7 +674,7 @@ DASHBOARD_HTML = r"""<!doctype html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DetoxBench Dashboard</title>
+    <title>ConformWeb Dashboard</title>
     <style>
       :root {
         color-scheme: light;
@@ -1065,7 +1076,7 @@ DASHBOARD_HTML = r"""<!doctype html>
     <header>
       <div class="topbar">
         <div>
-          <h1 id="title">DetoxBench Dashboard</h1>
+          <h1 id="title">ConformWeb Dashboard</h1>
           <div class="meta" id="subtitle"></div>
         </div>
         <div class="stats" id="stats"></div>
@@ -1334,14 +1345,18 @@ DASHBOARD_HTML = r"""<!doctype html>
             </div>
             <div class="step-body">
               <div class="shots">
-                <figure>
-                  <figcaption>Before</figcaption>
-                  <img src="${escapeHtml(step.screenshots.before)}" alt="before screenshot" loading="lazy" />
-                </figure>
-                <figure>
-                  <figcaption>After</figcaption>
-                  <img src="${escapeHtml(step.screenshots.after)}" alt="after screenshot" loading="lazy" />
-                </figure>
+                ${step.screenshots.before ? `
+                  <figure>
+                    <figcaption>Before</figcaption>
+                    <img src="${escapeHtml(step.screenshots.before)}" alt="before screenshot" loading="lazy" />
+                  </figure>
+                ` : ""}
+                ${step.screenshots.after ? `
+                  <figure>
+                    <figcaption>After</figcaption>
+                    <img src="${escapeHtml(step.screenshots.after)}" alt="after screenshot" loading="lazy" />
+                  </figure>
+                ` : ""}
               </div>
               <div class="assertions">${assertions}</div>
               <details>

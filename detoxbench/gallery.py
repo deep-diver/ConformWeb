@@ -98,7 +98,7 @@ def summarize_target(entry: dict[str, Path], asset_base_dir: Path) -> dict[str, 
                 target_dir=target_dir,
                 runs_dir=runs_dir,
                 output=dashboard_path,
-                title=f"DetoxBench Dashboard: {target_dir.name}",
+                title=f"ConformWeb Dashboard: {target_dir.name}",
             )
         )
 
@@ -168,7 +168,7 @@ GALLERY_HTML = r"""<!doctype html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DetoxBench Gallery</title>
+    <title>ConformWeb Gallery</title>
     <style>
       :root {
         color-scheme: light;

@@ -13,7 +13,8 @@ Use this loop on one target before expanding the same practice to the full
 suite:
 
 1. Choose one target with a non-trivial contract and scenario suite.
-2. Generate several blind implementations from the public contract only.
+2. Generate several blind implementations from the public contract and
+   disclosed public scenarios.
 3. Evaluate every blind implementation with the current evaluator.
 4. Classify every failed scenario and first failed step.
 5. Fix unfair failures by improving the contract, scenario assertions, or

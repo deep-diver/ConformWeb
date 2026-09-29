@@ -54,7 +54,7 @@ from the DSL.
    expectations.
 3. The compiler lowers the DSL bundle into a web `Contract` and `ScenarioSet`.
 4. If `--app-url` is absent, the evaluator serves the supplied `--static-dir`.
-5. Playwright opens a fresh page for each scenario.
+5. Playwright opens a fresh browser context for each scenario.
 6. For every compiled step:
    - capture before state via the declared public state probe plus browser page
      metadata
@@ -154,7 +154,7 @@ the current URL, browser path, and resolved page id used by page assertions.
 The dashboard is generated from existing run artifacts:
 
 ```bash
-python3 -m detoxbench dashboard --target targets/web/stayflow_concierge/tier_a
+conformweb dashboard --target targets/web/stayflow_concierge/tier_a
 ```
 
 It scans `cohorts/**/summary.json` by default for the consolidated target
@@ -164,7 +164,7 @@ relative paths.
 The suite gallery can discover DSL targets directly:
 
 ```bash
-python3 -m detoxbench gallery --targets-root targets/web --output reports/gallery/index.html
+conformweb gallery --targets-root targets/web --output reports/gallery/index.html
 ```
 
 or use `targets/web/suite.yaml` for a curated suite order.

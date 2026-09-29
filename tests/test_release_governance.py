@@ -4,10 +4,12 @@ from pathlib import Path
 import pytest
 
 from detoxbench.cohorts import cohort_fingerprint, load_cohort_manifest
+from detoxbench.cli import build_parser
 from detoxbench.core.models import AssertionResult, RunResult, ScenarioResult, StepResult
 from detoxbench.dsl.compiler import DslCompileError
 from detoxbench.dsl.scenario_sets import discover_scenario_paths, load_scenario_bundles
 from detoxbench.known_bad import assess_known_bad_result, load_known_bad_fixtures
+from detoxbench.target_inventory import discover_target_inventory, summarize_target_inventory
 
 
 def test_split_scenario_bundles_are_discovered_and_filtered(tmp_path: Path) -> None:
@@ -166,3 +168,57 @@ targets:
     assert fingerprint["target_count"] == 1
     assert fingerprint["targets"][0]["contract_sha256"]
     json.dumps(fingerprint)
+
+
+def test_target_inventory_reports_runnable_scenario_sets(tmp_path: Path) -> None:
+    root = tmp_path / "targets" / "web"
+    ready = root / "example_family" / "tier_a"
+    public_only = root / "example_family" / "tier_b"
+    unavailable = root / "example_family" / "tier_c"
+    for target in (ready, public_only, unavailable):
+        target.mkdir(parents=True)
+    for target in (ready, public_only):
+        (target / "contract.dsl.yaml").write_text("dsl_version: '1.0.0'\n", encoding="utf-8")
+    (ready / "reference_app").mkdir()
+    (ready / "scenarios.public.dsl.yaml").write_text(
+        "dsl_version: '1.0.0'\nscenarios:\n  - id: public_one\n    steps: []\n",
+        encoding="utf-8",
+    )
+    (ready / "scenarios.private.dsl.yaml").write_text(
+        "dsl_version: '1.0.0'\nscenarios:\n  - id: private_one\n    steps: []\n  - id: private_two\n    steps: []\n",
+        encoding="utf-8",
+    )
+    (public_only / "scenarios.public.dsl.yaml").write_text(
+        "dsl_version: '1.0.0'\nscenarios:\n  - id: public_two\n    steps: []\n",
+        encoding="utf-8",
+    )
+
+    inventory = discover_target_inventory(root)
+
+    assert [item.status for item in inventory] == ["ready", "public-only", "unavailable"]
+    assert inventory[0].to_dict()["available_scenario_sets"] == ["all", "public", "private"]
+    assert inventory[1].to_dict()["available_scenario_sets"] == ["public"]
+    assert summarize_target_inventory(inventory) == {
+        "target_slots": 3,
+        "status_counts": {"ready": 1, "public-only": 1, "unavailable": 1},
+        "public_scenarios": 2,
+        "private_scenarios": 2,
+        "legacy_scenarios": 0,
+        "scenario_total": 4,
+    }
+
+
+def test_evaluate_cli_accepts_failure_only_screenshots() -> None:
+    args = build_parser().parse_args(
+        [
+            "evaluate-dsl",
+            "--target",
+            "targets/web/example/tier_a",
+            "--static-dir",
+            "candidate",
+            "--screenshot-policy",
+            "failures",
+        ]
+    )
+
+    assert args.screenshot_policy == "failures"

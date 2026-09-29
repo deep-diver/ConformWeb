@@ -81,8 +81,8 @@ class StepResult:
     component: str | None
     before_state: dict[str, Any]
     after_state: dict[str, Any]
-    before_screenshot: str
-    after_screenshot: str
+    before_screenshot: str | None
+    after_screenshot: str | None
     assertions: list[AssertionResult]
     actor: str | None = None
 

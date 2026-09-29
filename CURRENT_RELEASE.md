@@ -18,6 +18,11 @@ the public manifest rather than represented as a single source-repository commit
 
 ## Included Updates
 
+- External-user workflow with the `conformweb` CLI entry point.
+- Machine-readable target inventory via `conformweb list-targets --json`.
+- Compile-only target validation via `conformweb validate-target`.
+- Optional failure-only or disabled screenshot retention for storage-efficient runs.
+- Camera-ready information boundary corrected across public documentation.
 - Corrected primary run accounting and provenance appendix.
 - Exact public-feedback repair `{context}` and `{feedback}` audit.
 - Probe-scenario and current-target inventory audit.
@@ -30,9 +35,11 @@ the public manifest rather than represented as a single source-repository commit
 
 The retained primary result aggregate is a fixed 2,160-run experiment. The current
 `targets/web` YAML tree contains 756 scoring scenarios: 288 public and 468 private, with zero
-scenarios marked `kind: probe`. The older retained paper inventory records 779 scoring
-scenarios and zero probes. These are separate artifact surfaces and are not silently treated
-as the same frozen scenario snapshot.
+scenarios marked `kind: probe`. However, those files are distributed across 21 complete
+targets, two public-only targets, and one unavailable target slot; they are not a complete
+24-target executable snapshot. The older retained primary-result inventory records 779
+scoring scenarios and zero probes. These are separate artifact surfaces and are not silently
+treated as the same frozen scenario snapshot.
 
 The exact current per-family/per-tier count is stored in
 `reports/conformweb_visualizations/tables/current_target_scenario_inventory_756.csv`.

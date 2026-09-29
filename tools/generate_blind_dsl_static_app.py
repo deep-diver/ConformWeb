@@ -450,7 +450,7 @@ Return only JSON matching this shape:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Generate a blind static app from a DetoxBench DSL contract.")
+    parser = argparse.ArgumentParser(description="Generate a blind static app from ConformWeb public inputs.")
     parser.add_argument("--contract-dsl", type=Path, required=True)
     parser.add_argument(
         "--public-scenarios-dsl",

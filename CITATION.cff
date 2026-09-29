@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use ConformWeb, please cite the EMNLP 2026 paper."
+title: "ConformWeb: A Contract-Grounded Benchmark for Behavioral Conformance"
+type: software
+version: 0.2.0
+date-released: 2026-09-29
+license: Apache-2.0
+repository-code: "https://github.com/deep-diver/ConformWeb"
+authors:
+  - family-names: Park
+    given-names: Chansung
+  - family-names: Jiang
+    given-names: Juyong
+  - family-names: Shen
+    given-names: Jiasi
+  - family-names: Kim
+    given-names: Sunghun
+preferred-citation:
+  type: conference-paper
+  title: "Do LLM-Generated Web Apps Behave Correctly? A Contract-Grounded Benchmark for Behavioral Conformance"
+  year: 2026
+  collection-title: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing"
+  authors:
+    - family-names: Park
+      given-names: Chansung
+    - family-names: Jiang
+      given-names: Juyong
+    - family-names: Shen
+      given-names: Jiasi
+    - family-names: Kim
+      given-names: Sunghun

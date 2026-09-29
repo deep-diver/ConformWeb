@@ -22,8 +22,9 @@ files exist, the evaluator loads both by default and can run either side with
 
 ## Contract
 
-`contract.dsl.yaml` is public. It is the only behavioral specification given to
-an LLM candidate builder.
+`contract.dsl.yaml` is public and is the normative behavioral specification
+given to an LLM candidate builder. The paper protocol also supplies disclosed
+public scenarios as examples; they do not extend the contract.
 
 It must define:
 
@@ -162,16 +163,16 @@ scenario-only expected table.
 
 ## Scenarios
 
-`scenarios.dsl.yaml` is evaluator-side input. It may be public during
-development, but candidate builders do not receive it.
+`scenarios.dsl.yaml` is the legacy unsplit evaluator input. Release targets use
+explicit public and private files.
 
 For release-boundary work, use:
 
 - `scenarios.public.dsl.yaml` for public examples and visible diagnostics;
 - `scenarios.private.dsl.yaml` for hidden formal scoring scenarios.
 
-Public scenarios are not part of the LLM candidate-generation prompt. Candidate
-builders receive the contract only.
+Public scenarios are part of the camera-ready candidate-generation prompt.
+Private scenarios remain evaluator-side and must not be supplied to the model.
 
 A scenario is an ordered list of component/action steps:
 
@@ -240,12 +241,12 @@ Candidate generation receives:
 
 - product/task description
 - complete `contract.dsl.yaml`
+- disclosed `scenarios.public.dsl.yaml`
+- fixed DSL interpretation instructions from the released prompt
 - allowed runtime shape, such as static files or app URL
 
 Candidate generation must not receive:
 
-- `scenarios.dsl.yaml`
-- `scenarios.public.dsl.yaml`
 - `scenarios.private.dsl.yaml`
 - private scenario files
 - run artifacts
@@ -323,7 +324,7 @@ a UI-contract failure, not a successful blocked/rejected/unauthorized behavior.
 Run a reference app:
 
 ```bash
-python3 -m detoxbench evaluate-dsl \
+conformweb evaluate-dsl \
   --target targets/web/stayflow_concierge/tier_a \
   --static-dir targets/web/stayflow_concierge/tier_a/reference_app \
   --headless
@@ -332,7 +333,7 @@ python3 -m detoxbench evaluate-dsl \
 Run a generated candidate:
 
 ```bash
-python3 -m detoxbench evaluate-dsl \
+conformweb evaluate-dsl \
   --target targets/web/stayflow_concierge/tier_a \
   --static-dir targets/web/stayflow_concierge/tier_a/generated_candidate_app \
   --run-subject generated_candidate_app \
@@ -346,7 +347,7 @@ quickly and reproducibly.
 Run only private scoring scenarios when split files exist:
 
 ```bash
-python3 -m detoxbench evaluate-dsl \
+conformweb evaluate-dsl \
   --target targets/web/stayflow_concierge/tier_b \
   --static-dir targets/web/stayflow_concierge/tier_b/reference_app \
   --scenario-set private \
@@ -356,7 +357,7 @@ python3 -m detoxbench evaluate-dsl \
 Verify known-bad fixtures:
 
 ```bash
-python3 -m detoxbench known-bad --target targets/web/<target-with-known-bad-fixtures>
+conformweb known-bad --target targets/web/<target-with-known-bad-fixtures>
 ```
 
 ## Benchmark Maturity

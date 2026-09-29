@@ -7,10 +7,10 @@ DetoxBench release maturity depends on four operational controls:
 3. model cohort reproducibility;
 4. known-bad fixtures.
 
-These controls do not change the core philosophy. Candidate builders still
-receive the public contract only. Public scenarios are public benchmark examples
-or development diagnostics; they are not part of the candidate-generation
-prompt.
+These controls do not change the core philosophy. In the camera-ready protocol,
+candidate builders receive the public contract and disclosed public scenarios.
+Private scenarios remain evaluator-side and are not part of the
+candidate-generation prompt.
 
 ## Public And Private Scenario Files
 
@@ -27,7 +27,7 @@ scenarios.public.dsl.yaml
 scenarios.private.dsl.yaml
 ```
 
-When split files exist, `detoxbench evaluate-dsl --target ...` loads both by
+When split files exist, `conformweb evaluate-dsl --target ...` loads both by
 default. Use `--scenario-set public` or `--scenario-set private` to run only one
 visibility class.
 
@@ -95,7 +95,7 @@ The manifest records:
 Run:
 
 ```bash
-python3 -m detoxbench cohort-info --manifest cohorts/gpt54-dsl20-frontier.yaml
+conformweb cohort-info --manifest cohorts/gpt54-dsl20-frontier.yaml
 ```
 
 to validate the manifest and print reproducibility fingerprints. The
@@ -128,7 +128,7 @@ targets/web/<target>/fixtures/known_bad/manifest.yaml
 Run:
 
 ```bash
-python3 -m detoxbench known-bad --target targets/web/<target-with-known-bad-fixtures>
+conformweb known-bad --target targets/web/<target-with-known-bad-fixtures>
 ```
 
 The command evaluates every known-bad fixture and then checks the manifest

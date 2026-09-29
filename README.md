@@ -4,95 +4,166 @@
 
 **Accepted to the EMNLP 2026 Main Conference.**
 
-This repository contains the benchmark implementation, frozen experiment aggregates, reproducibility audits, and public presentation assets for ConformWeb.
+ConformWeb evaluates whether a web application preserves a public behavioral
+contract under multi-step browser interaction. It compiles YAML contracts and
+scenarios into deterministic Playwright actions and rule-based assertions. The
+evaluator does not use visual similarity, source inspection, or an LLM judge.
 
-## Release Status
+This repository is intended to be usable in two ways:
 
-The repository was refreshed on 2026-09-29 from the retained ConformWeb experiment workspace. See [`CURRENT_RELEASE.md`](CURRENT_RELEASE.md) for source provenance and known artifact boundaries.
+1. Evaluate your own generated or hand-written app against a released target.
+2. Reproduce the paper protocol with the released generation prompts, evaluator,
+   and aggregate experiment artifacts.
 
-The repository intentionally distinguishes two scenario inventories:
+## Quick Start
 
-| Inventory | Public | Private | Scoring | Probe | Scope |
-|---|---:|---:|---:|---:|---|
-| Current `targets/web` tree | 288 | 468 | 756 | 0 | YAML files currently retained in the target tree |
-| Retained primary-result inventory | 294 | 485 | 779 | 0 | May contract/result bundle associated with the retained primary aggregate |
-
-The local artifacts do **not** support the claim that 807 scenarios were reduced to 756 by excluding 51 probes. The 51-scenario difference is a missing-file delta in the current target tree. See [`probe_scenario_audit.md`](reports/conformweb_visualizations/probe_scenario_audit.md) for the code and artifact audit, and [`current_target_scenario_inventory_756.csv`](reports/conformweb_visualizations/tables/current_target_scenario_inventory_756.csv) for the reproducible 6-by-4 inventory.
-
-## Primary Results
-
-The primary experiment uses a fixed `6 families x 4 tiers x 9 models x 10 repetitions = 2,160` grid.
-
-| Metric | Value |
-|---|---:|
-| Planned and scored primary runs | 2,160 |
-| Strict full-pass runs | 252 |
-| Strict full-pass rate | 11.7% |
-| Scenario-level conformance (`S_scen`) | 36.7% |
-| Step-level progress (`S_step`) | 49.4% |
-
-The complete accounting policy, provider identifiers, prompts, sampling settings, dates, hashes, runtime details, backend experiment, and repair rounds are documented in [`run_accounting_and_provenance_appendix.md`](reports/conformweb_visualizations/run_accounting_and_provenance_appendix.md). Values absent from retained code or artifacts are explicitly marked `not recorded`.
-
-## Repository Structure
-
-```text
-.
-|-- detoxbench/                         # Evaluator, compiler, browser bridge, scoring
-|-- targets/web/                        # Current retained target contracts and scenarios
-|-- reports/conformweb_visualizations/  # Primary aggregates, audits, tables, and figures
-|-- results_backend_backed_target_apps/ # Compact backend-backed accounting artifacts
-|-- results_iterative_repair_full_matrix/ # Repair runners and fixed-denominator snapshots
-|-- results_missing_families_full_rerun/  # Final compact six-family repair summaries
-|-- tools/                              # Generation, experiment, audit, and figure scripts
-|-- tests/                              # Evaluator/compiler/scoring tests
-|-- docs/                               # Benchmark design documentation
-|-- PACK_MANIFEST.csv                   # Included-file sizes, hashes, and provenance classes
-`-- EXCLUDED_PATTERNS.md                 # Deliberately omitted large or sensitive artifacts
-```
-
-## Benchmark Contract
-
-Each populated tier may contain:
-
-| Artifact | Description |
-|---|---|
-| `contract.dsl.yaml` | Public behavioral contract defining admissible actions, observations, and relations |
-| `scenarios.public.dsl.yaml` | Disclosed representative workflows |
-| `scenarios.private.dsl.yaml` | Hidden evaluation workflows grounded in the public contract |
-| `reference_app/` | Reference implementation source |
-| `cohorts/` | Compact batch-level metadata |
-
-The contract DSL exposes actions (`AC`), observations (`OC`), and relations (`RC`). A private scenario is admissible only when its references resolve through the public contract. Public scenarios are examples and are used to derive repair feedback; they are not supplied to the initial app generator and are not formal `kind: probe` scenarios.
-
-## Generation And Repair Prompts
-
-- Static generation prompt: `tools/generate_blind_dsl_static_app.py`
-- Backend-backed generation prompt: `tools/generate_blind_dsl_backend_app.py`
-- Public-feedback repair prompt: `results_iterative_repair_full_matrix/run_iterative_repair_public_feedback_ad_subset.py`
-- Exact repair `{context}` and `{feedback}` audit: [`repair_context_feedback_audit.md`](reports/conformweb_visualizations/repair_context_feedback_audit.md)
-
-## Poster Assets
-
-Poster-ready actual screens and provenance figures are under [`poster_asset_pack_20260929_current756`](reports/conformweb_visualizations/poster_asset_pack_20260929_current756). This is the only intentional PNG exception in the compact public release.
-
-## Setup
-
-Requires Python 3.11+:
+ConformWeb requires Python 3.11+ and Playwright Chromium.
 
 ```bash
+git clone https://github.com/deep-diver/ConformWeb.git
+cd ConformWeb
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -e ".[dev]"
 playwright install chromium
-pytest
 ```
 
-## Rebuilding Tables And Figures
+Inspect the target inventory and compile one public scenario set without opening
+a browser:
 
 ```bash
-python tools/build_conformweb_figure_pack.py
-python tools/build_conformweb_pair_figure.py
-python tools/export_conformweb_figure_source_data.py
-python tools/build_main_model_experiment_table.py
-python tools/audit_private_admissibility.py
+conformweb list-targets
+conformweb validate-target \
+  --target targets/web/stayflow_concierge/tier_a \
+  --scenario-set public
 ```
 
-Large screenshot trees, generated candidates, per-run event logs, browser traces, aborted batches, and intermediate archives are not published. Compact aggregate CSV/JSON files and selected failure evidence are retained where needed for accounting or presentation.
+Run an end-to-end harness smoke test against the included reference app:
+
+```bash
+conformweb evaluate-dsl \
+  --target targets/web/stayflow_concierge/tier_a \
+  --scenario-set public \
+  --static-dir targets/web/stayflow_concierge/tier_a/reference_app \
+  --run-subject reference-smoke \
+  --output .conformweb-runs/reference-smoke
+```
+
+The historical `detoxbench` command and `python -m detoxbench` remain aliases for
+the same CLI.
+
+## Evaluate Your App
+
+For a static candidate directory:
+
+```bash
+conformweb evaluate-dsl \
+  --target targets/web/stayflow_concierge/tier_a \
+  --scenario-set public \
+  --static-dir /absolute/path/to/candidate \
+  --run-subject my-candidate \
+  --screenshot-policy failures \
+  --output .conformweb-runs/my-candidate-public
+```
+
+For a framework or backend-backed app that is already running:
+
+```bash
+conformweb evaluate-dsl \
+  --target targets/web/stayflow_concierge/tier_a \
+  --scenario-set public \
+  --app-url http://127.0.0.1:5173 \
+  --run-subject my-running-app \
+  --screenshot-policy failures \
+  --output .conformweb-runs/my-running-app-public
+```
+
+Use public scenarios while implementing and debugging. Run `--scenario-set
+private` or `--scenario-set all` only after the candidate is fixed. A candidate
+must expose the contract's state-probe expression, preserve its declared browser
+routes, and render every declared selector as a directly actionable element.
+
+Each run writes:
+
+- `summary.json`: run, scenario, step, score, and first-failure records
+- `events.jsonl`: detailed before/after observations for every executed step
+- `screenshots/<scenario>/`: before/after browser evidence
+
+`--screenshot-policy failures` removes screenshots for passing steps and keeps
+the before/after pair for failed assertions plus any pre-error screenshot.
+`--screenshot-policy none` disables capture. The default `all` preserves the
+camera-ready evaluation protocol.
+
+The process exits with code `0` for a full pass, `1` for evaluated failures, and
+`2` for CLI usage errors. See [`docs/getting-started.md`](docs/getting-started.md)
+for the complete workflow and artifact schema.
+
+## Paper Generation Protocol
+
+The single-shot paper protocol gives the model the public contract and disclosed
+public scenarios, while withholding private scenarios, evaluator traces,
+screenshots, failure feedback, and reference source. It requires exactly
+`index.html`, `styles.css`, and `app.js`.
+
+Install the optional OpenAI SDK when generating candidates through the released
+runner:
+
+```bash
+pip install -e ".[generation]"
+python tools/generate_blind_dsl_static_app.py \
+  --contract-dsl targets/web/stayflow_concierge/tier_a/contract.dsl.yaml \
+  --public-scenarios-dsl targets/web/stayflow_concierge/tier_a/scenarios.public.dsl.yaml \
+  --output-dir /absolute/path/to/candidate \
+  --variant "clear travel booking workspace" \
+  --provider openai \
+  --model YOUR_MODEL_ID
+```
+
+The backend-backed prompt is in `tools/generate_blind_dsl_backend_app.py`. The
+public-feedback repair runner is in
+`results_iterative_repair_full_matrix/run_iterative_repair_public_feedback_ad_subset.py`.
+Prompt hashes and generation metadata are written alongside generated apps.
+
+## Release Boundary
+
+The camera-ready paper reports **24 validated instances and 756 scenarios**. The
+current `targets/web` checkout contains 24 family/tier directory slots and 756
+scenario definitions, but it is not a complete 24-target executable snapshot:
+
+- 21 targets contain contract, public scenarios, private scenarios, and a
+  reference app.
+- Campus Tier B and Media Tier B are public-only because their private scenario
+  files are not present.
+- Clinical Tier A has no contract, scenario, or reference-app files in the
+  current target tree.
+
+Therefore, do not claim an exact 24-target camera-ready rerun from
+`targets/web` alone. `conformweb list-targets` is the machine-derived source of
+truth for what can currently be executed. The retained primary aggregate is a
+different artifact snapshot with 779 scoring scenarios; it is preserved for
+result provenance and is not silently merged into the current target tree. See
+[`CURRENT_RELEASE.md`](CURRENT_RELEASE.md) for the exact boundary.
+
+## Repository Map
+
+```text
+detoxbench/                         evaluator, compiler, scoring, and CLI
+targets/web/                        released contracts, scenarios, reference apps
+tools/                              generation and experiment runners
+docs/getting-started.md             external evaluator workflow
+docs/candidate-workflow.md          paper candidate-generation protocol
+tests/                              compiler, evaluator, scoring, and release tests
+reports/conformweb_visualizations/  paper aggregates and provenance audits
+results_backend_backed_target_apps/ compact backend experiment artifacts
+results_iterative_repair_full_matrix/ repair runners and accounting snapshots
+```
+
+For the primary `6 x 4 x 9 x 10 = 2,160` experiment, model identifiers,
+sampling settings, dates, hashes, runtime details, backend accounting, and repair
+accounting, see
+[`run_accounting_and_provenance_appendix.md`](reports/conformweb_visualizations/run_accounting_and_provenance_appendix.md).
+
+## License And Citation
+
+The code and released artifacts are available under Apache-2.0. Citation
+metadata is provided in [`CITATION.cff`](CITATION.cff).

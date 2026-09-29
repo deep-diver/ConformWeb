@@ -33,6 +33,7 @@ class WebEvaluationConfig:
     headless: bool = True
     slow_mo_ms: int = 0
     action_timeout_ms: int = 5000
+    screenshot_policy: str = "all"
 
 
 class WebEvaluator:
@@ -45,6 +46,8 @@ class WebEvaluator:
         self.contract = contract
         self.scenarios = scenarios
         self.config = config
+        if self.config.screenshot_policy not in {"all", "failures", "none"}:
+            raise ValueError("screenshot_policy must be all, failures, or none")
         self.run_id = time.strftime("%Y%m%d-%H%M%S") + "-" + uuid.uuid4().hex[:8]
         self.run_dir = self.config.output_dir / self.run_id
         self.screenshot_dir = self.run_dir / "screenshots"
@@ -231,7 +234,9 @@ class WebEvaluator:
 
         before_state = self._capture_state(page)
         self.snapshots["before"] = before_state
-        before_screenshot = self._screenshot(page, scenario_id, index, "before")
+        before_screenshot = None
+        if self.config.screenshot_policy != "none":
+            before_screenshot = self._screenshot(page, scenario_id, index, "before")
 
         if action != "snapshot":
             self._perform_action(page, action, step)
@@ -239,7 +244,9 @@ class WebEvaluator:
 
         after_state = self._capture_state(page)
         self.snapshots["after"] = after_state
-        after_screenshot = self._screenshot(page, scenario_id, index, "after")
+        after_screenshot = None
+        if self.config.screenshot_policy != "none":
+            after_screenshot = self._screenshot(page, scenario_id, index, "after")
 
         save_as = step.get("save_as") or step.get("as")
         if save_as:
@@ -251,6 +258,15 @@ class WebEvaluator:
             snapshots=self.snapshots,
         )
 
+        if self.config.screenshot_policy == "failures" and all(
+            assertion.passed for assertion in assertions
+        ):
+            for screenshot in (before_screenshot, after_screenshot):
+                if screenshot is not None:
+                    screenshot.unlink(missing_ok=True)
+            before_screenshot = None
+            after_screenshot = None
+
         return StepResult(
             scenario_id=scenario_id,
             step_index=index,
@@ -258,8 +274,8 @@ class WebEvaluator:
             component=str(component_id) if component_id else None,
             before_state=before_state,
             after_state=after_state,
-            before_screenshot=str(before_screenshot),
-            after_screenshot=str(after_screenshot),
+            before_screenshot=str(before_screenshot) if before_screenshot else None,
+            after_screenshot=str(after_screenshot) if after_screenshot else None,
             assertions=assertions,
             actor=actor,
         )

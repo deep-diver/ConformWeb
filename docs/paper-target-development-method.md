@@ -5,7 +5,8 @@ Date: 2026-05-11
 This document records the current paper-facing workflow for constructing one
 DetoxBench target. The goal is to build realistic web applications that are
 usable as products, while still keeping evaluation fair: the candidate receives
-the public contract, not the reference implementation or scenario answers.
+the public contract and disclosed public scenarios, not the reference
+implementation or private scenario answers.
 
 ## Protocol
 
@@ -21,7 +22,7 @@ the public contract, not the reference implementation or scenario answers.
    scenarios only. The reference must pass the full evaluator, including
    private scenarios, after iterative repair.
 7. Generate blind implementations from weaker models first, using the public
-   contract only.
+   contract and disclosed public scenarios.
 8. Evaluate blind implementations, record formal score, stepwise score,
    contract score, tier breakdown, first failed step, failure category, and
    screenshots.
@@ -33,6 +34,7 @@ the public contract, not the reference implementation or scenario answers.
 Blind implementations may receive:
 
 - the public DSL contract;
+- the disclosed public scenario file;
 - the target domain and product premise;
 - a request for polished, production-quality UI/UX comparable to a real
   commercial service.
@@ -41,7 +43,7 @@ Blind implementations must not receive:
 
 - the reference app source;
 - reference screenshots;
-- public or private scenario files;
+- private scenario files;
 - evaluator logs, run summaries, dashboard artifacts, or failure answers.
 
 The UI/UX request is fair because visual realism is not a hidden scenario

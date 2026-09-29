@@ -1,7 +1,25 @@
 import json
 from pathlib import Path
 
-from detoxbench.dashboard import DashboardConfig, build_dashboard_data
+from detoxbench.dashboard import DashboardConfig, build_dashboard_data, normalize_step
+
+
+def test_normalize_step_accepts_omitted_screenshots(tmp_path: Path) -> None:
+    step = {
+        "scenario_id": "passing_step",
+        "step_index": 1,
+        "action": "snapshot",
+        "component": None,
+        "passed": True,
+        "before_state": {"ready": True},
+        "after_state": {"ready": True},
+        "screenshots": {"before": None, "after": None},
+        "assertions": [],
+    }
+
+    normalized = normalize_step(step, tmp_path, tmp_path)
+
+    assert normalized["screenshots"] == {"before": None, "after": None}
 
 
 def test_dashboard_data_groups_subjects_and_marks_defaults(tmp_path: Path) -> None:

@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "detoxbench"
-version = "0.1.0"
-description = "Rule-based behavioral benchmark runner for LLM-generated web apps."
+version = "0.2.0"
+description = "ConformWeb contract-grounded behavioral evaluator for generated web apps."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
@@ -17,8 +17,12 @@ dependencies = [
 dev = [
   "pytest>=8.0",
 ]
+generation = [
+  "openai>=1.40",
+]
 
 [project.scripts]
+conformweb = "detoxbench.cli:main"
 detoxbench = "detoxbench.cli:main"
 
 [tool.setuptools.packages.find]

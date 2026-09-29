@@ -5,12 +5,15 @@ import json
 import re
 from pathlib import Path
 
+from detoxbench import __version__
 from detoxbench.cohorts import cohort_fingerprint
 from detoxbench.cohorts import load_cohort_manifest
 from detoxbench.dashboard import DashboardConfig, build_dashboard
 from detoxbench.gallery import GalleryConfig, build_gallery
 from detoxbench.known_bad import assess_known_bad_result
 from detoxbench.known_bad import load_known_bad_fixtures
+from detoxbench.target_inventory import discover_target_inventory
+from detoxbench.target_inventory import summarize_target_inventory
 from detoxbench.dsl import compile_dsl_to_web_suite, load_dsl_yaml
 from detoxbench.dsl.scenario_sets import discover_scenario_paths
 from detoxbench.dsl.scenario_sets import load_scenario_bundles
@@ -19,10 +22,34 @@ from detoxbench.web.evaluator import WebEvaluationConfig, WebEvaluator
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="detoxbench",
-        description="Run DetoxBench behavioral evaluations.",
+        prog="conformweb",
+        description="Run ConformWeb contract-grounded behavioral evaluations.",
     )
+    parser.add_argument("--version", action="version", version=f"ConformWeb {__version__}")
     subparsers = parser.add_subparsers(dest="command", required=True)
+
+    list_targets = subparsers.add_parser(
+        "list-targets",
+        help="List released benchmark targets and their runnable scenario sets.",
+    )
+    list_targets.add_argument(
+        "--targets-root",
+        type=Path,
+        default=Path("targets/web"),
+        help="Directory containing family/tier target directories.",
+    )
+    list_targets.add_argument("--json", action="store_true")
+
+    validate_target = subparsers.add_parser(
+        "validate-target",
+        help="Compile a target without launching a browser.",
+    )
+    validate_target.add_argument("--target", type=Path, required=True)
+    validate_target.add_argument(
+        "--scenario-set",
+        choices=["all", "public", "private"],
+        default="all",
+    )
 
     evaluate_dsl = subparsers.add_parser(
         "evaluate-dsl",
@@ -46,14 +73,21 @@ def build_parser() -> argparse.ArgumentParser:
         default="all",
         help="Scenario visibility to run when split public/private files are present.",
     )
-    evaluate_dsl.add_argument("--app-url", help="Existing app URL.")
-    evaluate_dsl.add_argument("--static-dir", type=Path, help="Directory to serve.")
+    candidate = evaluate_dsl.add_mutually_exclusive_group(required=True)
+    candidate.add_argument("--app-url", help="Existing app URL.")
+    candidate.add_argument("--static-dir", type=Path, help="Directory to serve.")
     evaluate_dsl.add_argument("--output", type=Path, help="Directory for run logs and screenshots.")
     evaluate_dsl.add_argument("--run-subject", help="Human-readable subject for this run.")
     evaluate_dsl.add_argument("--headless", action="store_true", default=True)
     evaluate_dsl.add_argument("--headed", action="store_true")
     evaluate_dsl.add_argument("--slow-mo", type=int, default=0)
     evaluate_dsl.add_argument("--action-timeout", type=int, default=5000)
+    evaluate_dsl.add_argument(
+        "--screenshot-policy",
+        choices=["all", "failures", "none"],
+        default="all",
+        help="Screenshots to retain. Paper reproduction uses all.",
+    )
     evaluate_dsl.add_argument("--json", action="store_true")
 
     known_bad = subparsers.add_parser(
@@ -86,7 +120,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     dashboard = subparsers.add_parser(
         "dashboard",
-        help="Build a static HTML dashboard for DetoxBench run artifacts.",
+        help="Build a static HTML dashboard for ConformWeb run artifacts.",
     )
     dashboard.add_argument(
         "--target",
@@ -111,7 +145,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     gallery = subparsers.add_parser(
         "gallery",
-        help="Build a static suite gallery across DetoxBench targets.",
+        help="Build a static suite gallery across ConformWeb targets.",
     )
     gallery.add_argument(
         "--targets-root",
@@ -137,6 +171,10 @@ def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
 
+    if args.command == "list-targets":
+        return list_targets_command(args)
+    if args.command == "validate-target":
+        return validate_target_command(args)
     if args.command == "evaluate-dsl":
         return evaluate_dsl_command(args)
     if args.command == "known-bad":
@@ -152,11 +190,98 @@ def main(argv: list[str] | None = None) -> int:
     return 2
 
 
+def list_targets_command(args: argparse.Namespace) -> int:
+    targets_root = args.targets_root.resolve()
+    inventory = discover_target_inventory(targets_root)
+    summary = summarize_target_inventory(inventory)
+    if args.json:
+        print(
+            json.dumps(
+                {
+                    "targets_root": str(targets_root),
+                    "summary": summary,
+                    "targets": [item.to_dict() for item in inventory],
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return 0
+
+    headers = ("TARGET", "STATUS", "PUBLIC", "PRIVATE", "TOTAL", "REFERENCE")
+    rows = [
+        (
+            item.target,
+            item.status,
+            str(item.public_scenarios),
+            str(item.private_scenarios),
+            str(item.scenario_total),
+            "yes" if item.reference_app else "no",
+        )
+        for item in inventory
+    ]
+    widths = [
+        max(len(headers[index]), *(len(row[index]) for row in rows))
+        if rows
+        else len(headers[index])
+        for index in range(len(headers))
+    ]
+    print("  ".join(value.ljust(widths[index]) for index, value in enumerate(headers)))
+    print("  ".join("-" * width for width in widths))
+    for row in rows:
+        print("  ".join(value.ljust(widths[index]) for index, value in enumerate(row)))
+    print()
+    print(
+        "Summary: "
+        f"{summary['target_slots']} slots, "
+        f"{summary['status_counts'].get('ready', 0)} ready, "
+        f"{summary['status_counts'].get('public-only', 0)} public-only, "
+        f"{summary['status_counts'].get('unavailable', 0)} unavailable; "
+        f"{summary['public_scenarios']} public + "
+        f"{summary['private_scenarios']} private = "
+        f"{summary['scenario_total']} scenarios"
+    )
+    return 0
+
+
+def validate_target_command(args: argparse.Namespace) -> int:
+    target_dir = args.target.resolve()
+    contract_path = target_dir / "contract.dsl.yaml"
+    scenario_paths = discover_scenario_paths(target_dir, scenario_set=args.scenario_set)
+    if not contract_path.is_file():
+        raise SystemExit(f"Missing contract: {contract_path}")
+    if not scenario_paths:
+        raise SystemExit(
+            f"No {args.scenario_set!r} scenario files available under {target_dir}"
+        )
+
+    raw_contract = load_dsl_yaml(contract_path)
+    scenarios_dsl = load_scenario_bundles(scenario_paths, scenario_set=args.scenario_set)
+    _, scenarios = compile_dsl_to_web_suite(raw_contract, scenarios_dsl)
+    raw_scenarios = scenarios_dsl["scenarios"]
+    scoring = sum(1 for scenario in raw_scenarios if scenario.get("kind", "scoring") == "scoring")
+    probes = sum(1 for scenario in raw_scenarios if scenario.get("kind", "scoring") == "probe")
+    payload = {
+        "valid": True,
+        "target": str(target_dir),
+        "app_id": raw_contract.get("app", {}).get("id"),
+        "dsl_version": raw_contract.get("dsl_version"),
+        "scenario_set": args.scenario_set,
+        "scenario_sources": [str(path.resolve()) for path in scenario_paths],
+        "scenarios": len(scenarios.scenarios),
+        "scoring_scenarios": scoring,
+        "probe_scenarios": probes,
+        "compiled_steps": sum(len(scenario.get("steps", [])) for scenario in scenarios.scenarios),
+    }
+    print(json.dumps(payload, ensure_ascii=False, indent=2))
+    return 0
+
+
 def dashboard_command(args: argparse.Namespace) -> int:
     target_dir = args.target.resolve()
     runs_dir = (args.runs_dir or default_runs_dir(target_dir)).resolve()
     output = (args.output or target_dir / "reports" / "dashboard" / "index.html").resolve()
-    title = args.title or f"DetoxBench Dashboard: {target_dir.name}"
+    title = args.title or f"ConformWeb Dashboard: {target_dir.name}"
 
     result = build_dashboard(
         DashboardConfig(
@@ -214,6 +339,7 @@ def evaluate_dsl_command(args: argparse.Namespace) -> int:
         headless=not args.headed,
         slow_mo_ms=args.slow_mo,
         action_timeout_ms=args.action_timeout,
+        screenshot_policy=args.screenshot_policy,
     )
     result = WebEvaluator(contract, scenarios, config).run()
     payload = result.to_dict() if args.json else compact_result(result.to_dict())
@@ -329,7 +455,7 @@ def gallery_command(args: argparse.Namespace) -> int:
     if targets_root:
         targets_root = targets_root.resolve()
     output = (args.output or Path("reports/gallery/index.html")).resolve()
-    title = args.title or "DetoxBench Target Gallery"
+    title = args.title or "ConformWeb Target Gallery"
     result = build_gallery(
         GalleryConfig(
             output=output,

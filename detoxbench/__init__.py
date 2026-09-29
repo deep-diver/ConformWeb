@@ -1,6 +1,5 @@
-"""DetoxBench: rule-based behavioral evaluation for generated apps."""
+"""ConformWeb: contract-grounded behavioral evaluation for generated web apps."""
 
 __all__ = ["__version__"]
 
-__version__ = "0.1.0"
-
+__version__ = "0.2.0"
