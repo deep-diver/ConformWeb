@@ -1,0 +1,298 @@
+{
+  "generated_at": "2026-07-09T09:32:20+00:00",
+  "denominator_policy": "fixed planned full matrix; pending/missing/no-score counted as zero for interim @2/@3",
+  "records_loaded": 3127,
+  "round_1_records": 1140,
+  "round_2_records": 844,
+  "planned_per_round": 2160,
+  "completion_by_model_tier": [
+    {
+      "model": "GPT-5.4 nano",
+      "group": "Mini",
+      "tier": "A",
+      "planned": 60,
+      "round_1_records": 20,
+      "round_2_records": 20
+    },
+    {
+      "model": "GPT-5.4 nano",
+      "group": "Mini",
+      "tier": "B",
+      "planned": 60,
+      "round_1_records": 30,
+      "round_2_records": 30
+    },
+    {
+      "model": "GPT-5.4 nano",
+      "group": "Mini",
+      "tier": "C",
+      "planned": 60,
+      "round_1_records": 40,
+      "round_2_records": 40
+    },
+    {
+      "model": "GPT-5.4 nano",
+      "group": "Mini",
+      "tier": "D",
+      "planned": 60,
+      "round_1_records": 40,
+      "round_2_records": 38
+    },
+    {
+      "model": "Claude Haiku 4.5",
+      "group": "Mini",
+      "tier": "A",
+      "planned": 60,
+      "round_1_records": 20,
+      "round_2_records": 9
+    },
+    {
+      "model": "Claude Haiku 4.5",
+      "group": "Mini",
+      "tier": "B",
+      "planned": 60,
+      "round_1_records": 30,
+      "round_2_records": 22
+    },
+    {
+      "model": "Claude Haiku 4.5",
+      "group": "Mini",
+      "tier": "C",
+      "planned": 60,
+      "round_1_records": 40,
+      "round_2_records": 34
+    },
+    {
+      "model": "Claude Haiku 4.5",
+      "group": "Mini",
+      "tier": "D",
+      "planned": 60,
+      "round_1_records": 40,
+      "round_2_records": 27
+    },
+    {
+      "model": "Gemini 3.1 Flash Lite",
+      "group": "Mini",
+      "tier": "A",
+      "planned": 60,
+      "round_1_records": 20,
+      "round_2_records": 6
+    },
+    {
+      "model": "Gemini 3.1 Flash Lite",
+      "group": "Mini",
+      "tier": "B",
+      "planned": 60,
+      "round_1_records": 30,
+      "round_2_records": 14
+    },
+    {
+      "model": "Gemini 3.1 Flash Lite",
+      "group": "Mini",
+      "tier": "C",
+      "planned": 60,
+      "round_1_records": 50,
+      "round_2_records": 29
+    },
+    {
+      "model": "Gemini 3.1 Flash Lite",
+      "group": "Mini",
+      "tier": "D",
+      "planned": 60,
+      "round_1_records": 50,
+      "round_2_records": 33
+    },
+    {
+      "model": "GPT-5.4 mini",
+      "group": "Turbo",
+      "tier": "A",
+      "planned": 60,
+      "round_1_records": 20,
+      "round_2_records": 20
+    },
+    {
+      "model": "GPT-5.4 mini",
+      "group": "Turbo",
+      "tier": "B",
+      "planned": 60,
+      "round_1_records": 30,
+      "round_2_records": 30
+    },
+    {
+      "model": "GPT-5.4 mini",
+      "group": "Turbo",
+      "tier": "C",
+      "planned": 60,
+      "round_1_records": 40,
+      "round_2_records": 40
+    },
+    {
+      "model": "GPT-5.4 mini",
+      "group": "Turbo",
+      "tier": "D",
+      "planned": 60,
+      "round_1_records": 40,
+      "round_2_records": 40
+    },
+    {
+      "model": "Claude Sonnet 4.6",
+      "group": "Turbo",
+      "tier": "A",
+      "planned": 60,
+      "round_1_records": 20,
+      "round_2_records": 13
+    },
+    {
+      "model": "Claude Sonnet 4.6",
+      "group": "Turbo",
+      "tier": "B",
+      "planned": 60,
+      "round_1_records": 30,
+      "round_2_records": 23
+    },
+    {
+      "model": "Claude Sonnet 4.6",
+      "group": "Turbo",
+      "tier": "C",
+      "planned": 60,
+      "round_1_records": 40,
+      "round_2_records": 34
+    },
+    {
+      "model": "Claude Sonnet 4.6",
+      "group": "Turbo",
+      "tier": "D",
+      "planned": 60,
+      "round_1_records": 40,
+      "round_2_records": 34
+    },
+    {
+      "model": "Gemini 3.1 Flash",
+      "group": "Turbo",
+      "tier": "A",
+      "planned": 60,
+      "round_1_records": 20,
+      "round_2_records": 10
+    },
+    {
+      "model": "Gemini 3.1 Flash",
+      "group": "Turbo",
+      "tier": "B",
+      "planned": 60,
+      "round_1_records": 30,
+      "round_2_records": 8
+    },
+    {
+      "model": "Gemini 3.1 Flash",
+      "group": "Turbo",
+      "tier": "C",
+      "planned": 60,
+      "round_1_records": 50,
+      "round_2_records": 13
+    },
+    {
+      "model": "Gemini 3.1 Flash",
+      "group": "Turbo",
+      "tier": "D",
+      "planned": 60,
+      "round_1_records": 41,
+      "round_2_records": 11
+    },
+    {
+      "model": "GPT-5.4",
+      "group": "Frontier",
+      "tier": "A",
+      "planned": 60,
+      "round_1_records": 20,
+      "round_2_records": 20
+    },
+    {
+      "model": "GPT-5.4",
+      "group": "Frontier",
+      "tier": "B",
+      "planned": 60,
+      "round_1_records": 30,
+      "round_2_records": 30
+    },
+    {
+      "model": "GPT-5.4",
+      "group": "Frontier",
+      "tier": "C",
+      "planned": 60,
+      "round_1_records": 30,
+      "round_2_records": 30
+    },
+    {
+      "model": "GPT-5.4",
+      "group": "Frontier",
+      "tier": "D",
+      "planned": 60,
+      "round_1_records": 29,
+      "round_2_records": 24
+    },
+    {
+      "model": "Claude Opus 4.6",
+      "group": "Frontier",
+      "tier": "A",
+      "planned": 60,
+      "round_1_records": 20,
+      "round_2_records": 16
+    },
+    {
+      "model": "Claude Opus 4.6",
+      "group": "Frontier",
+      "tier": "B",
+      "planned": 60,
+      "round_1_records": 30,
+      "round_2_records": 17
+    },
+    {
+      "model": "Claude Opus 4.6",
+      "group": "Frontier",
+      "tier": "C",
+      "planned": 60,
+      "round_1_records": 30,
+      "round_2_records": 18
+    },
+    {
+      "model": "Claude Opus 4.6",
+      "group": "Frontier",
+      "tier": "D",
+      "planned": 60,
+      "round_1_records": 20,
+      "round_2_records": 8
+    },
+    {
+      "model": "Gemini 3.1 Pro Preview",
+      "group": "Frontier",
+      "tier": "A",
+      "planned": 60,
+      "round_1_records": 20,
+      "round_2_records": 19
+    },
+    {
+      "model": "Gemini 3.1 Pro Preview",
+      "group": "Frontier",
+      "tier": "B",
+      "planned": 60,
+      "round_1_records": 30,
+      "round_2_records": 25
+    },
+    {
+      "model": "Gemini 3.1 Pro Preview",
+      "group": "Frontier",
+      "tier": "C",
+      "planned": 60,
+      "round_1_records": 40,
+      "round_2_records": 31
+    },
+    {
+      "model": "Gemini 3.1 Pro Preview",
+      "group": "Frontier",
+      "tier": "D",
+      "planned": 60,
+      "round_1_records": 30,
+      "round_2_records": 28
+    }
+  ]
+}

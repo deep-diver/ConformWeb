@@ -1,0 +1,6 @@
+experiment_batch,family,tier,model,round,evaluated_runs,expected_runs,missing_runs,failed_runs,completed_records,full_pass_count,full_pass_rate,S_scen,S_step,recovered_count,public_feedback_audit_violations,backend_generation_failures,backend_evaluation_failures
+static_blind_at1,ALL,ALL,ALL,,1046,1080,0,34,1080,200,0.19120458891013384,0.4416484958412243,0.5316858385249501,0,0,0,0
+public_feedback_repair_at1_at2_at3,ALL,ALL,ALL,0,1047,1080,0,33,1080,201,0.19197707736389685,0.4430675971369324,0.5331901621377703,0,0,0,0
+public_feedback_repair_at1_at2_at3,ALL,ALL,ALL,1,920,1080,0,152,1080,301,0.32717391304347826,0.5905285802345237,0.6801980035147512,0,0,0,0
+public_feedback_repair_at1_at2_at3,ALL,ALL,ALL,2,937,1080,0,134,1080,344,0.3671291355389541,0.6413966768682852,0.7307888563589076,0,0,0,0
+backend_backed,ALL,ALL,ALL,,1008,1080,0,72,1080,169,0.16765873015873015,0.40620771822321783,0.4875110804064648,0,0,5,46

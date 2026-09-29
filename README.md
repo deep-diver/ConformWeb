@@ -2,86 +2,76 @@
 
 > **Do LLM-Generated Web Apps Behave Correctly? A Contract-Grounded Benchmark for Behavioral Conformance**
 
-This repository contains the supplementary materials for the above paper, submitted for double-blind review.
+This repository contains the benchmark implementation, frozen experiment aggregates, reproducibility audits, and public presentation assets for ConformWeb.
 
-## Overview
+## Release Status
 
-ConformWeb is a contract-grounded protocol and benchmark that evaluates whether LLM-generated web applications preserve behavioral correctness under dynamic, multi-step interaction. The benchmark is instantiated across **24 validated instances** spanning **6 application families** and **4 complexity tiers**, scaling to **756 private scenarios** and **6,433 semantic steps**. Across **2,160 evaluation runs**, only 252 achieve full conformance (**11.7% strict pass rate**).
+The repository was refreshed on 2026-09-29 from the retained ConformWeb experiment workspace. See [`CURRENT_RELEASE.md`](CURRENT_RELEASE.md) for source provenance and known artifact boundaries.
+
+The repository intentionally distinguishes two scenario inventories:
+
+| Inventory | Public | Private | Scoring | Probe | Scope |
+|---|---:|---:|---:|---:|---|
+| Current `targets/web` tree | 288 | 468 | 756 | 0 | YAML files currently retained in the target tree |
+| Retained primary-result inventory | 294 | 485 | 779 | 0 | May contract/result bundle associated with the retained primary aggregate |
+
+The local artifacts do **not** support the claim that 807 scenarios were reduced to 756 by excluding 51 probes. The 51-scenario difference is a missing-file delta in the current target tree. See [`probe_scenario_audit.md`](reports/conformweb_visualizations/probe_scenario_audit.md) for the code and artifact audit, and [`current_target_scenario_inventory_756.csv`](reports/conformweb_visualizations/tables/current_target_scenario_inventory_756.csv) for the reproducible 6-by-4 inventory.
+
+## Primary Results
+
+The primary experiment uses a fixed `6 families x 4 tiers x 9 models x 10 repetitions = 2,160` grid.
+
+| Metric | Value |
+|---|---:|
+| Planned and scored primary runs | 2,160 |
+| Strict full-pass runs | 252 |
+| Strict full-pass rate | 11.7% |
+| Scenario-level conformance (`S_scen`) | 36.7% |
+| Step-level progress (`S_step`) | 49.4% |
+
+The complete accounting policy, provider identifiers, prompts, sampling settings, dates, hashes, runtime details, backend experiment, and repair rounds are documented in [`run_accounting_and_provenance_appendix.md`](reports/conformweb_visualizations/run_accounting_and_provenance_appendix.md). Values absent from retained code or artifacts are explicitly marked `not recorded`.
 
 ## Repository Structure
 
-```
+```text
 .
-├── ConformWeb.pdf              # Paper manuscript
-├── detoxbench/                 # Core evaluation framework
-│   ├── core/                   # State management, assertions, logging, models
-│   ├── dsl/                    # Contract DSL compiler, scenario sets, web bridge
-│   ├── web/                    # Browser evaluator, local server
-│   ├── cohorts.py              # Cohort configuration loader
-│   └── dashboard.py            # Evaluation dashboard
-├── targets/web/                # Benchmark instances (6 families × multiple tiers)
-│   ├── stayflow_concierge/     # Travel booking
-│   ├── freshcart_market/       # Grocery e-commerce
-│   ├── clinic_shift_command/   # Clinical operations
-│   ├── campus_registrar_command/ # Academic registration
-│   ├── media_campaign_launch_desk/ # Marketing campaign
-│   └── homefix_hub/            # Home services
-├── reports/conformweb_visualizations/
-│   ├── data/                   # Final CSV rollups and raw traces
-│   ├── figures/                # Paper figures (PDF)
-│   ├── tables/                 # Paper tables (CSV/TeX)
-│   ├── contract_pack/          # Contract language spec and bundled contracts/scenarios
-│   └── validation_report.md    # Full 2160-run validation report
-├── tools/                      # Figure generation, auditing, and experiment scripts
-├── tests/                      # Unit tests
-├── docs/                       # Design documentation
-├── tables/                     # Additional table artifacts
-├── cohorts/                    # Cohort YAML configurations
-└── pyproject.toml              # Python project configuration
+|-- detoxbench/                         # Evaluator, compiler, browser bridge, scoring
+|-- targets/web/                        # Current retained target contracts and scenarios
+|-- reports/conformweb_visualizations/  # Primary aggregates, audits, tables, and figures
+|-- results_backend_backed_target_apps/ # Compact backend-backed accounting artifacts
+|-- results_iterative_repair_full_matrix/ # Repair runners and fixed-denominator snapshots
+|-- results_missing_families_full_rerun/  # Final compact six-family repair summaries
+|-- tools/                              # Generation, experiment, audit, and figure scripts
+|-- tests/                              # Evaluator/compiler/scoring tests
+|-- docs/                               # Benchmark design documentation
+|-- PACK_MANIFEST.csv                   # Included-file sizes, hashes, and provenance classes
+`-- EXCLUDED_PATTERNS.md                 # Deliberately omitted large or sensitive artifacts
 ```
 
-## Benchmark Instances
+## Benchmark Contract
 
-Each instance under `targets/web/` contains:
+Each populated tier may contain:
 
 | Artifact | Description |
 |---|---|
 | `contract.dsl.yaml` | Public behavioral contract defining admissible actions, observations, and relations |
 | `scenarios.public.dsl.yaml` | Disclosed representative workflows |
-| `scenarios.private.dsl.yaml` | Hidden evaluation scenarios (strictly grounded in the public contract) |
-| `reference_app/` | Reference implementation (HTML/CSS/JS) |
-| `cohorts/` | Batch-level metadata (`manifest.json`, `aggregate.json`, `progress.jsonl`) |
+| `scenarios.private.dsl.yaml` | Hidden evaluation workflows grounded in the public contract |
+| `reference_app/` | Reference implementation source |
+| `cohorts/` | Compact batch-level metadata |
 
-### Application Families
+The contract DSL exposes actions (`AC`), observations (`OC`), and relations (`RC`). A private scenario is admissible only when its references resolve through the public contract. Public scenarios are examples and are used to derive repair feedback; they are not supplied to the initial app generator and are not formal `kind: probe` scenarios.
 
-| Family | Description | Tiers |
-|---|---|---|
-| StayFlow Concierge | Travel itinerary and booking management | A, B, C, D |
-| FreshCart Market | Grocery e-commerce with cart and checkout | A, B, C, D |
-| Clinic Shift Command | Clinical staff scheduling and handoff | A, B, C, D |
-| Campus Registrar Command | Academic course registration and enrollment | A, B, C, D |
-| Media Campaign Launch Desk | Marketing campaign management | A, B, C, D |
-| HomeFix Hub | Home service booking and dispatch | A, B, C, D |
+## Generation And Repair Prompts
 
-### Complexity Tiers
+- Static generation prompt: `tools/generate_blind_dsl_static_app.py`
+- Backend-backed generation prompt: `tools/generate_blind_dsl_backend_app.py`
+- Public-feedback repair prompt: `results_iterative_repair_full_matrix/run_iterative_repair_public_feedback_ad_subset.py`
+- Exact repair `{context}` and `{feedback}` audit: [`repair_context_feedback_audit.md`](reports/conformweb_visualizations/repair_context_feedback_audit.md)
 
-- **Tier A**: Core happy-path workflows with linear state transitions
-- **Tier B**: Multi-role interactions and conditional routing
-- **Tier C**: Long-horizon dependencies with persistence and cross-page state
-- **Tier D**: Full behavioral depth with authorization, projections, and service boundaries
+## Poster Assets
 
-## Key Results
-
-| Metric | Value |
-|---|---|
-| Total evaluation runs | 2,160 |
-| Strict full-pass rate | 11.7% (252/2,160) |
-| Scenario-level conformance (S_scen) | 36.7% |
-| Step-level progress (S_step) | 49.4% |
-| Frontier model full-pass rate | 24.2% |
-| Mini model full-pass rate | 0.8% |
-
-See `reports/conformweb_visualizations/validation_report.md` for the complete per-model and per-family breakdown.
+Poster-ready actual screens and provenance figures are under [`poster_asset_pack_20260929_current756`](reports/conformweb_visualizations/poster_asset_pack_20260929_current756). This is the only intentional PNG exception in the compact public release.
 
 ## Setup
 
@@ -90,57 +80,17 @@ Requires Python 3.11+:
 ```bash
 pip install -e ".[dev]"
 playwright install chromium
-```
-
-## Reproducing Figures and Tables
-
-From the repository root:
-
-```bash
-# Build the main figure pack
-python tools/build_conformweb_figure_pack.py
-
-# Build pair comparison figures
-python tools/build_conformweb_pair_figure.py
-
-# Export figure source data
-python tools/export_conformweb_figure_source_data.py
-
-# Build the main model experiment table
-python tools/build_main_model_experiment_table.py
-
-# Audit private scenario admissibility
-python tools/audit_private_admissibility.py
-```
-
-Source data for all figures and tables is in `reports/conformweb_visualizations/data/`.
-
-## Running Tests
-
-```bash
 pytest
 ```
 
-## Contract Language
+## Rebuilding Tables And Figures
 
-The contract DSL defines three components per instance:
+```bash
+python tools/build_conformweb_figure_pack.py
+python tools/build_conformweb_pair_figure.py
+python tools/export_conformweb_figure_source_data.py
+python tools/build_main_model_experiment_table.py
+python tools/audit_private_admissibility.py
+```
 
-1. **Actions** (`AC`): Browser operations — control actions, inputs, uploads, role changes, navigation, reloads
-2. **Observations** (`OC`): Evidence channels — application state, browser metadata, service calls, rendered projections
-3. **Relations** (`RC`): Behavioral checks — state transitions, validation, persistence, authorization effects
-
-A private scenario is admissible (`τ ⪯ C`) only if every action, observation reference, and check can be resolved through the public contract. See `reports/conformweb_visualizations/contract_pack/` for the language specification and bundled artifacts.
-
-## Validation
-
-The 2,160-run validation report confirms:
-
-- All 24 instances validated with complete coverage
-- Zero missing or excluded runs after fill
-- Per-model rollups derived from evaluation reports, not inferred from group aggregates
-
-See `reports/conformweb_visualizations/validation_report.md` and `reports/conformweb_visualizations/private_admissibility_audit.md`.
-
-## Manifest
-
-Every included file, its original repository path, size, and inclusion reason is listed in `PACK_MANIFEST.csv`. Large artifacts (screenshots, per-run event logs, generated app directories, browser traces) are excluded from this submission pack; their aggregate results are preserved in the included CSV rollups and batch-level metadata.
+Large screenshot trees, generated candidates, per-run event logs, browser traces, aborted batches, and intermediate archives are not published. Compact aggregate CSV/JSON files and selected failure evidence are retained where needed for accounting or presentation.

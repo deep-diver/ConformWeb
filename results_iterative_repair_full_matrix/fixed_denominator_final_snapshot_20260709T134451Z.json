@@ -1,0 +1,362 @@
+{
+  "generated_at_utc": "2026-07-09T13:44:51+00:00",
+  "planned_denominators": {
+    "model_tier": 60,
+    "model_total": 240,
+    "group_total": 720,
+    "overall": 2160,
+    "tier_total": 540
+  },
+  "retained_original_records_per_round": {
+    "0": 1650,
+    "1": 1650,
+    "2": 1650
+  },
+  "stale_excluded_records": {
+    "full_matrix_20260709:0:google": 102,
+    "full_matrix_20260709:1:google": 102,
+    "full_matrix_20260709:2:google": 4
+  },
+  "overall": {
+    "@1": {
+      "full_pass": 252,
+      "denominator": 2160,
+      "full_pass_rate": 11.666666666666666,
+      "S_scen": 36.67728246465425,
+      "S_step": 49.35673072701107,
+      "records": 2160
+    },
+    "@2": {
+      "full_pass": 185,
+      "denominator": 2160,
+      "full_pass_rate": 8.564814814814815,
+      "S_scen": 19.781149887634605,
+      "S_step": 24.375135305815327,
+      "records": 1650
+    },
+    "@3": {
+      "full_pass": 252,
+      "denominator": 2160,
+      "full_pass_rate": 11.666666666666666,
+      "S_scen": 21.870272692433893,
+      "S_step": 26.732355927997602,
+      "records": 1650
+    }
+  },
+  "groups": {
+    "Mini": {
+      "@1": {
+        "full_pass": 6,
+        "denominator": 720,
+        "full_pass_rate": 0.8333333333333334,
+        "S_scen": 10.927903317520775,
+        "S_step": 24.814273751201256,
+        "records": 720
+      },
+      "@2": {
+        "full_pass": 7,
+        "denominator": 720,
+        "full_pass_rate": 0.9722222222222222,
+        "S_scen": 8.023439751216872,
+        "S_step": 15.717392205324154,
+        "records": 570
+      },
+      "@3": {
+        "full_pass": 12,
+        "denominator": 720,
+        "full_pass_rate": 1.6666666666666667,
+        "S_scen": 12.226373711228353,
+        "S_step": 22.105408645583623,
+        "records": 570
+      }
+    },
+    "Turbo": {
+      "@1": {
+        "full_pass": 72,
+        "denominator": 720,
+        "full_pass_rate": 10.0,
+        "S_scen": 31.92323338123891,
+        "S_step": 43.92135483209205,
+        "records": 720
+      },
+      "@2": {
+        "full_pass": 43,
+        "denominator": 720,
+        "full_pass_rate": 5.972222222222222,
+        "S_scen": 14.113516434191848,
+        "S_step": 17.720917796923178,
+        "records": 570
+      },
+      "@3": {
+        "full_pass": 52,
+        "denominator": 720,
+        "full_pass_rate": 7.222222222222221,
+        "S_scen": 14.28430225014114,
+        "S_step": 17.652108348772412,
+        "records": 570
+      }
+    },
+    "Frontier": {
+      "@1": {
+        "full_pass": 174,
+        "denominator": 720,
+        "full_pass_rate": 24.166666666666668,
+        "S_scen": 67.18071069520312,
+        "S_step": 79.33456359773993,
+        "records": 720
+      },
+      "@2": {
+        "full_pass": 135,
+        "denominator": 720,
+        "full_pass_rate": 18.75,
+        "S_scen": 37.20649347749509,
+        "S_step": 39.68709591519866,
+        "records": 510
+      },
+      "@3": {
+        "full_pass": 188,
+        "denominator": 720,
+        "full_pass_rate": 26.111111111111114,
+        "S_scen": 39.100142115932194,
+        "S_step": 40.439550789636755,
+        "records": 510
+      }
+    }
+  },
+  "models": {
+    "GPT-5.4 nano": {
+      "@1": {
+        "full_pass": 5,
+        "denominator": 240,
+        "full_pass_rate": 2.083333333333333,
+        "S_scen": 17.53258090478714,
+        "S_step": 32.001199260931564,
+        "records": 240
+      },
+      "@2": {
+        "full_pass": 7,
+        "denominator": 240,
+        "full_pass_rate": 2.9166666666666665,
+        "S_scen": 15.202883070231996,
+        "S_step": 26.49989745165412,
+        "records": 190
+      },
+      "@3": {
+        "full_pass": 10,
+        "denominator": 240,
+        "full_pass_rate": 4.166666666666666,
+        "S_scen": 18.861964512742855,
+        "S_step": 30.213763065705773,
+        "records": 190
+      }
+    },
+    "Claude Haiku 4.5": {
+      "@1": {
+        "full_pass": 1,
+        "denominator": 240,
+        "full_pass_rate": 0.4166666666666667,
+        "S_scen": 14.321864024752504,
+        "S_step": 31.520759445168682,
+        "records": 240
+      },
+      "@2": {
+        "full_pass": 0,
+        "denominator": 240,
+        "full_pass_rate": 0.0,
+        "S_scen": 8.146238351880555,
+        "S_step": 14.854418247056397,
+        "records": 190
+      },
+      "@3": {
+        "full_pass": 2,
+        "denominator": 240,
+        "full_pass_rate": 0.8333333333333334,
+        "S_scen": 15.388180740279184,
+        "S_step": 24.00577838145961,
+        "records": 190
+      }
+    },
+    "Gemini 3.1 Flash Lite": {
+      "@1": {
+        "full_pass": 0,
+        "denominator": 240,
+        "full_pass_rate": 0.0,
+        "S_scen": 0.929265023022673,
+        "S_step": 10.92086254750352,
+        "records": 240
+      },
+      "@2": {
+        "full_pass": 0,
+        "denominator": 240,
+        "full_pass_rate": 0.0,
+        "S_scen": 0.7211978315380657,
+        "S_step": 5.797860917261953,
+        "records": 190
+      },
+      "@3": {
+        "full_pass": 0,
+        "denominator": 240,
+        "full_pass_rate": 0.0,
+        "S_scen": 2.4289758806630157,
+        "S_step": 12.096684489585499,
+        "records": 190
+      }
+    },
+    "GPT-5.4 mini": {
+      "@1": {
+        "full_pass": 3,
+        "denominator": 240,
+        "full_pass_rate": 1.25,
+        "S_scen": 4.254863002409149,
+        "S_step": 13.491418931519467,
+        "records": 240
+      },
+      "@2": {
+        "full_pass": 0,
+        "denominator": 240,
+        "full_pass_rate": 0.0,
+        "S_scen": 2.2015741393791144,
+        "S_step": 8.15946952285534,
+        "records": 190
+      },
+      "@3": {
+        "full_pass": 1,
+        "denominator": 240,
+        "full_pass_rate": 0.4166666666666667,
+        "S_scen": 3.439502067641097,
+        "S_step": 9.938488690494394,
+        "records": 190
+      }
+    },
+    "Claude Sonnet 4.6": {
+      "@1": {
+        "full_pass": 46,
+        "denominator": 240,
+        "full_pass_rate": 19.166666666666668,
+        "S_scen": 54.97555653362104,
+        "S_step": 67.41890016497122,
+        "records": 240
+      },
+      "@2": {
+        "full_pass": 32,
+        "denominator": 240,
+        "full_pass_rate": 13.333333333333334,
+        "S_scen": 29.559601149228044,
+        "S_step": 32.686398045592696,
+        "records": 190
+      },
+      "@3": {
+        "full_pass": 38,
+        "denominator": 240,
+        "full_pass_rate": 15.833333333333332,
+        "S_scen": 30.261796896652836,
+        "S_step": 33.02837109991318,
+        "records": 190
+      }
+    },
+    "Gemini 3.1 Flash": {
+      "@1": {
+        "full_pass": 23,
+        "denominator": 240,
+        "full_pass_rate": 9.583333333333334,
+        "S_scen": 36.539280607686536,
+        "S_step": 50.85374539978545,
+        "records": 240
+      },
+      "@2": {
+        "full_pass": 11,
+        "denominator": 240,
+        "full_pass_rate": 4.583333333333333,
+        "S_scen": 10.57937401396838,
+        "S_step": 12.316885822321497,
+        "records": 190
+      },
+      "@3": {
+        "full_pass": 13,
+        "denominator": 240,
+        "full_pass_rate": 5.416666666666667,
+        "S_scen": 9.151607786129484,
+        "S_step": 9.989465255909675,
+        "records": 190
+      }
+    },
+    "GPT-5.4": {
+      "@1": {
+        "full_pass": 47,
+        "denominator": 240,
+        "full_pass_rate": 19.583333333333332,
+        "S_scen": 68.37938329423488,
+        "S_step": 81.0425942770297,
+        "records": 240
+      },
+      "@2": {
+        "full_pass": 43,
+        "denominator": 240,
+        "full_pass_rate": 17.916666666666668,
+        "S_scen": 42.37895538263164,
+        "S_step": 45.99423627513838,
+        "records": 170
+      },
+      "@3": {
+        "full_pass": 65,
+        "denominator": 240,
+        "full_pass_rate": 27.083333333333332,
+        "S_scen": 44.24615318214003,
+        "S_step": 46.53976287469848,
+        "records": 170
+      }
+    },
+    "Claude Opus 4.6": {
+      "@1": {
+        "full_pass": 69,
+        "denominator": 240,
+        "full_pass_rate": 28.749999999999996,
+        "S_scen": 70.83843586966597,
+        "S_step": 82.30415055079925,
+        "records": 240
+      },
+      "@2": {
+        "full_pass": 47,
+        "denominator": 240,
+        "full_pass_rate": 19.583333333333332,
+        "S_scen": 29.501218056735475,
+        "S_step": 30.437004932381257,
+        "records": 170
+      },
+      "@3": {
+        "full_pass": 57,
+        "denominator": 240,
+        "full_pass_rate": 23.75,
+        "S_scen": 29.056347240795738,
+        "S_step": 29.34233431535557,
+        "records": 170
+      }
+    },
+    "Gemini 3.1 Pro Preview": {
+      "@1": {
+        "full_pass": 58,
+        "denominator": 240,
+        "full_pass_rate": 24.166666666666668,
+        "S_scen": 62.32431292170845,
+        "S_step": 74.6569459653908,
+        "records": 240
+      },
+      "@2": {
+        "full_pass": 45,
+        "denominator": 240,
+        "full_pass_rate": 18.75,
+        "S_scen": 39.73930699311816,
+        "S_step": 42.63004653807634,
+        "records": 170
+      },
+      "@3": {
+        "full_pass": 66,
+        "denominator": 240,
+        "full_pass_rate": 27.500000000000004,
+        "S_scen": 43.99792592486082,
+        "S_step": 45.43655517885622,
+        "records": 170
+      }
+    }
+  }
+}

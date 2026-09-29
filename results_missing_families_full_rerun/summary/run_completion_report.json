@@ -1,0 +1,26 @@
+{
+  "static_blind_at1": {
+    "expected": 1080,
+    "generated": 1080,
+    "evaluated": 1046,
+    "missing": 0,
+    "failed": 34,
+    "completed": 1080
+  },
+  "public_feedback_repair_at1_at2_at3": {
+    "expected": 3240,
+    "generated": 1080,
+    "evaluated": 2904,
+    "missing": 0,
+    "failed": 323,
+    "completed": 3244
+  },
+  "backend_backed": {
+    "expected": 1080,
+    "generated": 1075,
+    "evaluated": 1008,
+    "missing": 0,
+    "failed": 72,
+    "completed": 1080
+  }
+}

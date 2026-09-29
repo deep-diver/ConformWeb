@@ -1,36 +1,35 @@
-\begin{table*}[t]
+\begin{table*}[!t]
 \centering
 \scriptsize
-\caption{Model-level behavioral conformance and tier stress. Panel A and Panel B use the complete 2,160-run paper scope after filling the three previously missing evaluation results. Individual model rows use explicit per-model raw summaries or retained per-model report rows; no model-level values are inferred from group aggregates.}
+\caption{Quantitative evaluation of LLM behavioral conformance and complexity tier stress across the full six-family matrix. Each cell reports @1 original blind generation, @2 first public-feedback repair, and @3 second public-feedback repair. Strict metrics use expected-run denominators and count failed or unevaluated runs as zero-score outcomes.}
 \label{tab:model-tier-conformance}
 \setlength{\tabcolsep}{3.0pt}
-\renewcommand{\arraystretch}{1.08}
+\renewcommand{\arraystretch}{1.2}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}llccccccc@{}}
 \toprule
-Group & Model & Full pass & $S_{\mathrm{scen}}$ & $S_{\mathrm{step}}$ & A & B & C & D \\
-\midrule
-\multicolumn{9}{@{}l}{\textit{Panel A: complete blind full-pass evidence}} \\
-All & Complete aggregate & 252/2160 (11.7\%) & 36.7\% & 49.4\% & 116/540 (21.5\%) & 82/540 (15.2\%) & 44/540 (8.1\%) & 10/540 (1.9\%) \\
-\midrule
+& & & & & \multicolumn{4}{c}{\textbf{Complexity Tier}} \\ \cmidrule(l){6-9}
+Group & Model & Full pass & $S_{\mathrm{scen}}$ & $S_{\mathrm{step}}$ & Tier A & Tier B & Tier C & Tier D \\
+\midrule[2pt]
+\multicolumn{9}{@{}l}{\textit{Panel A: complete full-matrix evidence with public-feedback repair rounds}} \\
+All & \textbf{Complete aggregate} & \shortstack[l]{@1 249/2160 (11.5\%)\\@2 406/2160 (18.8\%)\\@3 505/2160 (23.4\%)} & \shortstack[l]{@1 37.0\%\\@2 44.0\%\\@3 48.1\%} & \shortstack[l]{@1 47.7\%\\@2 53.7\%\\@3 57.6\%} & \shortstack[l]{@1 115/540 (21.3\%)\\@2 169/540 (31.3\%)\\@3 200/540 (37.0\%)} & \shortstack[l]{@1 86/540 (15.9\%)\\@2 140/540 (25.9\%)\\@3 175/540 (32.4\%)} & \shortstack[l]{@1 38/540 (7.0\%)\\@2 76/540 (14.1\%)\\@3 92/540 (17.0\%)} & \shortstack[l]{@1 10/540 (1.9\%)\\@2 21/540 (3.9\%)\\@3 38/540 (7.0\%)}  \\
+\midrule[2pt]
 \multicolumn{9}{@{}l}{\textit{Panel B: model-level conformance and tier stress}} \\
-\textbf{Mini} & \textbf{Group aggregate} & \textbf{6/720 (0.8\%)} & \textbf{10.9\%} & \textbf{24.8\%} & \textbf{1/180 (0.6\%)} & \textbf{2/180 (1.1\%)} & \textbf{3/180 (1.7\%)} & \textbf{0/180 (0.0\%)} \\
-& GPT-5.4 nano & 5/240 (2.1\%) & 17.5\% & 32.0\% & 0/60 (0.0\%) & 2/60 (3.3\%) & 3/60 (5.0\%) & 0/60 (0.0\%) \\
-& Claude Haiku 4.5 & 1/240 (0.4\%) & 14.3\% & 31.5\% & 1/60 (1.7\%) & 0/60 (0.0\%) & 0/60 (0.0\%) & 0/60 (0.0\%) \\
-& Gemini 3.1 Flash Lite & 0/240 (0.0\%) & 0.9\% & 10.9\% & 0/60 (0.0\%) & 0/60 (0.0\%) & 0/60 (0.0\%) & 0/60 (0.0\%) \\
+\textbf{Mini} & \textbf{Group aggregate} & \textbf{\shortstack[l]{@1 8/720 (1.1\%)\\@2 32/720 (4.4\%)\\@3 47/720 (6.5\%)}} & \textbf{\shortstack[l]{@1 11.8\%\\@2 22.8\%\\@3 28.6\%}} & \textbf{\shortstack[l]{@1 24.1\%\\@2 39.9\%\\@3 46.2\%}} & \textbf{\shortstack[l]{@1 4/180 (2.2\%)\\@2 12/180 (6.7\%)\\@3 21/180 (11.7\%)}} & \textbf{\shortstack[l]{@1 3/180 (1.7\%)\\@2 13/180 (7.2\%)\\@3 19/180 (10.6\%)}} & \textbf{\shortstack[l]{@1 1/180 (0.6\%)\\@2 7/180 (3.9\%)\\@3 7/180 (3.9\%)}} & \textbf{\shortstack[l]{@1 0/180 (0.0\%)\\@2 0/180 (0.0\%)\\@3 0/180 (0.0\%)}} \\
+& GPT-5.4 nano & \shortstack[l]{@1 4/240 (1.7\%)\\@2 18/240 (7.5\%)\\@3 24/240 (10.0\%)} & \shortstack[l]{@1 17.2\%\\@2 30.2\%\\@3 35.4\%} & \shortstack[l]{@1 29.3\%\\@2 46.7\%\\@3 52.0\%} & \shortstack[l]{@1 2/60 (3.3\%)\\@2 7/60 (11.7\%)\\@3 11/60 (18.3\%)} & \shortstack[l]{@1 1/60 (1.7\%)\\@2 5/60 (8.3\%)\\@3 7/60 (11.7\%)} & \shortstack[l]{@1 1/60 (1.7\%)\\@2 6/60 (10.0\%)\\@3 6/60 (10.0\%)} & \shortstack[l]{@1 0/60 (0.0\%)\\@2 0/60 (0.0\%)\\@3 0/60 (0.0\%)} \\
+& Claude Haiku 4.5 & \shortstack[l]{@1 4/240 (1.7\%)\\@2 14/240 (5.8\%)\\@3 23/240 (9.6\%)} & \shortstack[l]{@1 17.0\%\\@2 33.5\%\\@3 43.8\%} & \shortstack[l]{@1 32.4\%\\@2 51.0\%\\@3 60.9\%} & \shortstack[l]{@1 2/60 (3.3\%)\\@2 5/60 (8.3\%)\\@3 10/60 (16.7\%)} & \shortstack[l]{@1 2/60 (3.3\%)\\@2 8/60 (13.3\%)\\@3 12/60 (20.0\%)} & \shortstack[l]{@1 0/60 (0.0\%)\\@2 1/60 (1.7\%)\\@3 1/60 (1.7\%)} & \shortstack[l]{@1 0/60 (0.0\%)\\@2 0/60 (0.0\%)\\@3 0/60 (0.0\%)} \\
+& Gemini 3.1 Flash Lite & \shortstack[l]{@1 0/240 (0.0\%)\\@2 0/240 (0.0\%)\\@3 0/240 (0.0\%)} & \shortstack[l]{@1 1.1\%\\@2 4.8\%\\@3 6.6\%} & \shortstack[l]{@1 10.7\%\\@2 21.9\%\\@3 25.6\%} & \shortstack[l]{@1 0/60 (0.0\%)\\@2 0/60 (0.0\%)\\@3 0/60 (0.0\%)} & \shortstack[l]{@1 0/60 (0.0\%)\\@2 0/60 (0.0\%)\\@3 0/60 (0.0\%)} & \shortstack[l]{@1 0/60 (0.0\%)\\@2 0/60 (0.0\%)\\@3 0/60 (0.0\%)} & \shortstack[l]{@1 0/60 (0.0\%)\\@2 0/60 (0.0\%)\\@3 0/60 (0.0\%)} \\
 \midrule
-\textbf{Turbo} & \textbf{Group aggregate} & \textbf{72/720 (10.0\%)} & \textbf{31.9\%} & \textbf{43.9\%} & \textbf{35/180 (19.4\%)} & \textbf{22/180 (12.2\%)} & \textbf{12/180 (6.7\%)} & \textbf{3/180 (1.7\%)} \\
-& GPT-5.4 mini & 3/240 (1.2\%) & 4.3\% & 13.5\% & 3/60 (5.0\%) & 0/60 (0.0\%) & 0/60 (0.0\%) & 0/60 (0.0\%) \\
-& Claude Sonnet 4.6 & 46/240 (19.2\%) & 55.0\% & 67.4\% & 19/60 (31.7\%) & 14/60 (23.3\%) & 10/60 (16.7\%) & 3/60 (5.0\%) \\
-& Gemini 3.1 Flash & 23/240 (9.6\%) & 36.5\% & 50.9\% & 13/60 (21.7\%) & 8/60 (13.3\%) & 2/60 (3.3\%) & 0/60 (0.0\%) \\
+\textbf{Turbo} & \textbf{Group aggregate} & \textbf{\shortstack[l]{@1 66/720 (9.2\%)\\@2 107/720 (14.9\%)\\@3 131/720 (18.2\%)}} & \textbf{\shortstack[l]{@1 33.1\%\\@2 33.4\%\\@3 36.5\%}} & \textbf{\shortstack[l]{@1 43.3\%\\@2 39.7\%\\@3 42.8\%}} & \textbf{\shortstack[l]{@1 34/180 (18.9\%)\\@2 49/180 (27.2\%)\\@3 54/180 (30.0\%)}} & \textbf{\shortstack[l]{@1 21/180 (11.7\%)\\@2 39/180 (21.7\%)\\@3 51/180 (28.3\%)}} & \textbf{\shortstack[l]{@1 6/180 (3.3\%)\\@2 13/180 (7.2\%)\\@3 18/180 (10.0\%)}} & \textbf{\shortstack[l]{@1 5/180 (2.8\%)\\@2 6/180 (3.3\%)\\@3 8/180 (4.4\%)}} \\
+& GPT-5.4 mini & \shortstack[l]{@1 1/240 (0.4\%)\\@2 2/240 (0.8\%)\\@3 5/240 (2.1\%)} & \shortstack[l]{@1 3.9\%\\@2 8.0\%\\@3 10.9\%} & \shortstack[l]{@1 13.3\%\\@2 18.9\%\\@3 23.1\%} & \shortstack[l]{@1 1/60 (1.7\%)\\@2 1/60 (1.7\%)\\@3 3/60 (5.0\%)} & \shortstack[l]{@1 0/60 (0.0\%)\\@2 1/60 (1.7\%)\\@3 2/60 (3.3\%)} & \shortstack[l]{@1 0/60 (0.0\%)\\@2 0/60 (0.0\%)\\@3 0/60 (0.0\%)} & \shortstack[l]{@1 0/60 (0.0\%)\\@2 0/60 (0.0\%)\\@3 0/60 (0.0\%)} \\
+& Claude Sonnet 4.6 & \shortstack[l]{@1 43/240 (17.9\%)\\@2 70/240 (29.2\%)\\@3 79/240 (32.9\%)} & \shortstack[l]{@1 57.9\%\\@2 60.2\%\\@3 59.8\%} & \shortstack[l]{@1 67.8\%\\@2 64.9\%\\@3 63.2\%} & \shortstack[l]{@1 19/60 (31.7\%)\\@2 29/60 (48.3\%)\\@3 31/60 (51.7\%)} & \shortstack[l]{@1 15/60 (25.0\%)\\@2 26/60 (43.3\%)\\@3 31/60 (51.7\%)} & \shortstack[l]{@1 4/60 (6.7\%)\\@2 9/60 (15.0\%)\\@3 11/60 (18.3\%)} & \shortstack[l]{@1 5/60 (8.3\%)\\@2 6/60 (10.0\%)\\@3 6/60 (10.0\%)} \\
+& Gemini 3.1 Flash & \shortstack[l]{@1 22/240 (9.2\%)\\@2 35/240 (14.6\%)\\@3 47/240 (19.6\%)} & \shortstack[l]{@1 37.4\%\\@2 32.0\%\\@3 38.7\%} & \shortstack[l]{@1 48.7\%\\@2 35.2\%\\@3 42.0\%} & \shortstack[l]{@1 14/60 (23.3\%)\\@2 19/60 (31.7\%)\\@3 20/60 (33.3\%)} & \shortstack[l]{@1 6/60 (10.0\%)\\@2 12/60 (20.0\%)\\@3 18/60 (30.0\%)} & \shortstack[l]{@1 2/60 (3.3\%)\\@2 4/60 (6.7\%)\\@3 7/60 (11.7\%)} & \shortstack[l]{@1 0/60 (0.0\%)\\@2 0/60 (0.0\%)\\@3 2/60 (3.3\%)} \\
 \midrule
-\textbf{Frontier} & \textbf{Group aggregate} & \textbf{174/720 (24.2\%)} & \textbf{67.2\%} & \textbf{79.3\%} & \textbf{80/180 (44.4\%)} & \textbf{58/180 (32.2\%)} & \textbf{29/180 (16.1\%)} & \textbf{7/180 (3.9\%)} \\
-& GPT-5.4 & 47/240 (19.6\%) & 68.4\% & 81.0\% & 23/60 (38.3\%) & 17/60 (28.3\%) & 3/60 (5.0\%) & 4/60 (6.7\%) \\
-& Claude Opus 4.6 & 69/240 (28.8\%) & 70.8\% & 82.3\% & 32/60 (53.3\%) & 22/60 (36.7\%) & 15/60 (25.0\%) & 0/60 (0.0\%) \\
-& Gemini 3.1 Pro Preview & 58/240 (24.2\%) & 62.3\% & 74.7\% & 25/60 (41.7\%) & 19/60 (31.7\%) & 11/60 (18.3\%) & 3/60 (5.0\%) \\
+\textbf{Frontier} & \textbf{Group aggregate} & \textbf{\shortstack[l]{@1 175/720 (24.3\%)\\@2 267/720 (37.1\%)\\@3 327/720 (45.4\%)}} & \textbf{\shortstack[l]{@1 66.3\%\\@2 75.8\%\\@3 79.4\%}} & \textbf{\shortstack[l]{@1 75.6\%\\@2 81.7\%\\@3 83.8\%}} & \textbf{\shortstack[l]{@1 77/180 (42.8\%)\\@2 108/180 (60.0\%)\\@3 125/180 (69.4\%)}} & \textbf{\shortstack[l]{@1 62/180 (34.4\%)\\@2 88/180 (48.9\%)\\@3 105/180 (58.3\%)}} & \textbf{\shortstack[l]{@1 31/180 (17.2\%)\\@2 56/180 (31.1\%)\\@3 67/180 (37.2\%)}} & \textbf{\shortstack[l]{@1 5/180 (2.8\%)\\@2 15/180 (8.3\%)\\@3 30/180 (16.7\%)}} \\
+& GPT-5.4 & \shortstack[l]{@1 48/240 (20.0\%)\\@2 94/240 (39.2\%)\\@3 126/240 (52.5\%)} & \shortstack[l]{@1 66.3\%\\@2 80.8\%\\@3 84.8\%} & \shortstack[l]{@1 75.8\%\\@2 87.3\%\\@3 89.5\%} & \shortstack[l]{@1 16/60 (26.7\%)\\@2 34/60 (56.7\%)\\@3 44/60 (73.3\%)} & \shortstack[l]{@1 23/60 (38.3\%)\\@2 38/60 (63.3\%)\\@3 47/60 (78.3\%)} & \shortstack[l]{@1 7/60 (11.7\%)\\@2 14/60 (23.3\%)\\@3 23/60 (38.3\%)} & \shortstack[l]{@1 2/60 (3.3\%)\\@2 8/60 (13.3\%)\\@3 12/60 (20.0\%)} \\
+& Claude Opus 4.6 & \shortstack[l]{@1 69/240 (28.7\%)\\@2 86/240 (35.8\%)\\@3 91/240 (37.9\%)} & \shortstack[l]{@1 70.8\%\\@2 65.1\%\\@3 66.3\%} & \shortstack[l]{@1 78.6\%\\@2 69.1\%\\@3 69.9\%} & \shortstack[l]{@1 34/60 (56.7\%)\\@2 39/60 (65.0\%)\\@3 41/60 (68.3\%)} & \shortstack[l]{@1 22/60 (36.7\%)\\@2 24/60 (40.0\%)\\@3 24/60 (40.0\%)} & \shortstack[l]{@1 13/60 (21.7\%)\\@2 22/60 (36.7\%)\\@3 23/60 (38.3\%)} & \shortstack[l]{@1 0/60 (0.0\%)\\@2 1/60 (1.7\%)\\@3 3/60 (5.0\%)} \\
+& Gemini 3.1 Pro Preview & \shortstack[l]{@1 58/240 (24.2\%)\\@2 87/240 (36.2\%)\\@3 110/240 (45.8\%)} & \shortstack[l]{@1 61.8\%\\@2 81.6\%\\@3 87.0\%} & \shortstack[l]{@1 72.4\%\\@2 88.6\%\\@3 91.9\%} & \shortstack[l]{@1 27/60 (45.0\%)\\@2 35/60 (58.3\%)\\@3 40/60 (66.7\%)} & \shortstack[l]{@1 17/60 (28.3\%)\\@2 26/60 (43.3\%)\\@3 34/60 (56.7\%)} & \shortstack[l]{@1 11/60 (18.3\%)\\@2 20/60 (33.3\%)\\@3 21/60 (35.0\%)} & \shortstack[l]{@1 3/60 (5.0\%)\\@2 6/60 (10.0\%)\\@3 15/60 (25.0\%)} \\
 \bottomrule
 \end{tabular}%
 }
-\vspace{2pt}
-\footnotesize{\emph{Note.} Denominators are reportable runs. The complete aggregate has 2,160 reportable generations. Some retained per-model rows come from evaluation reports or tier README rollups rather than low-level raw summaries; no individual model value is inferred from a group aggregate.}
 \end{table*}

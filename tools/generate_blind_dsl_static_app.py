@@ -584,7 +584,7 @@ def generate_payload(
     request_timeout: int,
 ) -> tuple[dict, dict]:
     if provider == "openai":
-        return generate_openai_payload(model, prompt, max_output_tokens, base_url)
+        return generate_openai_payload(model, prompt, max_output_tokens, base_url, request_timeout)
     if provider == "anthropic":
         return generate_anthropic_payload(model, prompt, max_output_tokens, base_url, request_timeout)
     if provider == "google":
@@ -616,10 +616,11 @@ def generate_openai_payload(
     prompt: str,
     max_output_tokens: int,
     base_url: str | None,
+    request_timeout: int,
 ) -> tuple[dict, dict]:
     from openai import OpenAI
 
-    client_kwargs = {"api_key": os.environ.get("OPENAI_API_KEY")}
+    client_kwargs = {"api_key": os.environ.get("OPENAI_API_KEY"), "timeout": request_timeout, "max_retries": 0}
     if base_url:
         client_kwargs["base_url"] = base_url
     client = OpenAI(**client_kwargs)

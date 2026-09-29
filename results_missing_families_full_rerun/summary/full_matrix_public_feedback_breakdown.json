@@ -1,0 +1,3239 @@
+{
+  "overall": {
+    "@1": {
+      "expected_runs": 2160,
+      "full_pass_count": 249,
+      "strict_full_pass_rate": 0.11527777777777778,
+      "strict_S_scen": 0.3704316832608039,
+      "strict_S_step": 0.47665851974811735
+    },
+    "@2": {
+      "expected_runs": 2160,
+      "full_pass_count": 406,
+      "strict_full_pass_rate": 0.18796296296296297,
+      "strict_S_scen": 0.44004937060752697,
+      "strict_S_step": 0.5374727002426486
+    },
+    "@3": {
+      "expected_runs": 2160,
+      "full_pass_count": 505,
+      "strict_full_pass_rate": 0.2337962962962963,
+      "strict_S_scen": 0.4814365920988265,
+      "strict_S_step": 0.5757593581191178
+    }
+  },
+  "by_group": {
+    "F": {
+      "@1": {
+        "expected_runs": 720,
+        "full_pass_count": 175,
+        "strict_full_pass_rate": 0.24305555555555555,
+        "strict_S_scen": 0.662984071776557,
+        "strict_S_step": 0.7559709535222598
+      },
+      "@2": {
+        "expected_runs": 720,
+        "full_pass_count": 267,
+        "strict_full_pass_rate": 0.37083333333333335,
+        "strict_S_scen": 0.7584265817677228,
+        "strict_S_step": 0.8168310667914258
+      },
+      "@3": {
+        "expected_runs": 720,
+        "full_pass_count": 327,
+        "strict_full_pass_rate": 0.45416666666666666,
+        "strict_S_scen": 0.7935795817282711,
+        "strict_S_step": 0.8378240822384798
+      }
+    },
+    "M": {
+      "@1": {
+        "expected_runs": 720,
+        "full_pass_count": 8,
+        "strict_full_pass_rate": 0.011111111111111112,
+        "strict_S_scen": 0.11770571738800958,
+        "strict_S_step": 0.24120989186944605
+      },
+      "@2": {
+        "expected_runs": 720,
+        "full_pass_count": 32,
+        "strict_full_pass_rate": 0.044444444444444446,
+        "strict_S_scen": 0.22805816185769387,
+        "strict_S_step": 0.39863644295151063
+      },
+      "@3": {
+        "expected_runs": 720,
+        "full_pass_count": 47,
+        "strict_full_pass_rate": 0.06527777777777778,
+        "strict_S_scen": 0.28617569210328325,
+        "strict_S_step": 0.46191225095865496
+      }
+    },
+    "T": {
+      "@1": {
+        "expected_runs": 720,
+        "full_pass_count": 66,
+        "strict_full_pass_rate": 0.09166666666666666,
+        "strict_S_scen": 0.3306052606178451,
+        "strict_S_step": 0.43279471385264623
+      },
+      "@2": {
+        "expected_runs": 720,
+        "full_pass_count": 107,
+        "strict_full_pass_rate": 0.1486111111111111,
+        "strict_S_scen": 0.3336633681971643,
+        "strict_S_step": 0.3969505909850095
+      },
+      "@3": {
+        "expected_runs": 720,
+        "full_pass_count": 131,
+        "strict_full_pass_rate": 0.18194444444444444,
+        "strict_S_scen": 0.3645545024649251,
+        "strict_S_step": 0.42754174116021876
+      }
+    }
+  },
+  "by_model": {
+    "gpt54_nano": {
+      "model": "gpt54_nano",
+      "model_label": "GPT-5.4 nano",
+      "model_group": "M",
+      "model_group_label": "Mini",
+      "rounds": {
+        "@1": {
+          "expected_runs": 240,
+          "full_pass_count": 4,
+          "strict_full_pass_rate": 0.016666666666666666,
+          "strict_S_scen": 0.17184676419678216,
+          "strict_S_step": 0.2928615192153869
+        },
+        "@2": {
+          "expected_runs": 240,
+          "full_pass_count": 18,
+          "strict_full_pass_rate": 0.075,
+          "strict_S_scen": 0.30184758447984433,
+          "strict_S_step": 0.4671628994656276
+        },
+        "@3": {
+          "expected_runs": 240,
+          "full_pass_count": 24,
+          "strict_full_pass_rate": 0.1,
+          "strict_S_scen": 0.3538736628784774,
+          "strict_S_step": 0.5204186416710439
+        }
+      },
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.2517512077294686,
+            "strict_S_step": 0.38358927636753604
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 7,
+            "strict_full_pass_rate": 0.11666666666666667,
+            "strict_S_scen": 0.4378019323671498,
+            "strict_S_step": 0.5923286559472044
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 11,
+            "strict_full_pass_rate": 0.18333333333333332,
+            "strict_S_scen": 0.5186292270531401,
+            "strict_S_step": 0.6584263277382438
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.20642633228840127,
+            "strict_S_step": 0.36944670248461364
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 5,
+            "strict_full_pass_rate": 0.08333333333333333,
+            "strict_S_scen": 0.3992075931731104,
+            "strict_S_step": 0.5786981737200609
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 7,
+            "strict_full_pass_rate": 0.11666666666666667,
+            "strict_S_scen": 0.45661790316962736,
+            "strict_S_step": 0.6439466812270441
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.09745319302764083,
+            "strict_S_step": 0.17192962602329195
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 6,
+            "strict_full_pass_rate": 0.1,
+            "strict_S_scen": 0.20672603986405036,
+            "strict_S_step": 0.34599683510121176
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 6,
+            "strict_full_pass_rate": 0.1,
+            "strict_S_scen": 0.2714875343418169,
+            "strict_S_step": 0.43248779652533803
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.13175632374161786,
+            "strict_S_step": 0.24648047198610595
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.16365477251506663,
+            "strict_S_step": 0.3516279330940336
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.16875998694932517,
+            "strict_S_step": 0.34681376119354984
+          }
+        }
+      }
+    },
+    "claude_haiku45": {
+      "model": "claude_haiku45",
+      "model_label": "Claude Haiku 4.5",
+      "model_group": "M",
+      "model_group_label": "Mini",
+      "rounds": {
+        "@1": {
+          "expected_runs": 240,
+          "full_pass_count": 4,
+          "strict_full_pass_rate": 0.016666666666666666,
+          "strict_S_scen": 0.16998206905851915,
+          "strict_S_step": 0.32359169942804833
+        },
+        "@2": {
+          "expected_runs": 240,
+          "full_pass_count": 14,
+          "strict_full_pass_rate": 0.058333333333333334,
+          "strict_S_scen": 0.33464663106684267,
+          "strict_S_step": 0.5097400914506304
+        },
+        "@3": {
+          "expected_runs": 240,
+          "full_pass_count": 23,
+          "strict_full_pass_rate": 0.09583333333333334,
+          "strict_S_scen": 0.4383460643459767,
+          "strict_S_step": 0.6089263415847224
+        }
+      },
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.23671497584541062,
+            "strict_S_step": 0.3999790985069545
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 5,
+            "strict_full_pass_rate": 0.08333333333333333,
+            "strict_S_scen": 0.46654589371980676,
+            "strict_S_step": 0.6338045904019532
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 10,
+            "strict_full_pass_rate": 0.16666666666666666,
+            "strict_S_scen": 0.5247282608695653,
+            "strict_S_step": 0.6898209981272446
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.1869949494949495,
+            "strict_S_step": 0.3536411339290511
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 8,
+            "strict_full_pass_rate": 0.13333333333333333,
+            "strict_S_scen": 0.32641065830721,
+            "strict_S_step": 0.5197776304098735
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 12,
+            "strict_full_pass_rate": 0.2,
+            "strict_S_scen": 0.49285527690700104,
+            "strict_S_step": 0.6744958914327103
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.11803532578973545,
+            "strict_S_step": 0.2601292855884298
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.29881380638007043,
+            "strict_S_step": 0.4673129791647248
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.3974918430264052,
+            "strict_S_step": 0.5561419442947686
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.13818302510398098,
+            "strict_S_step": 0.2806172796877577
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.24681616586028354,
+            "strict_S_step": 0.41806516582596986
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.33830887658093545,
+            "strict_S_step": 0.5152465324841663
+          }
+        }
+      }
+    },
+    "gemini31_flash_lite": {
+      "model": "gemini31_flash_lite",
+      "model_label": "Gemini 3.1 Flash Lite",
+      "model_group": "M",
+      "model_group_label": "Mini",
+      "rounds": {
+        "@1": {
+          "expected_runs": 240,
+          "full_pass_count": 0,
+          "strict_full_pass_rate": 0.0,
+          "strict_S_scen": 0.011288318908727453,
+          "strict_S_step": 0.10717645696490287
+        },
+        "@2": {
+          "expected_runs": 240,
+          "full_pass_count": 0,
+          "strict_full_pass_rate": 0.0,
+          "strict_S_scen": 0.047680270026394654,
+          "strict_S_step": 0.21900633793827395
+        },
+        "@3": {
+          "expected_runs": 240,
+          "full_pass_count": 0,
+          "strict_full_pass_rate": 0.0,
+          "strict_S_scen": 0.0663073490853956,
+          "strict_S_step": 0.2563917696201984
+        }
+      },
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.029257246376811596,
+            "strict_S_step": 0.16800558045237543
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.1386171497584541,
+            "strict_S_step": 0.3696661028618069
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.18294082125603864,
+            "strict_S_step": 0.4407673480453061
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.015517241379310345,
+            "strict_S_step": 0.09863479879438909
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.04564176245210728,
+            "strict_S_step": 0.22574843816236154
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.0694052594914664,
+            "strict_S_step": 0.268001658210621
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.0003787878787878788,
+            "strict_S_step": 0.0872693701887786
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.004669888483252538,
+            "strict_S_step": 0.1445088067390298
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.006464081233666486,
+            "strict_S_step": 0.17010989763039988
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.0,
+            "strict_S_step": 0.07479607842406837
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.001792279411764706,
+            "strict_S_step": 0.13610200398989747
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.006419234360410832,
+            "strict_S_step": 0.1466881745944665
+          }
+        }
+      }
+    },
+    "gpt54_mini": {
+      "model": "gpt54_mini",
+      "model_label": "GPT-5.4 mini",
+      "model_group": "T",
+      "model_group_label": "Turbo",
+      "rounds": {
+        "@1": {
+          "expected_runs": 240,
+          "full_pass_count": 1,
+          "strict_full_pass_rate": 0.004166666666666667,
+          "strict_S_scen": 0.03923888294345508,
+          "strict_S_step": 0.1328036193096833
+        },
+        "@2": {
+          "expected_runs": 240,
+          "full_pass_count": 2,
+          "strict_full_pass_rate": 0.008333333333333333,
+          "strict_S_scen": 0.07953690852118218,
+          "strict_S_step": 0.18943391973470863
+        },
+        "@3": {
+          "expected_runs": 240,
+          "full_pass_count": 5,
+          "strict_full_pass_rate": 0.020833333333333332,
+          "strict_S_scen": 0.10935304811011504,
+          "strict_S_step": 0.23063407623700752
+        }
+      },
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.08740942028985509,
+            "strict_S_step": 0.20338112829202531
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.14619565217391306,
+            "strict_S_step": 0.26120316124016274
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 3,
+            "strict_full_pass_rate": 0.05,
+            "strict_S_scen": 0.18278985507246376,
+            "strict_S_step": 0.2947393910765925
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.038314176245210725,
+            "strict_S_step": 0.15216858079090925
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.08874521072796934,
+            "strict_S_step": 0.23116547480714555
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.10922152560083595,
+            "strict_S_step": 0.2526433801464156
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.015448642755094368,
+            "strict_S_step": 0.10514066487685936
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.051834222163238526,
+            "strict_S_step": 0.15932441656622778
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.09876171862990549,
+            "strict_S_step": 0.22807420526710379
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.01578329248366013,
+            "strict_S_step": 0.07052410327893928
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.03137254901960784,
+            "strict_S_step": 0.10604262632529848
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.0466390931372549,
+            "strict_S_step": 0.14707932845791807
+          }
+        }
+      }
+    },
+    "claude_sonnet46": {
+      "model": "claude_sonnet46",
+      "model_label": "Claude Sonnet 4.6",
+      "model_group": "T",
+      "model_group_label": "Turbo",
+      "rounds": {
+        "@1": {
+          "expected_runs": 240,
+          "full_pass_count": 43,
+          "strict_full_pass_rate": 0.17916666666666667,
+          "strict_S_scen": 0.5788553828499513,
+          "strict_S_step": 0.6782885943507232
+        },
+        "@2": {
+          "expected_runs": 240,
+          "full_pass_count": 70,
+          "strict_full_pass_rate": 0.2916666666666667,
+          "strict_S_scen": 0.6019077938383348,
+          "strict_S_step": 0.649253635566883
+        },
+        "@3": {
+          "expected_runs": 240,
+          "full_pass_count": 79,
+          "strict_full_pass_rate": 0.32916666666666666,
+          "strict_S_scen": 0.5977540316857525,
+          "strict_S_step": 0.6316334898249814
+        }
+      },
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 19,
+            "strict_full_pass_rate": 0.31666666666666665,
+            "strict_S_scen": 0.6410326086956523,
+            "strict_S_step": 0.7154330487796308
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 29,
+            "strict_full_pass_rate": 0.48333333333333334,
+            "strict_S_scen": 0.7269625603864734,
+            "strict_S_step": 0.7583032179780652
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 31,
+            "strict_full_pass_rate": 0.5166666666666667,
+            "strict_S_scen": 0.7532608695652174,
+            "strict_S_step": 0.7709573514885568
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 15,
+            "strict_full_pass_rate": 0.25,
+            "strict_S_scen": 0.6016718913270637,
+            "strict_S_step": 0.7058993768770114
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 26,
+            "strict_full_pass_rate": 0.43333333333333335,
+            "strict_S_scen": 0.6031609195402299,
+            "strict_S_step": 0.6352402811872172
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 31,
+            "strict_full_pass_rate": 0.5166666666666667,
+            "strict_S_scen": 0.6270114942528735,
+            "strict_S_step": 0.6406690555343516
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 4,
+            "strict_full_pass_rate": 0.06666666666666667,
+            "strict_S_scen": 0.5398497556789309,
+            "strict_S_step": 0.6525091836389635
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 9,
+            "strict_full_pass_rate": 0.15,
+            "strict_S_scen": 0.5178306465767931,
+            "strict_S_step": 0.5692010565690554
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 11,
+            "strict_full_pass_rate": 0.18333333333333332,
+            "strict_S_scen": 0.503033148376069,
+            "strict_S_step": 0.5402662824387954
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 5,
+            "strict_full_pass_rate": 0.08333333333333333,
+            "strict_S_scen": 0.5328672756981581,
+            "strict_S_step": 0.6393127681072871
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 6,
+            "strict_full_pass_rate": 0.1,
+            "strict_S_scen": 0.5596770488498429,
+            "strict_S_step": 0.6342699865331944
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 6,
+            "strict_full_pass_rate": 0.1,
+            "strict_S_scen": 0.5077106145488498,
+            "strict_S_step": 0.5746412698382214
+          }
+        }
+      }
+    },
+    "gemini_flash_latest": {
+      "model": "gemini_flash_latest",
+      "model_label": "Gemini 3.1 Flash",
+      "model_group": "T",
+      "model_group_label": "Turbo",
+      "rounds": {
+        "@1": {
+          "expected_runs": 240,
+          "full_pass_count": 22,
+          "strict_full_pass_rate": 0.09166666666666666,
+          "strict_S_scen": 0.373721516060129,
+          "strict_S_step": 0.48729192789753195
+        },
+        "@2": {
+          "expected_runs": 240,
+          "full_pass_count": 35,
+          "strict_full_pass_rate": 0.14583333333333334,
+          "strict_S_scen": 0.3195454022319758,
+          "strict_S_step": 0.3521642176534368
+        },
+        "@3": {
+          "expected_runs": 240,
+          "full_pass_count": 47,
+          "strict_full_pass_rate": 0.19583333333333333,
+          "strict_S_scen": 0.38655642759890785,
+          "strict_S_step": 0.4203576574186675
+        }
+      },
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 14,
+            "strict_full_pass_rate": 0.23333333333333334,
+            "strict_S_scen": 0.5227355072463769,
+            "strict_S_step": 0.6184933115536905
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 19,
+            "strict_full_pass_rate": 0.31666666666666665,
+            "strict_S_scen": 0.4976147342995169,
+            "strict_S_step": 0.518111302151256
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 20,
+            "strict_full_pass_rate": 0.3333333333333333,
+            "strict_S_scen": 0.5948671497584541,
+            "strict_S_step": 0.6243055764055426
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 6,
+            "strict_full_pass_rate": 0.1,
+            "strict_S_scen": 0.3677159526297457,
+            "strict_S_step": 0.4892428728792953
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 12,
+            "strict_full_pass_rate": 0.2,
+            "strict_S_scen": 0.3739115290839429,
+            "strict_S_step": 0.40878731136666246
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 18,
+            "strict_full_pass_rate": 0.3,
+            "strict_S_scen": 0.366862591431557,
+            "strict_S_step": 0.38638799956801306
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.35793314014234084,
+            "strict_S_step": 0.4974183950721628
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 4,
+            "strict_full_pass_rate": 0.06666666666666667,
+            "strict_S_scen": 0.2414945861649342,
+            "strict_S_step": 0.26994922578444525
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 7,
+            "strict_full_pass_rate": 0.11666666666666667,
+            "strict_S_scen": 0.3110870639768622,
+            "strict_S_step": 0.3537897864702301
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.24650146422205246,
+            "strict_S_step": 0.34401313208497936
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.1651607593795094,
+            "strict_S_step": 0.21180903131138354
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.2734089052287582,
+            "strict_S_step": 0.31694726723088423
+          }
+        }
+      }
+    },
+    "gpt54": {
+      "model": "gpt54",
+      "model_label": "GPT-5.4",
+      "model_group": "F",
+      "model_group_label": "Frontier",
+      "rounds": {
+        "@1": {
+          "expected_runs": 240,
+          "full_pass_count": 48,
+          "strict_full_pass_rate": 0.2,
+          "strict_S_scen": 0.6626334047984417,
+          "strict_S_step": 0.7578251372165375
+        },
+        "@2": {
+          "expected_runs": 240,
+          "full_pass_count": 94,
+          "strict_full_pass_rate": 0.39166666666666666,
+          "strict_S_scen": 0.8080529298061335,
+          "strict_S_step": 0.8733455343943842
+        },
+        "@3": {
+          "expected_runs": 240,
+          "full_pass_count": 126,
+          "strict_full_pass_rate": 0.525,
+          "strict_S_scen": 0.8477091437979765,
+          "strict_S_step": 0.8947711511789059
+        }
+      },
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 16,
+            "strict_full_pass_rate": 0.26666666666666666,
+            "strict_S_scen": 0.7520833333333333,
+            "strict_S_step": 0.8444943956517463
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 34,
+            "strict_full_pass_rate": 0.5666666666666667,
+            "strict_S_scen": 0.9046195652173914,
+            "strict_S_step": 0.9567038823431908
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 44,
+            "strict_full_pass_rate": 0.7333333333333333,
+            "strict_S_scen": 0.9307367149758454,
+            "strict_S_step": 0.9539584677681834
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 23,
+            "strict_full_pass_rate": 0.38333333333333336,
+            "strict_S_scen": 0.7696969696969697,
+            "strict_S_step": 0.8486331336797519
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 38,
+            "strict_full_pass_rate": 0.6333333333333333,
+            "strict_S_scen": 0.9168321142459074,
+            "strict_S_step": 0.9577026652307057
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 47,
+            "strict_full_pass_rate": 0.7833333333333333,
+            "strict_S_scen": 0.9492554858934169,
+            "strict_S_step": 0.9704072975297616
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 7,
+            "strict_full_pass_rate": 0.11666666666666667,
+            "strict_S_scen": 0.5997146097718162,
+            "strict_S_step": 0.7074327707538067
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 14,
+            "strict_full_pass_rate": 0.23333333333333334,
+            "strict_S_scen": 0.7763751323891956,
+            "strict_S_step": 0.8560664553658928
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 23,
+            "strict_full_pass_rate": 0.38333333333333336,
+            "strict_S_scen": 0.8397979197559684,
+            "strict_S_step": 0.9001882931632508
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.5290387063916476,
+            "strict_S_step": 0.6307402487808452
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 8,
+            "strict_full_pass_rate": 0.13333333333333333,
+            "strict_S_scen": 0.6343849073720397,
+            "strict_S_step": 0.722909134637748
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 12,
+            "strict_full_pass_rate": 0.2,
+            "strict_S_scen": 0.6710464545666751,
+            "strict_S_step": 0.7545305462544276
+          }
+        }
+      }
+    },
+    "claude_opus46": {
+      "model": "claude_opus46",
+      "model_label": "Claude Opus 4.6",
+      "model_group": "F",
+      "model_group_label": "Frontier",
+      "rounds": {
+        "@1": {
+          "expected_runs": 240,
+          "full_pass_count": 69,
+          "strict_full_pass_rate": 0.2875,
+          "strict_S_scen": 0.7082644131512834,
+          "strict_S_step": 0.786499416071157
+        },
+        "@2": {
+          "expected_runs": 240,
+          "full_pass_count": 86,
+          "strict_full_pass_rate": 0.35833333333333334,
+          "strict_S_scen": 0.6512983791188022,
+          "strict_S_step": 0.6909685647872671
+        },
+        "@3": {
+          "expected_runs": 240,
+          "full_pass_count": 91,
+          "strict_full_pass_rate": 0.37916666666666665,
+          "strict_S_scen": 0.6634804282130545,
+          "strict_S_step": 0.699392541241327
+        }
+      },
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 34,
+            "strict_full_pass_rate": 0.5666666666666667,
+            "strict_S_scen": 0.8254227053140096,
+            "strict_S_step": 0.8771398007916326
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 39,
+            "strict_full_pass_rate": 0.65,
+            "strict_S_scen": 0.851298309178744,
+            "strict_S_step": 0.8728892007676331
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 41,
+            "strict_full_pass_rate": 0.6833333333333333,
+            "strict_S_scen": 0.8894625603864734,
+            "strict_S_step": 0.9081082351908388
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 22,
+            "strict_full_pass_rate": 0.36666666666666664,
+            "strict_S_scen": 0.7629049111807732,
+            "strict_S_step": 0.8381031820047663
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 24,
+            "strict_full_pass_rate": 0.4,
+            "strict_S_scen": 0.6679380006966213,
+            "strict_S_step": 0.7049289133494651
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 24,
+            "strict_full_pass_rate": 0.4,
+            "strict_S_scen": 0.6794322535701846,
+            "strict_S_step": 0.7128988464314572
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 13,
+            "strict_full_pass_rate": 0.21666666666666667,
+            "strict_S_scen": 0.6356608118297298,
+            "strict_S_step": 0.7228841952961683
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 22,
+            "strict_full_pass_rate": 0.36666666666666664,
+            "strict_S_scen": 0.6376679192940118,
+            "strict_S_step": 0.6923705217424544
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 23,
+            "strict_full_pass_rate": 0.38333333333333336,
+            "strict_S_scen": 0.5995593027661993,
+            "strict_S_step": 0.645920056056017
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.6090692242806213,
+            "strict_S_step": 0.7078704861920608
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.44828928730583145,
+            "strict_S_step": 0.4936856232895159
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 3,
+            "strict_full_pass_rate": 0.05,
+            "strict_S_scen": 0.48546759612936086,
+            "strict_S_step": 0.5306430272869951
+          }
+        }
+      }
+    },
+    "gemini31_pro_preview": {
+      "model": "gemini31_pro_preview",
+      "model_label": "Gemini 3.1 Pro Preview",
+      "model_group": "F",
+      "model_group_label": "Frontier",
+      "rounds": {
+        "@1": {
+          "expected_runs": 240,
+          "full_pass_count": 58,
+          "strict_full_pass_rate": 0.24166666666666667,
+          "strict_S_scen": 0.6180543973799459,
+          "strict_S_step": 0.7235883072790851
+        },
+        "@2": {
+          "expected_runs": 240,
+          "full_pass_count": 87,
+          "strict_full_pass_rate": 0.3625,
+          "strict_S_scen": 0.8159284363782326,
+          "strict_S_step": 0.886179101192626
+        },
+        "@3": {
+          "expected_runs": 240,
+          "full_pass_count": 110,
+          "strict_full_pass_rate": 0.4583333333333333,
+          "strict_S_scen": 0.8695491731737824,
+          "strict_S_step": 0.9193085542952066
+        }
+      },
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 27,
+            "strict_full_pass_rate": 0.45,
+            "strict_S_scen": 0.7958635265700482,
+            "strict_S_step": 0.8517310810138172
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 35,
+            "strict_full_pass_rate": 0.5833333333333334,
+            "strict_S_scen": 0.8751207729468599,
+            "strict_S_step": 0.9110482791167732
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 40,
+            "strict_full_pass_rate": 0.6666666666666666,
+            "strict_S_scen": 0.9259057971014493,
+            "strict_S_step": 0.9496849783068266
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 17,
+            "strict_full_pass_rate": 0.2833333333333333,
+            "strict_S_scen": 0.6492946708463949,
+            "strict_S_step": 0.7491800136091048
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 26,
+            "strict_full_pass_rate": 0.43333333333333335,
+            "strict_S_scen": 0.8691832114245908,
+            "strict_S_step": 0.9221228484262111
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 34,
+            "strict_full_pass_rate": 0.5666666666666667,
+            "strict_S_scen": 0.9009926854754442,
+            "strict_S_step": 0.935307106821102
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 11,
+            "strict_full_pass_rate": 0.18333333333333332,
+            "strict_S_scen": 0.5848523293539979,
+            "strict_S_step": 0.7109756938235581
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 20,
+            "strict_full_pass_rate": 0.3333333333333333,
+            "strict_S_scen": 0.8033695268659514,
+            "strict_S_step": 0.8732644433724848
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 21,
+            "strict_full_pass_rate": 0.35,
+            "strict_S_scen": 0.8114401096810917,
+            "strict_S_step": 0.8800714223038555
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 3,
+            "strict_full_pass_rate": 0.05,
+            "strict_S_scen": 0.4422070627493422,
+            "strict_S_step": 0.5824664406698599
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 6,
+            "strict_full_pass_rate": 0.1,
+            "strict_S_scen": 0.7160402342755283,
+            "strict_S_step": 0.838280833855035
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 15,
+            "strict_full_pass_rate": 0.25,
+            "strict_S_scen": 0.8398581004371446,
+            "strict_S_step": 0.9121707097490425
+          }
+        }
+      }
+    }
+  },
+  "by_tier": {
+    "A": {
+      "@1": {
+        "expected_runs": 540,
+        "full_pass_count": 115,
+        "strict_full_pass_rate": 0.21296296296296297,
+        "strict_S_scen": 0.460252281266774,
+        "strict_S_step": 0.5624718579343787
+      },
+      "@2": {
+        "expected_runs": 540,
+        "full_pass_count": 169,
+        "strict_full_pass_rate": 0.31296296296296294,
+        "strict_S_scen": 0.5605307300053676,
+        "strict_S_step": 0.6526731547564495
+      },
+      "@3": {
+        "expected_runs": 540,
+        "full_pass_count": 200,
+        "strict_full_pass_rate": 0.37037037037037035,
+        "strict_S_scen": 0.6114801395598498,
+        "strict_S_step": 0.6989742971274817
+      }
+    },
+    "B": {
+      "@1": {
+        "expected_runs": 540,
+        "full_pass_count": 86,
+        "strict_full_pass_rate": 0.15925925925925927,
+        "strict_S_scen": 0.3998374550098688,
+        "strict_S_step": 0.5116610883387659
+      },
+      "@2": {
+        "expected_runs": 540,
+        "full_pass_count": 140,
+        "strict_full_pass_rate": 0.25925925925925924,
+        "strict_S_scen": 0.47678122218352104,
+        "strict_S_step": 0.5760190818510781
+      },
+      "@3": {
+        "expected_runs": 540,
+        "full_pass_count": 175,
+        "strict_full_pass_rate": 0.32407407407407407,
+        "strict_S_scen": 0.5168504973102674,
+        "strict_S_step": 0.6094175463223863
+      }
+    },
+    "C": {
+      "@1": {
+        "expected_runs": 540,
+        "full_pass_count": 38,
+        "strict_full_pass_rate": 0.07037037037037037,
+        "strict_S_scen": 0.32770295513645264,
+        "strict_S_step": 0.4350765761402243
+      },
+      "@2": {
+        "expected_runs": 540,
+        "full_pass_count": 76,
+        "strict_full_pass_rate": 0.14074074074074075,
+        "strict_S_scen": 0.3931979742423887,
+        "strict_S_step": 0.48644386004505846
+      },
+      "@3": {
+        "expected_runs": 540,
+        "full_pass_count": 92,
+        "strict_full_pass_rate": 0.17037037037037037,
+        "strict_S_scen": 0.42656919130977605,
+        "strict_S_step": 0.5230055204610844
+      }
+    },
+    "D": {
+      "@1": {
+        "expected_runs": 540,
+        "full_pass_count": 10,
+        "strict_full_pass_rate": 0.018518518518518517,
+        "strict_S_scen": 0.29393404163012005,
+        "strict_S_step": 0.3974245565791004
+      },
+      "@2": {
+        "expected_runs": 540,
+        "full_pass_count": 21,
+        "strict_full_pass_rate": 0.03888888888888889,
+        "strict_S_scen": 0.3296875559988305,
+        "strict_S_step": 0.4347547043180085
+      },
+      "@3": {
+        "expected_runs": 540,
+        "full_pass_count": 38,
+        "strict_full_pass_rate": 0.07037037037037037,
+        "strict_S_scen": 0.37084654021541275,
+        "strict_S_step": 0.47164006856551904
+      }
+    }
+  },
+  "by_model_tier": {
+    "gpt54_nano": {
+      "model": "gpt54_nano",
+      "model_label": "GPT-5.4 nano",
+      "model_group": "M",
+      "model_group_label": "Mini",
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.2517512077294686,
+            "strict_S_step": 0.38358927636753604
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 7,
+            "strict_full_pass_rate": 0.11666666666666667,
+            "strict_S_scen": 0.4378019323671498,
+            "strict_S_step": 0.5923286559472044
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 11,
+            "strict_full_pass_rate": 0.18333333333333332,
+            "strict_S_scen": 0.5186292270531401,
+            "strict_S_step": 0.6584263277382438
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.20642633228840127,
+            "strict_S_step": 0.36944670248461364
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 5,
+            "strict_full_pass_rate": 0.08333333333333333,
+            "strict_S_scen": 0.3992075931731104,
+            "strict_S_step": 0.5786981737200609
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 7,
+            "strict_full_pass_rate": 0.11666666666666667,
+            "strict_S_scen": 0.45661790316962736,
+            "strict_S_step": 0.6439466812270441
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.09745319302764083,
+            "strict_S_step": 0.17192962602329195
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 6,
+            "strict_full_pass_rate": 0.1,
+            "strict_S_scen": 0.20672603986405036,
+            "strict_S_step": 0.34599683510121176
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 6,
+            "strict_full_pass_rate": 0.1,
+            "strict_S_scen": 0.2714875343418169,
+            "strict_S_step": 0.43248779652533803
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.13175632374161786,
+            "strict_S_step": 0.24648047198610595
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.16365477251506663,
+            "strict_S_step": 0.3516279330940336
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.16875998694932517,
+            "strict_S_step": 0.34681376119354984
+          }
+        }
+      }
+    },
+    "claude_haiku45": {
+      "model": "claude_haiku45",
+      "model_label": "Claude Haiku 4.5",
+      "model_group": "M",
+      "model_group_label": "Mini",
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.23671497584541062,
+            "strict_S_step": 0.3999790985069545
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 5,
+            "strict_full_pass_rate": 0.08333333333333333,
+            "strict_S_scen": 0.46654589371980676,
+            "strict_S_step": 0.6338045904019532
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 10,
+            "strict_full_pass_rate": 0.16666666666666666,
+            "strict_S_scen": 0.5247282608695653,
+            "strict_S_step": 0.6898209981272446
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.1869949494949495,
+            "strict_S_step": 0.3536411339290511
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 8,
+            "strict_full_pass_rate": 0.13333333333333333,
+            "strict_S_scen": 0.32641065830721,
+            "strict_S_step": 0.5197776304098735
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 12,
+            "strict_full_pass_rate": 0.2,
+            "strict_S_scen": 0.49285527690700104,
+            "strict_S_step": 0.6744958914327103
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.11803532578973545,
+            "strict_S_step": 0.2601292855884298
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.29881380638007043,
+            "strict_S_step": 0.4673129791647248
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.3974918430264052,
+            "strict_S_step": 0.5561419442947686
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.13818302510398098,
+            "strict_S_step": 0.2806172796877577
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.24681616586028354,
+            "strict_S_step": 0.41806516582596986
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.33830887658093545,
+            "strict_S_step": 0.5152465324841663
+          }
+        }
+      }
+    },
+    "gemini31_flash_lite": {
+      "model": "gemini31_flash_lite",
+      "model_label": "Gemini 3.1 Flash Lite",
+      "model_group": "M",
+      "model_group_label": "Mini",
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.029257246376811596,
+            "strict_S_step": 0.16800558045237543
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.1386171497584541,
+            "strict_S_step": 0.3696661028618069
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.18294082125603864,
+            "strict_S_step": 0.4407673480453061
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.015517241379310345,
+            "strict_S_step": 0.09863479879438909
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.04564176245210728,
+            "strict_S_step": 0.22574843816236154
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.0694052594914664,
+            "strict_S_step": 0.268001658210621
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.0003787878787878788,
+            "strict_S_step": 0.0872693701887786
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.004669888483252538,
+            "strict_S_step": 0.1445088067390298
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.006464081233666486,
+            "strict_S_step": 0.17010989763039988
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.0,
+            "strict_S_step": 0.07479607842406837
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.001792279411764706,
+            "strict_S_step": 0.13610200398989747
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.006419234360410832,
+            "strict_S_step": 0.1466881745944665
+          }
+        }
+      }
+    },
+    "gpt54_mini": {
+      "model": "gpt54_mini",
+      "model_label": "GPT-5.4 mini",
+      "model_group": "T",
+      "model_group_label": "Turbo",
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.08740942028985509,
+            "strict_S_step": 0.20338112829202531
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.14619565217391306,
+            "strict_S_step": 0.26120316124016274
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 3,
+            "strict_full_pass_rate": 0.05,
+            "strict_S_scen": 0.18278985507246376,
+            "strict_S_step": 0.2947393910765925
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.038314176245210725,
+            "strict_S_step": 0.15216858079090925
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.08874521072796934,
+            "strict_S_step": 0.23116547480714555
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.10922152560083595,
+            "strict_S_step": 0.2526433801464156
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.015448642755094368,
+            "strict_S_step": 0.10514066487685936
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.051834222163238526,
+            "strict_S_step": 0.15932441656622778
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.09876171862990549,
+            "strict_S_step": 0.22807420526710379
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.01578329248366013,
+            "strict_S_step": 0.07052410327893928
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.03137254901960784,
+            "strict_S_step": 0.10604262632529848
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.0466390931372549,
+            "strict_S_step": 0.14707932845791807
+          }
+        }
+      }
+    },
+    "claude_sonnet46": {
+      "model": "claude_sonnet46",
+      "model_label": "Claude Sonnet 4.6",
+      "model_group": "T",
+      "model_group_label": "Turbo",
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 19,
+            "strict_full_pass_rate": 0.31666666666666665,
+            "strict_S_scen": 0.6410326086956523,
+            "strict_S_step": 0.7154330487796308
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 29,
+            "strict_full_pass_rate": 0.48333333333333334,
+            "strict_S_scen": 0.7269625603864734,
+            "strict_S_step": 0.7583032179780652
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 31,
+            "strict_full_pass_rate": 0.5166666666666667,
+            "strict_S_scen": 0.7532608695652174,
+            "strict_S_step": 0.7709573514885568
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 15,
+            "strict_full_pass_rate": 0.25,
+            "strict_S_scen": 0.6016718913270637,
+            "strict_S_step": 0.7058993768770114
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 26,
+            "strict_full_pass_rate": 0.43333333333333335,
+            "strict_S_scen": 0.6031609195402299,
+            "strict_S_step": 0.6352402811872172
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 31,
+            "strict_full_pass_rate": 0.5166666666666667,
+            "strict_S_scen": 0.6270114942528735,
+            "strict_S_step": 0.6406690555343516
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 4,
+            "strict_full_pass_rate": 0.06666666666666667,
+            "strict_S_scen": 0.5398497556789309,
+            "strict_S_step": 0.6525091836389635
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 9,
+            "strict_full_pass_rate": 0.15,
+            "strict_S_scen": 0.5178306465767931,
+            "strict_S_step": 0.5692010565690554
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 11,
+            "strict_full_pass_rate": 0.18333333333333332,
+            "strict_S_scen": 0.503033148376069,
+            "strict_S_step": 0.5402662824387954
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 5,
+            "strict_full_pass_rate": 0.08333333333333333,
+            "strict_S_scen": 0.5328672756981581,
+            "strict_S_step": 0.6393127681072871
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 6,
+            "strict_full_pass_rate": 0.1,
+            "strict_S_scen": 0.5596770488498429,
+            "strict_S_step": 0.6342699865331944
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 6,
+            "strict_full_pass_rate": 0.1,
+            "strict_S_scen": 0.5077106145488498,
+            "strict_S_step": 0.5746412698382214
+          }
+        }
+      }
+    },
+    "gemini_flash_latest": {
+      "model": "gemini_flash_latest",
+      "model_label": "Gemini 3.1 Flash",
+      "model_group": "T",
+      "model_group_label": "Turbo",
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 14,
+            "strict_full_pass_rate": 0.23333333333333334,
+            "strict_S_scen": 0.5227355072463769,
+            "strict_S_step": 0.6184933115536905
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 19,
+            "strict_full_pass_rate": 0.31666666666666665,
+            "strict_S_scen": 0.4976147342995169,
+            "strict_S_step": 0.518111302151256
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 20,
+            "strict_full_pass_rate": 0.3333333333333333,
+            "strict_S_scen": 0.5948671497584541,
+            "strict_S_step": 0.6243055764055426
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 6,
+            "strict_full_pass_rate": 0.1,
+            "strict_S_scen": 0.3677159526297457,
+            "strict_S_step": 0.4892428728792953
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 12,
+            "strict_full_pass_rate": 0.2,
+            "strict_S_scen": 0.3739115290839429,
+            "strict_S_step": 0.40878731136666246
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 18,
+            "strict_full_pass_rate": 0.3,
+            "strict_S_scen": 0.366862591431557,
+            "strict_S_step": 0.38638799956801306
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.35793314014234084,
+            "strict_S_step": 0.4974183950721628
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 4,
+            "strict_full_pass_rate": 0.06666666666666667,
+            "strict_S_scen": 0.2414945861649342,
+            "strict_S_step": 0.26994922578444525
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 7,
+            "strict_full_pass_rate": 0.11666666666666667,
+            "strict_S_scen": 0.3110870639768622,
+            "strict_S_step": 0.3537897864702301
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.24650146422205246,
+            "strict_S_step": 0.34401313208497936
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.1651607593795094,
+            "strict_S_step": 0.21180903131138354
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.2734089052287582,
+            "strict_S_step": 0.31694726723088423
+          }
+        }
+      }
+    },
+    "gpt54": {
+      "model": "gpt54",
+      "model_label": "GPT-5.4",
+      "model_group": "F",
+      "model_group_label": "Frontier",
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 16,
+            "strict_full_pass_rate": 0.26666666666666666,
+            "strict_S_scen": 0.7520833333333333,
+            "strict_S_step": 0.8444943956517463
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 34,
+            "strict_full_pass_rate": 0.5666666666666667,
+            "strict_S_scen": 0.9046195652173914,
+            "strict_S_step": 0.9567038823431908
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 44,
+            "strict_full_pass_rate": 0.7333333333333333,
+            "strict_S_scen": 0.9307367149758454,
+            "strict_S_step": 0.9539584677681834
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 23,
+            "strict_full_pass_rate": 0.38333333333333336,
+            "strict_S_scen": 0.7696969696969697,
+            "strict_S_step": 0.8486331336797519
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 38,
+            "strict_full_pass_rate": 0.6333333333333333,
+            "strict_S_scen": 0.9168321142459074,
+            "strict_S_step": 0.9577026652307057
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 47,
+            "strict_full_pass_rate": 0.7833333333333333,
+            "strict_S_scen": 0.9492554858934169,
+            "strict_S_step": 0.9704072975297616
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 7,
+            "strict_full_pass_rate": 0.11666666666666667,
+            "strict_S_scen": 0.5997146097718162,
+            "strict_S_step": 0.7074327707538067
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 14,
+            "strict_full_pass_rate": 0.23333333333333334,
+            "strict_S_scen": 0.7763751323891956,
+            "strict_S_step": 0.8560664553658928
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 23,
+            "strict_full_pass_rate": 0.38333333333333336,
+            "strict_S_scen": 0.8397979197559684,
+            "strict_S_step": 0.9001882931632508
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.5290387063916476,
+            "strict_S_step": 0.6307402487808452
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 8,
+            "strict_full_pass_rate": 0.13333333333333333,
+            "strict_S_scen": 0.6343849073720397,
+            "strict_S_step": 0.722909134637748
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 12,
+            "strict_full_pass_rate": 0.2,
+            "strict_S_scen": 0.6710464545666751,
+            "strict_S_step": 0.7545305462544276
+          }
+        }
+      }
+    },
+    "claude_opus46": {
+      "model": "claude_opus46",
+      "model_label": "Claude Opus 4.6",
+      "model_group": "F",
+      "model_group_label": "Frontier",
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 34,
+            "strict_full_pass_rate": 0.5666666666666667,
+            "strict_S_scen": 0.8254227053140096,
+            "strict_S_step": 0.8771398007916326
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 39,
+            "strict_full_pass_rate": 0.65,
+            "strict_S_scen": 0.851298309178744,
+            "strict_S_step": 0.8728892007676331
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 41,
+            "strict_full_pass_rate": 0.6833333333333333,
+            "strict_S_scen": 0.8894625603864734,
+            "strict_S_step": 0.9081082351908388
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 22,
+            "strict_full_pass_rate": 0.36666666666666664,
+            "strict_S_scen": 0.7629049111807732,
+            "strict_S_step": 0.8381031820047663
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 24,
+            "strict_full_pass_rate": 0.4,
+            "strict_S_scen": 0.6679380006966213,
+            "strict_S_step": 0.7049289133494651
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 24,
+            "strict_full_pass_rate": 0.4,
+            "strict_S_scen": 0.6794322535701846,
+            "strict_S_step": 0.7128988464314572
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 13,
+            "strict_full_pass_rate": 0.21666666666666667,
+            "strict_S_scen": 0.6356608118297298,
+            "strict_S_step": 0.7228841952961683
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 22,
+            "strict_full_pass_rate": 0.36666666666666664,
+            "strict_S_scen": 0.6376679192940118,
+            "strict_S_step": 0.6923705217424544
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 23,
+            "strict_full_pass_rate": 0.38333333333333336,
+            "strict_S_scen": 0.5995593027661993,
+            "strict_S_step": 0.645920056056017
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.6090692242806213,
+            "strict_S_step": 0.7078704861920608
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.44828928730583145,
+            "strict_S_step": 0.4936856232895159
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 3,
+            "strict_full_pass_rate": 0.05,
+            "strict_S_scen": 0.48546759612936086,
+            "strict_S_step": 0.5306430272869951
+          }
+        }
+      }
+    },
+    "gemini31_pro_preview": {
+      "model": "gemini31_pro_preview",
+      "model_label": "Gemini 3.1 Pro Preview",
+      "model_group": "F",
+      "model_group_label": "Frontier",
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 27,
+            "strict_full_pass_rate": 0.45,
+            "strict_S_scen": 0.7958635265700482,
+            "strict_S_step": 0.8517310810138172
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 35,
+            "strict_full_pass_rate": 0.5833333333333334,
+            "strict_S_scen": 0.8751207729468599,
+            "strict_S_step": 0.9110482791167732
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 40,
+            "strict_full_pass_rate": 0.6666666666666666,
+            "strict_S_scen": 0.9259057971014493,
+            "strict_S_step": 0.9496849783068266
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 17,
+            "strict_full_pass_rate": 0.2833333333333333,
+            "strict_S_scen": 0.6492946708463949,
+            "strict_S_step": 0.7491800136091048
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 26,
+            "strict_full_pass_rate": 0.43333333333333335,
+            "strict_S_scen": 0.8691832114245908,
+            "strict_S_step": 0.9221228484262111
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 34,
+            "strict_full_pass_rate": 0.5666666666666667,
+            "strict_S_scen": 0.9009926854754442,
+            "strict_S_step": 0.935307106821102
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 11,
+            "strict_full_pass_rate": 0.18333333333333332,
+            "strict_S_scen": 0.5848523293539979,
+            "strict_S_step": 0.7109756938235581
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 20,
+            "strict_full_pass_rate": 0.3333333333333333,
+            "strict_S_scen": 0.8033695268659514,
+            "strict_S_step": 0.8732644433724848
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 21,
+            "strict_full_pass_rate": 0.35,
+            "strict_S_scen": 0.8114401096810917,
+            "strict_S_step": 0.8800714223038555
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 60,
+            "full_pass_count": 3,
+            "strict_full_pass_rate": 0.05,
+            "strict_S_scen": 0.4422070627493422,
+            "strict_S_step": 0.5824664406698599
+          },
+          "@2": {
+            "expected_runs": 60,
+            "full_pass_count": 6,
+            "strict_full_pass_rate": 0.1,
+            "strict_S_scen": 0.7160402342755283,
+            "strict_S_step": 0.838280833855035
+          },
+          "@3": {
+            "expected_runs": 60,
+            "full_pass_count": 15,
+            "strict_full_pass_rate": 0.25,
+            "strict_S_scen": 0.8398581004371446,
+            "strict_S_step": 0.9121707097490425
+          }
+        }
+      }
+    }
+  },
+  "by_group_tier": {
+    "M": {
+      "A": {
+        "@1": {
+          "expected_runs": 180,
+          "full_pass_count": 4,
+          "strict_full_pass_rate": 0.022222222222222223,
+          "strict_S_scen": 0.17257447665056358,
+          "strict_S_step": 0.31719131844228865
+        },
+        "@2": {
+          "expected_runs": 180,
+          "full_pass_count": 12,
+          "strict_full_pass_rate": 0.06666666666666667,
+          "strict_S_scen": 0.3476549919484702,
+          "strict_S_step": 0.5319331164036549
+        },
+        "@3": {
+          "expected_runs": 180,
+          "full_pass_count": 21,
+          "strict_full_pass_rate": 0.11666666666666667,
+          "strict_S_scen": 0.40876610305958133,
+          "strict_S_step": 0.5963382246369315
+        }
+      },
+      "B": {
+        "@1": {
+          "expected_runs": 180,
+          "full_pass_count": 3,
+          "strict_full_pass_rate": 0.016666666666666666,
+          "strict_S_scen": 0.13631284105422037,
+          "strict_S_step": 0.2739075450693513
+        },
+        "@2": {
+          "expected_runs": 180,
+          "full_pass_count": 13,
+          "strict_full_pass_rate": 0.07222222222222222,
+          "strict_S_scen": 0.2570866713108092,
+          "strict_S_step": 0.4414080807640986
+        },
+        "@3": {
+          "expected_runs": 180,
+          "full_pass_count": 19,
+          "strict_full_pass_rate": 0.10555555555555556,
+          "strict_S_scen": 0.33962614652269824,
+          "strict_S_step": 0.5288147436234585
+        }
+      },
+      "C": {
+        "@1": {
+          "expected_runs": 180,
+          "full_pass_count": 1,
+          "strict_full_pass_rate": 0.005555555555555556,
+          "strict_S_scen": 0.07195576889872138,
+          "strict_S_step": 0.17310942726683345
+        },
+        "@2": {
+          "expected_runs": 180,
+          "full_pass_count": 7,
+          "strict_full_pass_rate": 0.03888888888888889,
+          "strict_S_scen": 0.1700699115757911,
+          "strict_S_step": 0.3192728736683221
+        },
+        "@3": {
+          "expected_runs": 180,
+          "full_pass_count": 7,
+          "strict_full_pass_rate": 0.03888888888888889,
+          "strict_S_scen": 0.22514781953396287,
+          "strict_S_step": 0.38624654615016885
+        }
+      },
+      "D": {
+        "@1": {
+          "expected_runs": 180,
+          "full_pass_count": 0,
+          "strict_full_pass_rate": 0.0,
+          "strict_S_scen": 0.08997978294853295,
+          "strict_S_step": 0.20063127669931063
+        },
+        "@2": {
+          "expected_runs": 180,
+          "full_pass_count": 0,
+          "strict_full_pass_rate": 0.0,
+          "strict_S_scen": 0.13742107259570496,
+          "strict_S_step": 0.30193170096996697
+        },
+        "@3": {
+          "expected_runs": 180,
+          "full_pass_count": 0,
+          "strict_full_pass_rate": 0.0,
+          "strict_S_scen": 0.17116269929689049,
+          "strict_S_step": 0.3362494894240609
+        }
+      }
+    },
+    "T": {
+      "A": {
+        "@1": {
+          "expected_runs": 180,
+          "full_pass_count": 34,
+          "strict_full_pass_rate": 0.18888888888888888,
+          "strict_S_scen": 0.41705917874396137,
+          "strict_S_step": 0.5124358295417822
+        },
+        "@2": {
+          "expected_runs": 180,
+          "full_pass_count": 49,
+          "strict_full_pass_rate": 0.2722222222222222,
+          "strict_S_scen": 0.45692431561996777,
+          "strict_S_step": 0.5125392271231614
+        },
+        "@3": {
+          "expected_runs": 180,
+          "full_pass_count": 54,
+          "strict_full_pass_rate": 0.3,
+          "strict_S_scen": 0.5103059581320452,
+          "strict_S_step": 0.563334106323564
+        }
+      },
+      "B": {
+        "@1": {
+          "expected_runs": 180,
+          "full_pass_count": 21,
+          "strict_full_pass_rate": 0.11666666666666667,
+          "strict_S_scen": 0.3359006734006734,
+          "strict_S_step": 0.4491036101824053
+        },
+        "@2": {
+          "expected_runs": 180,
+          "full_pass_count": 39,
+          "strict_full_pass_rate": 0.21666666666666667,
+          "strict_S_scen": 0.3552725531173807,
+          "strict_S_step": 0.42506435578700835
+        },
+        "@3": {
+          "expected_runs": 180,
+          "full_pass_count": 51,
+          "strict_full_pass_rate": 0.2833333333333333,
+          "strict_S_scen": 0.3676985370950888,
+          "strict_S_step": 0.42656681174959343
+        }
+      },
+      "C": {
+        "@1": {
+          "expected_runs": 180,
+          "full_pass_count": 6,
+          "strict_full_pass_rate": 0.03333333333333333,
+          "strict_S_scen": 0.30441051285878873,
+          "strict_S_step": 0.4183560811959952
+        },
+        "@2": {
+          "expected_runs": 180,
+          "full_pass_count": 13,
+          "strict_full_pass_rate": 0.07222222222222222,
+          "strict_S_scen": 0.27038648496832196,
+          "strict_S_step": 0.33282489963990947
+        },
+        "@3": {
+          "expected_runs": 180,
+          "full_pass_count": 18,
+          "strict_full_pass_rate": 0.1,
+          "strict_S_scen": 0.3042939769942789,
+          "strict_S_step": 0.3740434247253764
+        }
+      },
+      "D": {
+        "@1": {
+          "expected_runs": 180,
+          "full_pass_count": 5,
+          "strict_full_pass_rate": 0.027777777777777776,
+          "strict_S_scen": 0.26505067746795685,
+          "strict_S_step": 0.35128333449040194
+        },
+        "@2": {
+          "expected_runs": 180,
+          "full_pass_count": 6,
+          "strict_full_pass_rate": 0.03333333333333333,
+          "strict_S_scen": 0.25207011908298677,
+          "strict_S_step": 0.3173738813899588
+        },
+        "@3": {
+          "expected_runs": 180,
+          "full_pass_count": 8,
+          "strict_full_pass_rate": 0.044444444444444446,
+          "strict_S_scen": 0.27591953763828764,
+          "strict_S_step": 0.34622262184234126
+        }
+      }
+    },
+    "F": {
+      "A": {
+        "@1": {
+          "expected_runs": 180,
+          "full_pass_count": 77,
+          "strict_full_pass_rate": 0.42777777777777776,
+          "strict_S_scen": 0.7911231884057971,
+          "strict_S_step": 0.8577884258190653
+        },
+        "@2": {
+          "expected_runs": 180,
+          "full_pass_count": 108,
+          "strict_full_pass_rate": 0.6,
+          "strict_S_scen": 0.8770128824476651,
+          "strict_S_step": 0.9135471207425324
+        },
+        "@3": {
+          "expected_runs": 180,
+          "full_pass_count": 125,
+          "strict_full_pass_rate": 0.6944444444444444,
+          "strict_S_scen": 0.9153683574879228,
+          "strict_S_step": 0.9372505604219497
+        }
+      },
+      "B": {
+        "@1": {
+          "expected_runs": 180,
+          "full_pass_count": 62,
+          "strict_full_pass_rate": 0.34444444444444444,
+          "strict_S_scen": 0.7272988505747126,
+          "strict_S_step": 0.811972109764541
+        },
+        "@2": {
+          "expected_runs": 180,
+          "full_pass_count": 88,
+          "strict_full_pass_rate": 0.4888888888888889,
+          "strict_S_scen": 0.8179844421223731,
+          "strict_S_step": 0.8615848090021274
+        },
+        "@3": {
+          "expected_runs": 180,
+          "full_pass_count": 105,
+          "strict_full_pass_rate": 0.5833333333333334,
+          "strict_S_scen": 0.8432268083130152,
+          "strict_S_step": 0.8728710835941069
+        }
+      },
+      "C": {
+        "@1": {
+          "expected_runs": 180,
+          "full_pass_count": 31,
+          "strict_full_pass_rate": 0.17222222222222222,
+          "strict_S_scen": 0.606742583651848,
+          "strict_S_step": 0.7137642199578443
+        },
+        "@2": {
+          "expected_runs": 180,
+          "full_pass_count": 56,
+          "strict_full_pass_rate": 0.3111111111111111,
+          "strict_S_scen": 0.739137526183053,
+          "strict_S_step": 0.8072338068269441
+        },
+        "@3": {
+          "expected_runs": 180,
+          "full_pass_count": 67,
+          "strict_full_pass_rate": 0.37222222222222223,
+          "strict_S_scen": 0.7502657774010865,
+          "strict_S_step": 0.8087265905077078
+        }
+      },
+      "D": {
+        "@1": {
+          "expected_runs": 180,
+          "full_pass_count": 5,
+          "strict_full_pass_rate": 0.027777777777777776,
+          "strict_S_scen": 0.5267716644738704,
+          "strict_S_step": 0.6403590585475887
+        },
+        "@2": {
+          "expected_runs": 180,
+          "full_pass_count": 15,
+          "strict_full_pass_rate": 0.08333333333333333,
+          "strict_S_scen": 0.5995714763177998,
+          "strict_S_step": 0.6849585305940996
+        },
+        "@3": {
+          "expected_runs": 180,
+          "full_pass_count": 30,
+          "strict_full_pass_rate": 0.16666666666666666,
+          "strict_S_scen": 0.6654573837110602,
+          "strict_S_step": 0.7324480944301551
+        }
+      }
+    }
+  },
+  "by_family": {
+    "freshcart_market": {
+      "family": "freshcart_market",
+      "family_label": "FreshCart Market",
+      "rounds": {
+        "@1": {
+          "expected_runs": 360,
+          "full_pass_count": 20,
+          "strict_full_pass_rate": 0.05555555555555555,
+          "strict_S_scen": 0.27604143189842983,
+          "strict_S_step": 0.3861785813137046
+        },
+        "@2": {
+          "expected_runs": 360,
+          "full_pass_count": 35,
+          "strict_full_pass_rate": 0.09722222222222222,
+          "strict_S_scen": 0.3506746633272021,
+          "strict_S_step": 0.4588284904129298
+        },
+        "@3": {
+          "expected_runs": 360,
+          "full_pass_count": 52,
+          "strict_full_pass_rate": 0.14444444444444443,
+          "strict_S_scen": 0.37005497817715644,
+          "strict_S_step": 0.47333772146761494
+        }
+      }
+    },
+    "homefix_hub": {
+      "family": "homefix_hub",
+      "family_label": "HomeFix Hub",
+      "rounds": {
+        "@1": {
+          "expected_runs": 360,
+          "full_pass_count": 19,
+          "strict_full_pass_rate": 0.05277777777777778,
+          "strict_S_scen": 0.3539667064143665,
+          "strict_S_step": 0.47334364749150754
+        },
+        "@2": {
+          "expected_runs": 360,
+          "full_pass_count": 44,
+          "strict_full_pass_rate": 0.12222222222222222,
+          "strict_S_scen": 0.4415027888550056,
+          "strict_S_step": 0.5508906224788902
+        },
+        "@3": {
+          "expected_runs": 360,
+          "full_pass_count": 70,
+          "strict_full_pass_rate": 0.19444444444444445,
+          "strict_S_scen": 0.47065970185967104,
+          "strict_S_step": 0.5669714130652115
+        }
+      }
+    },
+    "stayflow_concierge": {
+      "family": "stayflow_concierge",
+      "family_label": "StayFlow Concierge",
+      "rounds": {
+        "@1": {
+          "expected_runs": 360,
+          "full_pass_count": 9,
+          "strict_full_pass_rate": 0.025,
+          "strict_S_scen": 0.30399369957878203,
+          "strict_S_step": 0.44973416813280986
+        },
+        "@2": {
+          "expected_runs": 360,
+          "full_pass_count": 26,
+          "strict_full_pass_rate": 0.07222222222222222,
+          "strict_S_scen": 0.3389901775302825,
+          "strict_S_step": 0.4768333018041519
+        },
+        "@3": {
+          "expected_runs": 360,
+          "full_pass_count": 39,
+          "strict_full_pass_rate": 0.10833333333333334,
+          "strict_S_scen": 0.3784918552628448,
+          "strict_S_step": 0.5121660186032795
+        }
+      }
+    },
+    "campus_registrar_command": {
+      "family": "campus_registrar_command",
+      "family_label": "Campus Registrar Command",
+      "rounds": {
+        "@1": {
+          "expected_runs": 360,
+          "full_pass_count": 70,
+          "strict_full_pass_rate": 0.19444444444444445,
+          "strict_S_scen": 0.43423719104500036,
+          "strict_S_step": 0.5251371495125272
+        },
+        "@2": {
+          "expected_runs": 360,
+          "full_pass_count": 113,
+          "strict_full_pass_rate": 0.3138888888888889,
+          "strict_S_scen": 0.5044901772969724,
+          "strict_S_step": 0.5880585957644342
+        },
+        "@3": {
+          "expected_runs": 360,
+          "full_pass_count": 132,
+          "strict_full_pass_rate": 0.36666666666666664,
+          "strict_S_scen": 0.5574637517842386,
+          "strict_S_step": 0.6370460082152537
+        }
+      }
+    },
+    "clinic_shift_command": {
+      "family": "clinic_shift_command",
+      "family_label": "Clinic Shift Command",
+      "rounds": {
+        "@1": {
+          "expected_runs": 360,
+          "full_pass_count": 48,
+          "strict_full_pass_rate": 0.13333333333333333,
+          "strict_S_scen": 0.40312001002218395,
+          "strict_S_step": 0.48258147705374
+        },
+        "@2": {
+          "expected_runs": 360,
+          "full_pass_count": 62,
+          "strict_full_pass_rate": 0.17222222222222222,
+          "strict_S_scen": 0.46057802101280365,
+          "strict_S_step": 0.5339128690889788
+        },
+        "@3": {
+          "expected_runs": 360,
+          "full_pass_count": 68,
+          "strict_full_pass_rate": 0.18888888888888888,
+          "strict_S_scen": 0.49783941702419965,
+          "strict_S_step": 0.5784590764998837
+        }
+      }
+    },
+    "media_campaign_launch_desk": {
+      "family": "media_campaign_launch_desk",
+      "family_label": "Media Campaign Launch Desk",
+      "rounds": {
+        "@1": {
+          "expected_runs": 360,
+          "full_pass_count": 83,
+          "strict_full_pass_rate": 0.23055555555555557,
+          "strict_S_scen": 0.4512310606060606,
+          "strict_S_step": 0.5429760949844148
+        },
+        "@2": {
+          "expected_runs": 360,
+          "full_pass_count": 126,
+          "strict_full_pass_rate": 0.35,
+          "strict_S_scen": 0.5440603956228957,
+          "strict_S_step": 0.6163123219065069
+        },
+        "@3": {
+          "expected_runs": 360,
+          "full_pass_count": 144,
+          "strict_full_pass_rate": 0.4,
+          "strict_S_scen": 0.6141098484848484,
+          "strict_S_step": 0.6865759108634636
+        }
+      }
+    }
+  },
+  "by_family_tier": {
+    "freshcart_market": {
+      "family": "freshcart_market",
+      "family_label": "FreshCart Market",
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 12,
+            "strict_full_pass_rate": 0.13333333333333333,
+            "strict_S_scen": 0.41481481481481486,
+            "strict_S_step": 0.5017366802840469
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 16,
+            "strict_full_pass_rate": 0.17777777777777778,
+            "strict_S_scen": 0.5212962962962963,
+            "strict_S_step": 0.611670287193258
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 19,
+            "strict_full_pass_rate": 0.2111111111111111,
+            "strict_S_scen": 0.5731481481481482,
+            "strict_S_step": 0.6627193779203013
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 3,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.2164750957854406,
+            "strict_S_step": 0.34746055579388907
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 7,
+            "strict_full_pass_rate": 0.07777777777777778,
+            "strict_S_scen": 0.3164750957854406,
+            "strict_S_step": 0.4311709870043203
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 10,
+            "strict_full_pass_rate": 0.1111111111111111,
+            "strict_S_scen": 0.33869731800766284,
+            "strict_S_step": 0.45059965809965813
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 4,
+            "strict_full_pass_rate": 0.044444444444444446,
+            "strict_S_scen": 0.24444444444444444,
+            "strict_S_step": 0.36455223352339045
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 9,
+            "strict_full_pass_rate": 0.1,
+            "strict_S_scen": 0.3025089605734767,
+            "strict_S_step": 0.41938828230132347
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 14,
+            "strict_full_pass_rate": 0.15555555555555556,
+            "strict_S_scen": 0.2860215053763441,
+            "strict_S_step": 0.3905112250874416
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.011111111111111112,
+            "strict_S_scen": 0.2284313725490196,
+            "strict_S_step": 0.33096485565349193
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 3,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.2624183006535948,
+            "strict_S_step": 0.3730844051528176
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 9,
+            "strict_full_pass_rate": 0.1,
+            "strict_S_scen": 0.2823529411764706,
+            "strict_S_step": 0.38952062476305876
+          }
+        }
+      }
+    },
+    "homefix_hub": {
+      "family": "homefix_hub",
+      "family_label": "HomeFix Hub",
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 11,
+            "strict_full_pass_rate": 0.12222222222222222,
+            "strict_S_scen": 0.41018518518518515,
+            "strict_S_step": 0.5391154694788416
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 21,
+            "strict_full_pass_rate": 0.23333333333333334,
+            "strict_S_scen": 0.47731481481481486,
+            "strict_S_step": 0.5725113538485631
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 30,
+            "strict_full_pass_rate": 0.3333333333333333,
+            "strict_S_scen": 0.5115740740740741,
+            "strict_S_step": 0.5941503210398559
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 6,
+            "strict_full_pass_rate": 0.06666666666666667,
+            "strict_S_scen": 0.38773946360153255,
+            "strict_S_step": 0.49407413849378135
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 15,
+            "strict_full_pass_rate": 0.16666666666666666,
+            "strict_S_scen": 0.4934865900383142,
+            "strict_S_step": 0.604191124682196
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 26,
+            "strict_full_pass_rate": 0.28888888888888886,
+            "strict_S_scen": 0.5425287356321838,
+            "strict_S_step": 0.638475208791429
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.022222222222222223,
+            "strict_S_scen": 0.3832199546485261,
+            "strict_S_step": 0.4774660136235581
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 7,
+            "strict_full_pass_rate": 0.07777777777777778,
+            "strict_S_scen": 0.47437641723356005,
+            "strict_S_step": 0.5610340860450229
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 11,
+            "strict_full_pass_rate": 0.12222222222222222,
+            "strict_S_scen": 0.4802721088435374,
+            "strict_S_step": 0.5467845350302425
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.23472222222222222,
+            "strict_S_step": 0.3827189683698491
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.011111111111111112,
+            "strict_S_scen": 0.32083333333333336,
+            "strict_S_step": 0.4658259253397787
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 3,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.3482638888888889,
+            "strict_S_step": 0.48847558739931835
+          }
+        }
+      }
+    },
+    "stayflow_concierge": {
+      "family": "stayflow_concierge",
+      "family_label": "StayFlow Concierge",
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.022222222222222223,
+            "strict_S_scen": 0.36425120772946856,
+            "strict_S_step": 0.5016220437304775
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 5,
+            "strict_full_pass_rate": 0.05555555555555555,
+            "strict_S_scen": 0.41207729468599036,
+            "strict_S_step": 0.5440142580905634
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 7,
+            "strict_full_pass_rate": 0.07777777777777778,
+            "strict_S_scen": 0.4821256038647343,
+            "strict_S_step": 0.6124556957990693
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.022222222222222223,
+            "strict_S_scen": 0.3766283524904214,
+            "strict_S_step": 0.5289615342923955
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 9,
+            "strict_full_pass_rate": 0.1,
+            "strict_S_scen": 0.42681992337164754,
+            "strict_S_step": 0.5694833467377327
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 13,
+            "strict_full_pass_rate": 0.14444444444444443,
+            "strict_S_scen": 0.4417624521072797,
+            "strict_S_step": 0.5617956204791134
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.011111111111111112,
+            "strict_S_scen": 0.22311111111111112,
+            "strict_S_step": 0.40240922611865104
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 5,
+            "strict_full_pass_rate": 0.05555555555555555,
+            "strict_S_scen": 0.26666666666666666,
+            "strict_S_step": 0.4185650276153242
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 7,
+            "strict_full_pass_rate": 0.07777777777777778,
+            "strict_S_scen": 0.2777777777777778,
+            "strict_S_step": 0.44399477249802677
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 4,
+            "strict_full_pass_rate": 0.044444444444444446,
+            "strict_S_scen": 0.25198412698412703,
+            "strict_S_step": 0.3659438683897156
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 7,
+            "strict_full_pass_rate": 0.07777777777777778,
+            "strict_S_scen": 0.2503968253968254,
+            "strict_S_step": 0.3752705747729875
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 12,
+            "strict_full_pass_rate": 0.13333333333333333,
+            "strict_S_scen": 0.3123015873015873,
+            "strict_S_step": 0.43041798563690875
+          }
+        }
+      }
+    },
+    "campus_registrar_command": {
+      "family": "campus_registrar_command",
+      "family_label": "Campus Registrar Command",
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 28,
+            "strict_full_pass_rate": 0.3111111111111111,
+            "strict_S_scen": 0.5,
+            "strict_S_step": 0.5947738725119678
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 46,
+            "strict_full_pass_rate": 0.5111111111111111,
+            "strict_S_scen": 0.6842592592592592,
+            "strict_S_step": 0.7544315318720081
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 53,
+            "strict_full_pass_rate": 0.5888888888888889,
+            "strict_S_scen": 0.7481481481481481,
+            "strict_S_step": 0.8128958805744521
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 31,
+            "strict_full_pass_rate": 0.34444444444444444,
+            "strict_S_scen": 0.5101851851851852,
+            "strict_S_step": 0.6053243207409874
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 47,
+            "strict_full_pass_rate": 0.5222222222222223,
+            "strict_S_scen": 0.587037037037037,
+            "strict_S_step": 0.6686380440547107
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 53,
+            "strict_full_pass_rate": 0.5888888888888889,
+            "strict_S_scen": 0.6425925925925926,
+            "strict_S_step": 0.711928071928072
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 8,
+            "strict_full_pass_rate": 0.08888888888888889,
+            "strict_S_scen": 0.3486590038314176,
+            "strict_S_step": 0.43135083574653516
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 13,
+            "strict_full_pass_rate": 0.14444444444444443,
+            "strict_S_scen": 0.4084291187739464,
+            "strict_S_step": 0.49532669612642344
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 15,
+            "strict_full_pass_rate": 0.16666666666666666,
+            "strict_S_scen": 0.4793103448275862,
+            "strict_S_step": 0.5699802920583289
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 3,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.37810457516339874,
+            "strict_S_step": 0.46909956905061856
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 7,
+            "strict_full_pass_rate": 0.07777777777777778,
+            "strict_S_scen": 0.3382352941176471,
+            "strict_S_step": 0.43383811100459485
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 11,
+            "strict_full_pass_rate": 0.12222222222222222,
+            "strict_S_scen": 0.35980392156862745,
+            "strict_S_step": 0.45337978830016207
+          }
+        }
+      }
+    },
+    "clinic_shift_command": {
+      "family": "clinic_shift_command",
+      "family_label": "Clinic Shift Command",
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 24,
+            "strict_full_pass_rate": 0.26666666666666666,
+            "strict_S_scen": 0.5009661835748792,
+            "strict_S_step": 0.5956331168831168
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 31,
+            "strict_full_pass_rate": 0.34444444444444444,
+            "strict_S_scen": 0.5932367149758454,
+            "strict_S_step": 0.6849898420293157
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 34,
+            "strict_full_pass_rate": 0.37777777777777777,
+            "strict_S_scen": 0.6265700483091787,
+            "strict_S_step": 0.7180537043365991
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 14,
+            "strict_full_pass_rate": 0.15555555555555556,
+            "strict_S_scen": 0.4922558922558923,
+            "strict_S_step": 0.5815342822161004
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 20,
+            "strict_full_pass_rate": 0.2222222222222222,
+            "strict_S_scen": 0.497979797979798,
+            "strict_S_step": 0.5803523875114784
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 23,
+            "strict_full_pass_rate": 0.25555555555555554,
+            "strict_S_scen": 0.52996632996633,
+            "strict_S_step": 0.6295819121955486
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 8,
+            "strict_full_pass_rate": 0.08888888888888889,
+            "strict_S_scen": 0.30491452991452994,
+            "strict_S_step": 0.37813473667215586
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 8,
+            "strict_full_pass_rate": 0.08888888888888889,
+            "strict_S_scen": 0.37008547008547005,
+            "strict_S_step": 0.4341668338070256
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 8,
+            "strict_full_pass_rate": 0.08888888888888889,
+            "strict_S_scen": 0.430982905982906,
+            "strict_S_step": 0.5150607693328144
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.022222222222222223,
+            "strict_S_scen": 0.31434343434343437,
+            "strict_S_step": 0.3750237724435868
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 3,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.38101010101010097,
+            "strict_S_step": 0.43614241300809553
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 3,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "strict_S_scen": 0.40383838383838383,
+            "strict_S_step": 0.45113992013457305
+          }
+        }
+      }
+    },
+    "media_campaign_launch_desk": {
+      "family": "media_campaign_launch_desk",
+      "family_label": "Media Campaign Launch Desk",
+      "tiers": {
+        "A": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 38,
+            "strict_full_pass_rate": 0.4222222222222222,
+            "strict_S_scen": 0.5712962962962963,
+            "strict_S_step": 0.6419499647178218
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 50,
+            "strict_full_pass_rate": 0.5555555555555556,
+            "strict_S_scen": 0.675,
+            "strict_S_step": 0.7484216555049888
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 57,
+            "strict_full_pass_rate": 0.6333333333333333,
+            "strict_S_scen": 0.7273148148148147,
+            "strict_S_step": 0.7935708030946126
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 30,
+            "strict_full_pass_rate": 0.3333333333333333,
+            "strict_S_scen": 0.4157407407407407,
+            "strict_S_step": 0.5126116984954414
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 42,
+            "strict_full_pass_rate": 0.4666666666666667,
+            "strict_S_scen": 0.5388888888888889,
+            "strict_S_step": 0.6022786011160303
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 50,
+            "strict_full_pass_rate": 0.5555555555555556,
+            "strict_S_scen": 0.6055555555555555,
+            "strict_S_step": 0.6641248064404964
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 15,
+            "strict_full_pass_rate": 0.16666666666666666,
+            "strict_S_scen": 0.4618686868686869,
+            "strict_S_step": 0.5565464111570554
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 34,
+            "strict_full_pass_rate": 0.37777777777777777,
+            "strict_S_scen": 0.5371212121212121,
+            "strict_S_step": 0.5901822343752317
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 37,
+            "strict_full_pass_rate": 0.4111111111111111,
+            "strict_S_scen": 0.6050505050505051,
+            "strict_S_step": 0.6717015287596521
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 90,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.3560185185185185,
+            "strict_S_step": 0.4607963055673406
+          },
+          "@2": {
+            "expected_runs": 90,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.4252314814814815,
+            "strict_S_step": 0.5243667966297768
+          },
+          "@3": {
+            "expected_runs": 90,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.5185185185185185,
+            "strict_S_step": 0.6169065051590933
+          }
+        }
+      }
+    }
+  }
+}

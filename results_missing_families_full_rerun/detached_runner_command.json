@@ -1,0 +1,24 @@
+{
+  "pid": 44597,
+  "log_path": "<repository-root>/results_missing_families_full_rerun/logs/full_run_20260712T231045_detached_p24_skip_gemini_latest.log",
+  "cmd": [
+    "python",
+    "tools/run_missing_families_full_rerun.py",
+    "--resume",
+    "--max-parallel-jobs",
+    "24",
+    "--max-retries",
+    "4",
+    "--models",
+    "gpt54_nano",
+    "claude_haiku45",
+    "gemini31_flash_lite",
+    "gpt54_mini",
+    "claude_sonnet46",
+    "gpt54",
+    "claude_opus46",
+    "gemini31_pro_preview"
+  ],
+  "started_at": "20260712T231045",
+  "models_note": "gemini_flash_latest excluded; do not use gemini-flash-latest because it resolved to Gemini 3.5 Flash"
+}

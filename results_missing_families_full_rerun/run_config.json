@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-07-12T14:10:45+00:00",
+  "result_root": "<repository-root>/results_missing_families_full_rerun",
+  "batches": [
+    "static",
+    "repair",
+    "backend"
+  ],
+  "families": [
+    "clinic_shift_command",
+    "campus_registrar_command",
+    "media_campaign_launch_desk"
+  ],
+  "tiers": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "models": [
+    {
+      "model_tier": "M",
+      "slug": "gpt54_nano",
+      "provider": "openai",
+      "model": "gpt-5.4-nano",
+      "max_output_tokens": 64000,
+      "request_timeout": 900,
+      "base_url": null
+    },
+    {
+      "model_tier": "M",
+      "slug": "claude_haiku45",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5",
+      "max_output_tokens": 64000,
+      "request_timeout": 900,
+      "base_url": "https://api.anthropic.com"
+    },
+    {
+      "model_tier": "M",
+      "slug": "gemini31_flash_lite",
+      "provider": "google",
+      "model": "gemini-3.1-flash-lite",
+      "max_output_tokens": 64000,
+      "request_timeout": 900,
+      "base_url": null
+    },
+    {
+      "model_tier": "T",
+      "slug": "gpt54_mini",
+      "provider": "openai",
+      "model": "gpt-5.4-mini",
+      "max_output_tokens": 64000,
+      "request_timeout": 900,
+      "base_url": null
+    },
+    {
+      "model_tier": "T",
+      "slug": "claude_sonnet46",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6",
+      "max_output_tokens": 64000,
+      "request_timeout": 900,
+      "base_url": "https://api.anthropic.com"
+    },
+    {
+      "model_tier": "F",
+      "slug": "gpt54",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "max_output_tokens": 80000,
+      "request_timeout": 1200,
+      "base_url": null
+    },
+    {
+      "model_tier": "F",
+      "slug": "claude_opus46",
+      "provider": "anthropic",
+      "model": "claude-opus-4-6",
+      "max_output_tokens": 80000,
+      "request_timeout": 1200,
+      "base_url": "https://api.anthropic.com"
+    },
+    {
+      "model_tier": "F",
+      "slug": "gemini31_pro_preview",
+      "provider": "google",
+      "model": "gemini-3.1-pro-preview",
+      "max_output_tokens": 80000,
+      "request_timeout": 1200,
+      "base_url": null
+    }
+  ],
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "max_parallel_jobs": 24,
+  "max_retries": 4,
+  "evaluation_timeout": 300,
+  "request_timeout_cap": null,
+  "expected_cells": 960,
+  "expected_static_runs": 960,
+  "expected_repair_round_records": 2880,
+  "expected_backend_runs": 960,
+  "target_policy": "read existing target DSLs; when a current-worktree target is absent, copy the existing git branch snapshot under this result root only",
+  "protocol": {
+    "static_blind_at1": "public contract plus public scenarios only; evaluated on scenario-set=all",
+    "public_feedback_repair_at1_at2_at3": "public-scenario first-failure feedback only; reported evaluation on scenario-set=all",
+    "backend_backed": "same evaluator and assertions; Express plus JSON-file storage substrate"
+  }
+}

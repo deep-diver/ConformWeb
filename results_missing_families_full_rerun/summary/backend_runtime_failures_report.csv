@@ -1,0 +1,962 @@
+experiment_batch,family,tier,model,model_name,model_tier,generation_seed,round,output_path,status,error,evaluated,full_pass,S_scen,S_step,first_failure_category,public_feedback_audit_status,run_id,summary_path,scenarios_passed,scenarios_total,formal_ratio,contract_ratio,backend_status,install_status,app_url
+backend_backed,campus_registrar_command,A,gpt54_nano,gpt-5.4-nano,M,1,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/campus_registrar_command/tier_a/gpt54_nano/seed_01,eval_failed,"Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""<repository-root>/detoxbench/__main__.py"", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 141, in main
+    return evaluate_dsl_command(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 218, in evaluate_dsl_command
+    result = WebEvaluator(contract, scenarios, config).run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 67, in run
+    result = self._run_browser(app_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 94, in _run_browser
+    pages = self._open_scenario_pages(context, app_url, scenario)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 127, in _open_scenario_pages
+    page.goto(self._actor_start_url(app_url, actor), wait_until=""networkidle"")
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/sync_api/_generated.py"", line 9362, in goto
+    self._sync(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_sync_base.py"", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_page.py"", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_frame.py"", line 153, in goto
+    await self._channel.send(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 559, in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_TOO_MANY_REDIRECTS at http://127.0.0.1:56995/#/catalog
+Call log:
+  - navigating to ""http://127.0.0.1:56995/#/catalog"", waiting until ""networkidle""
+
+",False,,,,,,,,,,,,,,http://127.0.0.1:56995/#/catalog
+backend_backed,campus_registrar_command,A,gpt54,gpt-5.4,F,2,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/campus_registrar_command/tier_a/gpt54/seed_02,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,campus_registrar_command,A,gpt54_nano,gpt-5.4-nano,M,6,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/campus_registrar_command/tier_a/gpt54_nano/seed_06,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,campus_registrar_command,B,gpt54_mini,gpt-5.4-mini,T,2,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/campus_registrar_command/tier_b/gpt54_mini/seed_02,eval_failed,"Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""<repository-root>/detoxbench/__main__.py"", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 141, in main
+    return evaluate_dsl_command(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 218, in evaluate_dsl_command
+    result = WebEvaluator(contract, scenarios, config).run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 67, in run
+    result = self._run_browser(app_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 94, in _run_browser
+    pages = self._open_scenario_pages(context, app_url, scenario)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 127, in _open_scenario_pages
+    page.goto(self._actor_start_url(app_url, actor), wait_until=""networkidle"")
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/sync_api/_generated.py"", line 9362, in goto
+    self._sync(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_sync_base.py"", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_page.py"", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_frame.py"", line 153, in goto
+    await self._channel.send(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 559, in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_TOO_MANY_REDIRECTS at http://127.0.0.1:53971/#/command
+Call log:
+  - navigating to ""http://127.0.0.1:53971/#/command"", waiting until ""networkidle""
+
+",False,,,,,,,,,,,,,,http://127.0.0.1:53971/#/command
+backend_backed,campus_registrar_command,B,gpt54_nano,gpt-5.4-nano,M,8,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/campus_registrar_command/tier_b/gpt54_nano/seed_08,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,campus_registrar_command,C,gemini31_pro_preview,gemini-3.1-pro-preview,F,3,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/campus_registrar_command/tier_c/gemini31_pro_preview/seed_03,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,campus_registrar_command,C,gpt54_mini,gpt-5.4-mini,T,1,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/campus_registrar_command/tier_c/gpt54_mini/seed_01,eval_failed,"Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""<repository-root>/detoxbench/__main__.py"", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 141, in main
+    return evaluate_dsl_command(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 218, in evaluate_dsl_command
+    result = WebEvaluator(contract, scenarios, config).run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 67, in run
+    result = self._run_browser(app_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 94, in _run_browser
+    pages = self._open_scenario_pages(context, app_url, scenario)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 127, in _open_scenario_pages
+    page.goto(self._actor_start_url(app_url, actor), wait_until=""networkidle"")
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/sync_api/_generated.py"", line 9362, in goto
+    self._sync(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_sync_base.py"", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_page.py"", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_frame.py"", line 153, in goto
+    await self._channel.send(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 559, in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_TOO_MANY_REDIRECTS at http://127.0.0.1:60995/#/command
+Call log:
+  - navigating to ""http://127.0.0.1:60995/#/command"", waiting until ""networkidle""
+
+",False,,,,,,,,,,,,,,http://127.0.0.1:60995/#/command
+backend_backed,campus_registrar_command,C,gpt54_nano,gpt-5.4-nano,M,1,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/campus_registrar_command/tier_c/gpt54_nano/seed_01,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,campus_registrar_command,C,gpt54_nano,gpt-5.4-nano,M,3,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/campus_registrar_command/tier_c/gpt54_nano/seed_03,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,campus_registrar_command,C,gpt54_nano,gpt-5.4-nano,M,6,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/campus_registrar_command/tier_c/gpt54_nano/seed_06,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,campus_registrar_command,C,gpt54_nano,gpt-5.4-nano,M,8,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/campus_registrar_command/tier_c/gpt54_nano/seed_08,eval_failed,"Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""<repository-root>/detoxbench/__main__.py"", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 141, in main
+    return evaluate_dsl_command(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 218, in evaluate_dsl_command
+    result = WebEvaluator(contract, scenarios, config).run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 67, in run
+    result = self._run_browser(app_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 94, in _run_browser
+    pages = self._open_scenario_pages(context, app_url, scenario)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 127, in _open_scenario_pages
+    page.goto(self._actor_start_url(app_url, actor), wait_until=""networkidle"")
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/sync_api/_generated.py"", line 9362, in goto
+    self._sync(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_sync_base.py"", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_page.py"", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_frame.py"", line 153, in goto
+    await self._channel.send(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 559, in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:52339/#/command
+Call log:
+  - navigating to ""http://127.0.0.1:52339/#/command"", waiting until ""networkidle""
+
+",False,,,,,,,,,,,,,,http://127.0.0.1:52339/#/command
+backend_backed,campus_registrar_command,C,gpt54_nano,gpt-5.4-nano,M,10,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/campus_registrar_command/tier_c/gpt54_nano/seed_10,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,campus_registrar_command,D,gpt54_nano,gpt-5.4-nano,M,5,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/campus_registrar_command/tier_d/gpt54_nano/seed_05,eval_failed,"Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""<repository-root>/detoxbench/__main__.py"", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 141, in main
+    return evaluate_dsl_command(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 218, in evaluate_dsl_command
+    result = WebEvaluator(contract, scenarios, config).run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 67, in run
+    result = self._run_browser(app_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 94, in _run_browser
+    pages = self._open_scenario_pages(context, app_url, scenario)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 127, in _open_scenario_pages
+    page.goto(self._actor_start_url(app_url, actor), wait_until=""networkidle"")
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/sync_api/_generated.py"", line 9362, in goto
+    self._sync(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_sync_base.py"", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_page.py"", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_frame.py"", line 153, in goto
+    await self._channel.send(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 559, in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:53318/#/cockpit
+Call log:
+  - navigating to ""http://127.0.0.1:53318/#/cockpit"", waiting until ""networkidle""
+
+",False,,,,,,,,,,,,,,http://127.0.0.1:53318/#/cockpit
+backend_backed,campus_registrar_command,D,gpt54_nano,gpt-5.4-nano,M,4,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/campus_registrar_command/tier_d/gpt54_nano/seed_04,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,campus_registrar_command,D,gpt54_nano,gpt-5.4-nano,M,7,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/campus_registrar_command/tier_d/gpt54_nano/seed_07,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,campus_registrar_command,D,gpt54_nano,gpt-5.4-nano,M,8,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/campus_registrar_command/tier_d/gpt54_nano/seed_08,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,clinic_shift_command,A,gpt54_nano,gpt-5.4-nano,M,1,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_a/gpt54_nano/seed_01,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,media_campaign_launch_desk,A,gpt54_nano,gpt-5.4-nano,M,2,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_a/gpt54_nano/seed_02,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,media_campaign_launch_desk,A,gpt54_nano,gpt-5.4-nano,M,5,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_a/gpt54_nano/seed_05,eval_failed,"Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""<repository-root>/detoxbench/__main__.py"", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 141, in main
+    return evaluate_dsl_command(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 218, in evaluate_dsl_command
+    result = WebEvaluator(contract, scenarios, config).run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 67, in run
+    result = self._run_browser(app_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 94, in _run_browser
+    pages = self._open_scenario_pages(context, app_url, scenario)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 127, in _open_scenario_pages
+    page.goto(self._actor_start_url(app_url, actor), wait_until=""networkidle"")
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/sync_api/_generated.py"", line 9362, in goto
+    self._sync(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_sync_base.py"", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_page.py"", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_frame.py"", line 153, in goto
+    await self._channel.send(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 559, in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:63830/#/assets
+Call log:
+  - navigating to ""http://127.0.0.1:63830/#/assets"", waiting until ""networkidle""
+
+",False,,,,,,,,,,,,,,http://127.0.0.1:63830/#/assets
+backend_backed,clinic_shift_command,A,gpt54_nano,gpt-5.4-nano,M,5,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_a/gpt54_nano/seed_05,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,clinic_shift_command,A,gpt54_nano,gpt-5.4-nano,M,8,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_a/gpt54_nano/seed_08,eval_failed,"Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""<repository-root>/detoxbench/__main__.py"", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 141, in main
+    return evaluate_dsl_command(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 218, in evaluate_dsl_command
+    result = WebEvaluator(contract, scenarios, config).run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 67, in run
+    result = self._run_browser(app_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 94, in _run_browser
+    pages = self._open_scenario_pages(context, app_url, scenario)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 127, in _open_scenario_pages
+    page.goto(self._actor_start_url(app_url, actor), wait_until=""networkidle"")
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/sync_api/_generated.py"", line 9362, in goto
+    self._sync(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_sync_base.py"", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_page.py"", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_frame.py"", line 153, in goto
+    await self._channel.send(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 559, in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:50674/#/queue
+Call log:
+  - navigating to ""http://127.0.0.1:50674/#/queue"", waiting until ""networkidle""
+
+",False,,,,,,,,,,,,,,http://127.0.0.1:50674/#/queue
+backend_backed,media_campaign_launch_desk,A,gpt54_nano,gpt-5.4-nano,M,9,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_a/gpt54_nano/seed_09,eval_failed,"Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""<repository-root>/detoxbench/__main__.py"", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 141, in main
+    return evaluate_dsl_command(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 218, in evaluate_dsl_command
+    result = WebEvaluator(contract, scenarios, config).run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 67, in run
+    result = self._run_browser(app_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 94, in _run_browser
+    pages = self._open_scenario_pages(context, app_url, scenario)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 127, in _open_scenario_pages
+    page.goto(self._actor_start_url(app_url, actor), wait_until=""networkidle"")
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/sync_api/_generated.py"", line 9362, in goto
+    self._sync(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_sync_base.py"", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_page.py"", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_frame.py"", line 153, in goto
+    await self._channel.send(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 559, in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_TOO_MANY_REDIRECTS at http://127.0.0.1:51400/#/assets
+Call log:
+  - navigating to ""http://127.0.0.1:51400/#/assets"", waiting until ""networkidle""
+
+",False,,,,,,,,,,,,,,http://127.0.0.1:51400/#/assets
+backend_backed,clinic_shift_command,A,gpt54_nano,gpt-5.4-nano,M,9,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_a/gpt54_nano/seed_09,eval_failed,"Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""<repository-root>/detoxbench/__main__.py"", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 141, in main
+    return evaluate_dsl_command(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 218, in evaluate_dsl_command
+    result = WebEvaluator(contract, scenarios, config).run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 67, in run
+    result = self._run_browser(app_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 94, in _run_browser
+    pages = self._open_scenario_pages(context, app_url, scenario)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 127, in _open_scenario_pages
+    page.goto(self._actor_start_url(app_url, actor), wait_until=""networkidle"")
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/sync_api/_generated.py"", line 9362, in goto
+    self._sync(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_sync_base.py"", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_page.py"", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_frame.py"", line 153, in goto
+    await self._channel.send(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 559, in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:51509/#/queue
+Call log:
+  - navigating to ""http://127.0.0.1:51509/#/queue"", waiting until ""networkidle""
+
+",False,,,,,,,,,,,,,,http://127.0.0.1:51509/#/queue
+backend_backed,clinic_shift_command,A,gemini_flash_latest,gemini-flash-latest,T,4,,<repository-root>/results_missing_families_full_rerun/backend_backed/candidates/clinic_shift_command/tier_a/gemini_flash_latest/seed_04,generation_failed,"Traceback (most recent call last):
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 379, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 144, in main
+    payload, response_metadata = generate_payload(
+                                 ^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 234, in generate_payload
+    return generate_google_payload(model, prompt, max_output_tokens, request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 334, in generate_google_payload
+    return json.loads(static_gen.extract_json_payload(text)), {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/json/__init__.py"", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/json/decoder.py"", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/json/decoder.py"", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Invalid control character at: line 13 column 5154 (char 11562)
+",False,,,,,,,,,,,,,,
+backend_backed,clinic_shift_command,A,gemini_flash_latest,gemini-flash-latest,T,6,,<repository-root>/results_missing_families_full_rerun/backend_backed/candidates/clinic_shift_command/tier_a/gemini_flash_latest/seed_06,generation_failed,"Traceback (most recent call last):
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 379, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 144, in main
+    payload, response_metadata = generate_payload(
+                                 ^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 234, in generate_payload
+    return generate_google_payload(model, prompt, max_output_tokens, request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 334, in generate_google_payload
+    return json.loads(static_gen.extract_json_payload(text)), {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/json/__init__.py"", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/json/decoder.py"", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/json/decoder.py"", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Invalid control character at: line 17 column 1500 (char 17457)
+",False,,,,,,,,,,,,,,
+backend_backed,media_campaign_launch_desk,B,claude_haiku45,claude-haiku-4-5,M,7,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_b/claude_haiku45/seed_07,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,media_campaign_launch_desk,B,gemini_flash_latest,gemini-flash-latest,T,8,,<repository-root>/results_missing_families_full_rerun/backend_backed/candidates/media_campaign_launch_desk/tier_b/gemini_flash_latest/seed_08,generation_failed,"Traceback (most recent call last):
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 379, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 144, in main
+    payload, response_metadata = generate_payload(
+                                 ^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 234, in generate_payload
+    return generate_google_payload(model, prompt, max_output_tokens, request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 334, in generate_google_payload
+    return json.loads(static_gen.extract_json_payload(text)), {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/json/__init__.py"", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/json/decoder.py"", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/json/decoder.py"", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Invalid control character at: line 13 column 2953 (char 15150)
+",False,,,,,,,,,,,,,,
+backend_backed,clinic_shift_command,B,gpt54_mini,gpt-5.4-mini,T,3,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_b/gpt54_mini/seed_03,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,media_campaign_launch_desk,B,gpt54_mini,gpt-5.4-mini,T,5,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_b/gpt54_mini/seed_05,eval_failed,"Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""<repository-root>/detoxbench/__main__.py"", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 141, in main
+    return evaluate_dsl_command(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 218, in evaluate_dsl_command
+    result = WebEvaluator(contract, scenarios, config).run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 67, in run
+    result = self._run_browser(app_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 94, in _run_browser
+    pages = self._open_scenario_pages(context, app_url, scenario)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 127, in _open_scenario_pages
+    page.goto(self._actor_start_url(app_url, actor), wait_until=""networkidle"")
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/sync_api/_generated.py"", line 9362, in goto
+    self._sync(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_sync_base.py"", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_page.py"", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_frame.py"", line 153, in goto
+    await self._channel.send(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 559, in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_TOO_MANY_REDIRECTS at http://127.0.0.1:57182/#/studio
+Call log:
+  - navigating to ""http://127.0.0.1:57182/#/studio"", waiting until ""networkidle""
+
+",False,,,,,,,,,,,,,,http://127.0.0.1:57182/#/studio
+backend_backed,clinic_shift_command,B,gpt54_nano,gpt-5.4-nano,M,7,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_b/gpt54_nano/seed_07,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,clinic_shift_command,B,gpt54_nano,gpt-5.4-nano,M,8,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_b/gpt54_nano/seed_08,eval_failed,"Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""<repository-root>/detoxbench/__main__.py"", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 141, in main
+    return evaluate_dsl_command(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 218, in evaluate_dsl_command
+    result = WebEvaluator(contract, scenarios, config).run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 67, in run
+    result = self._run_browser(app_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 94, in _run_browser
+    pages = self._open_scenario_pages(context, app_url, scenario)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 127, in _open_scenario_pages
+    page.goto(self._actor_start_url(app_url, actor), wait_until=""networkidle"")
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/sync_api/_generated.py"", line 9362, in goto
+    self._sync(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_sync_base.py"", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_page.py"", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_frame.py"", line 153, in goto
+    await self._channel.send(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 559, in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:56832/#/command
+Call log:
+  - navigating to ""http://127.0.0.1:56832/#/command"", waiting until ""networkidle""
+
+",False,,,,,,,,,,,,,,http://127.0.0.1:56832/#/command
+backend_backed,media_campaign_launch_desk,C,claude_haiku45,claude-haiku-4-5,M,3,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_c/claude_haiku45/seed_03,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,campus_registrar_command,C,gemini_flash_latest,gemini-flash-latest,T,7,,<repository-root>/results_missing_families_full_rerun/backend_backed/candidates/campus_registrar_command/tier_c/gemini_flash_latest/seed_07,generation_failed,"Traceback (most recent call last):
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 379, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 144, in main
+    payload, response_metadata = generate_payload(
+                                 ^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 234, in generate_payload
+    return generate_google_payload(model, prompt, max_output_tokens, request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 334, in generate_google_payload
+    return json.loads(static_gen.extract_json_payload(text)), {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/json/__init__.py"", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/json/decoder.py"", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/json/decoder.py"", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 13 column 7234 (char 14855)
+",False,,,,,,,,,,,,,,
+backend_backed,media_campaign_launch_desk,D,gemini_flash_latest,gemini-flash-latest,T,3,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_d/gemini_flash_latest/seed_03,eval_failed,"Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""<repository-root>/detoxbench/__main__.py"", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 141, in main
+    return evaluate_dsl_command(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 218, in evaluate_dsl_command
+    result = WebEvaluator(contract, scenarios, config).run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 67, in run
+    result = self._run_browser(app_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 94, in _run_browser
+    pages = self._open_scenario_pages(context, app_url, scenario)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 127, in _open_scenario_pages
+    page.goto(self._actor_start_url(app_url, actor), wait_until=""networkidle"")
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/sync_api/_generated.py"", line 9362, in goto
+    self._sync(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_sync_base.py"", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_page.py"", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_frame.py"", line 153, in goto
+    await self._channel.send(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 559, in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 5000ms exceeded.
+Call log:
+  - navigating to ""http://127.0.0.1:64140/#/slate"", waiting until ""networkidle""
+
+",False,,,,,,,,,,,,,,http://127.0.0.1:64140/#/slate
+backend_backed,media_campaign_launch_desk,C,gemini31_flash_lite,gemini-3.1-flash-lite,M,10,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_c/gemini31_flash_lite/seed_10,evaluation_timeout,,False,,,,,,,,,,,,,,http://127.0.0.1:60937/#/audiences
+backend_backed,clinic_shift_command,D,gemini_flash_latest,gemini-flash-latest,T,8,,<repository-root>/results_missing_families_full_rerun/backend_backed/candidates/clinic_shift_command/tier_d/gemini_flash_latest/seed_08,generation_failed,"Traceback (most recent call last):
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 379, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 144, in main
+    payload, response_metadata = generate_payload(
+                                 ^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 234, in generate_payload
+    return generate_google_payload(model, prompt, max_output_tokens, request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/tools/generate_blind_dsl_backend_app.py"", line 334, in generate_google_payload
+    return json.loads(static_gen.extract_json_payload(text)), {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/json/__init__.py"", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/json/decoder.py"", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/json/decoder.py"", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Unterminated string starting at: line 21 column 18 (char 70609)
+",False,,,,,,,,,,,,,,
+backend_backed,clinic_shift_command,C,gpt54,gpt-5.4,F,1,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_c/gpt54/seed_01,evaluation_timeout,"node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: write EPIPE
+    at afterWriteDispatched (node:internal/stream_base_commons:159:15)
+    at writeGeneric (node:internal/stream_base_commons:150:3)
+    at Socket._writeGeneric (node:net:966:11)
+    at Socket._write (node:net:978:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at PipeTransport.send (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/server/utils/pipeTransport.js:52:21)
+    at dispatcherConnection.onmessage (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/cli/driver.js:60:59)
+    at DispatcherConnection.sendEvent (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/server/dispatchers/dispatcher.js:176:10)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -32,
+  code: 'EPIPE',
+  syscall: 'write'
+}
+
+Node.js v24.14.1
+",False,,,,,,,,,,,,,,http://127.0.0.1:63580/#/command
+backend_backed,clinic_shift_command,D,gemini_flash_latest,gemini-flash-latest,T,10,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/gemini_flash_latest/seed_10,evaluation_timeout,,False,,,,,,,,,,,,,,http://127.0.0.1:53569/#/command
+backend_backed,clinic_shift_command,C,gpt54_mini,gpt-5.4-mini,T,5,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_c/gpt54_mini/seed_05,eval_failed,"Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""<repository-root>/detoxbench/__main__.py"", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 141, in main
+    return evaluate_dsl_command(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 218, in evaluate_dsl_command
+    result = WebEvaluator(contract, scenarios, config).run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 67, in run
+    result = self._run_browser(app_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 94, in _run_browser
+    pages = self._open_scenario_pages(context, app_url, scenario)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 127, in _open_scenario_pages
+    page.goto(self._actor_start_url(app_url, actor), wait_until=""networkidle"")
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/sync_api/_generated.py"", line 9362, in goto
+    self._sync(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_sync_base.py"", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_page.py"", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_frame.py"", line 153, in goto
+    await self._channel.send(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 559, in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_TOO_MANY_REDIRECTS at http://127.0.0.1:50666/#/command
+Call log:
+  - navigating to ""http://127.0.0.1:50666/#/command"", waiting until ""networkidle""
+
+",False,,,,,,,,,,,,,,http://127.0.0.1:50666/#/command
+backend_backed,clinic_shift_command,C,gpt54_mini,gpt-5.4-mini,T,2,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_c/gpt54_mini/seed_02,evaluation_timeout,,False,,,,,,,,,,,,,,http://127.0.0.1:63931/#/command
+backend_backed,clinic_shift_command,C,gpt54_mini,gpt-5.4-mini,T,3,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_c/gpt54_mini/seed_03,evaluation_timeout,"node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: write EPIPE
+    at afterWriteDispatched (node:internal/stream_base_commons:159:15)
+    at writeGeneric (node:internal/stream_base_commons:150:3)
+    at Socket._writeGeneric (node:net:966:11)
+    at Socket._write (node:net:978:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at PipeTransport.send (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/server/utils/pipeTransport.js:52:21)
+    at dispatcherConnection.onmessage (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/cli/driver.js:60:59)
+    at DispatcherConnection.sendEvent (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/server/dispatchers/dispatcher.js:176:10)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -32,
+  code: 'EPIPE',
+  syscall: 'write'
+}
+
+Node.js v24.14.1
+",False,,,,,,,,,,,,,,http://127.0.0.1:64625/#/command
+backend_backed,clinic_shift_command,C,gpt54_mini,gpt-5.4-mini,T,10,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_c/gpt54_mini/seed_10,evaluation_timeout,,False,,,,,,,,,,,,,,http://127.0.0.1:56631/#/command
+backend_backed,clinic_shift_command,C,gpt54_nano,gpt-5.4-nano,M,2,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_c/gpt54_nano/seed_02,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,media_campaign_launch_desk,C,gpt54_nano,gpt-5.4-nano,M,4,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_c/gpt54_nano/seed_04,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,clinic_shift_command,C,gpt54_nano,gpt-5.4-nano,M,4,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_c/gpt54_nano/seed_04,eval_failed,"Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""<repository-root>/detoxbench/__main__.py"", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 141, in main
+    return evaluate_dsl_command(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 218, in evaluate_dsl_command
+    result = WebEvaluator(contract, scenarios, config).run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 67, in run
+    result = self._run_browser(app_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 94, in _run_browser
+    pages = self._open_scenario_pages(context, app_url, scenario)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 127, in _open_scenario_pages
+    page.goto(self._actor_start_url(app_url, actor), wait_until=""networkidle"")
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/sync_api/_generated.py"", line 9362, in goto
+    self._sync(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_sync_base.py"", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_page.py"", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_frame.py"", line 153, in goto
+    await self._channel.send(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 559, in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:50907/#/command
+Call log:
+  - navigating to ""http://127.0.0.1:50907/#/command"", waiting until ""networkidle""
+
+",False,,,,,,,,,,,,,,http://127.0.0.1:50907/#/command
+backend_backed,media_campaign_launch_desk,C,gpt54_nano,gpt-5.4-nano,M,6,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_c/gpt54_nano/seed_06,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,clinic_shift_command,C,gpt54_nano,gpt-5.4-nano,M,9,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_c/gpt54_nano/seed_09,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,clinic_shift_command,D,claude_haiku45,claude-haiku-4-5,M,5,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/claude_haiku45/seed_05,eval_failed,"Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""<repository-root>/detoxbench/__main__.py"", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 141, in main
+    return evaluate_dsl_command(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 218, in evaluate_dsl_command
+    result = WebEvaluator(contract, scenarios, config).run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 67, in run
+    result = self._run_browser(app_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 94, in _run_browser
+    pages = self._open_scenario_pages(context, app_url, scenario)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 127, in _open_scenario_pages
+    page.goto(self._actor_start_url(app_url, actor), wait_until=""networkidle"")
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/sync_api/_generated.py"", line 9362, in goto
+    self._sync(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_sync_base.py"", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_page.py"", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_frame.py"", line 153, in goto
+    await self._channel.send(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 559, in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 5000ms exceeded.
+Call log:
+  - navigating to ""http://127.0.0.1:64870/#/command"", waiting until ""networkidle""
+
+",False,,,,,,,,,,,,,,http://127.0.0.1:64870/#/command
+backend_backed,clinic_shift_command,D,claude_haiku45,claude-haiku-4-5,M,3,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/claude_haiku45/seed_03,evaluation_timeout,,False,,,,,,,,,,,,,,http://127.0.0.1:62449/#/command
+backend_backed,clinic_shift_command,D,claude_haiku45,claude-haiku-4-5,M,4,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/claude_haiku45/seed_04,evaluation_timeout,"node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: write EPIPE
+    at afterWriteDispatched (node:internal/stream_base_commons:159:15)
+    at writeGeneric (node:internal/stream_base_commons:150:3)
+    at Socket._writeGeneric (node:net:966:11)
+    at Socket._write (node:net:978:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at PipeTransport.send (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/server/utils/pipeTransport.js:52:21)
+    at dispatcherConnection.onmessage (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/cli/driver.js:60:59)
+    at DispatcherConnection.dispatch (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/server/dispatchers/dispatcher.js:350:10)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -32,
+  code: 'EPIPE',
+  syscall: 'write'
+}
+
+Node.js v24.14.1
+",False,,,,,,,,,,,,,,http://127.0.0.1:63978/#/command
+backend_backed,clinic_shift_command,D,claude_haiku45,claude-haiku-4-5,M,7,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/claude_haiku45/seed_07,evaluation_timeout,"node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: write EPIPE
+    at afterWriteDispatched (node:internal/stream_base_commons:159:15)
+    at writeGeneric (node:internal/stream_base_commons:150:3)
+    at Socket._writeGeneric (node:net:966:11)
+    at Socket._write (node:net:978:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at PipeTransport.send (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/server/utils/pipeTransport.js:52:21)
+    at dispatcherConnection.onmessage (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/cli/driver.js:60:59)
+    at DispatcherConnection.sendEvent (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/server/dispatchers/dispatcher.js:176:10)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -32,
+  code: 'EPIPE',
+  syscall: 'write'
+}
+
+Node.js v24.14.1
+",False,,,,,,,,,,,,,,http://127.0.0.1:51741/#/command
+backend_backed,clinic_shift_command,D,claude_haiku45,claude-haiku-4-5,M,10,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/claude_haiku45/seed_10,evaluation_timeout,,False,,,,,,,,,,,,,,http://127.0.0.1:57848/#/command
+backend_backed,clinic_shift_command,D,gemini31_flash_lite,gemini-3.1-flash-lite,M,2,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/gemini31_flash_lite/seed_02,evaluation_timeout,,False,,,,,,,,,,,,,,http://127.0.0.1:52494/#/command
+backend_backed,clinic_shift_command,D,gemini31_flash_lite,gemini-3.1-flash-lite,M,3,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/gemini31_flash_lite/seed_03,evaluation_timeout,,False,,,,,,,,,,,,,,http://127.0.0.1:54786/#/command
+backend_backed,clinic_shift_command,D,gemini31_flash_lite,gemini-3.1-flash-lite,M,4,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/gemini31_flash_lite/seed_04,evaluation_timeout,,False,,,,,,,,,,,,,,http://127.0.0.1:55825/#/command
+backend_backed,clinic_shift_command,D,gemini31_flash_lite,gemini-3.1-flash-lite,M,8,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/gemini31_flash_lite/seed_08,evaluation_timeout,,False,,,,,,,,,,,,,,http://127.0.0.1:62616/#/command
+backend_backed,clinic_shift_command,D,gemini31_flash_lite,gemini-3.1-flash-lite,M,9,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/gemini31_flash_lite/seed_09,evaluation_timeout,,False,,,,,,,,,,,,,,http://127.0.0.1:65345/#/command
+backend_backed,clinic_shift_command,D,gpt54,gpt-5.4,F,1,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/gpt54/seed_01,evaluation_timeout,"node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: write EPIPE
+    at afterWriteDispatched (node:internal/stream_base_commons:159:15)
+    at writeGeneric (node:internal/stream_base_commons:150:3)
+    at Socket._writeGeneric (node:net:966:11)
+    at Socket._write (node:net:978:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at PipeTransport.send (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/server/utils/pipeTransport.js:52:21)
+    at dispatcherConnection.onmessage (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/cli/driver.js:60:59)
+    at DispatcherConnection.sendEvent (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/server/dispatchers/dispatcher.js:176:10)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -32,
+  code: 'EPIPE',
+  syscall: 'write'
+}
+
+Node.js v24.14.1
+",False,,,,,,,,,,,,,,http://127.0.0.1:50977/#/command
+backend_backed,media_campaign_launch_desk,D,gpt54,gpt-5.4,F,2,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_d/gpt54/seed_02,evaluation_timeout,,False,,,,,,,,,,,,,,http://127.0.0.1:53377/#/slate
+backend_backed,clinic_shift_command,D,gpt54,gpt-5.4,F,4,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/gpt54/seed_04,evaluation_timeout,,False,,,,,,,,,,,,,,http://127.0.0.1:55973/#/command
+backend_backed,clinic_shift_command,D,gpt54,gpt-5.4,F,6,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/gpt54/seed_06,evaluation_timeout,,False,,,,,,,,,,,,,,http://127.0.0.1:58706/#/command
+backend_backed,media_campaign_launch_desk,D,gpt54_nano,gpt-5.4-nano,M,1,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_d/gpt54_nano/seed_01,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,media_campaign_launch_desk,D,gpt54_nano,gpt-5.4-nano,M,2,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_d/gpt54_nano/seed_02,eval_failed,"Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""<repository-root>/detoxbench/__main__.py"", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 141, in main
+    return evaluate_dsl_command(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/cli.py"", line 218, in evaluate_dsl_command
+    result = WebEvaluator(contract, scenarios, config).run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 67, in run
+    result = self._run_browser(app_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 94, in _run_browser
+    pages = self._open_scenario_pages(context, app_url, scenario)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""<repository-root>/detoxbench/web/evaluator.py"", line 127, in _open_scenario_pages
+    page.goto(self._actor_start_url(app_url, actor), wait_until=""networkidle"")
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/sync_api/_generated.py"", line 9362, in goto
+    self._sync(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_sync_base.py"", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_page.py"", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_frame.py"", line 153, in goto
+    await self._channel.send(
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/miniconda3/lib/python3.12/site-packages/playwright/_impl/_connection.py"", line 559, in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_TOO_MANY_REDIRECTS at http://127.0.0.1:50169/#/slate
+Call log:
+  - navigating to ""http://127.0.0.1:50169/#/slate"", waiting until ""networkidle""
+
+",False,,,,,,,,,,,,,,http://127.0.0.1:50169/#/slate
+backend_backed,clinic_shift_command,D,gpt54_nano,gpt-5.4-nano,M,3,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/gpt54_nano/seed_03,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,media_campaign_launch_desk,D,gpt54_nano,gpt-5.4-nano,M,3,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_d/gpt54_nano/seed_03,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,clinic_shift_command,D,gpt54_nano,gpt-5.4-nano,M,4,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/gpt54_nano/seed_04,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,media_campaign_launch_desk,D,gpt54_nano,gpt-5.4-nano,M,5,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_d/gpt54_nano/seed_05,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,media_campaign_launch_desk,D,gpt54_nano,gpt-5.4-nano,M,4,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_d/gpt54_nano/seed_04,evaluation_timeout,,False,,,,,,,,,,,,,,http://127.0.0.1:54433/#/slate
+backend_backed,media_campaign_launch_desk,D,gpt54_nano,gpt-5.4-nano,M,7,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/media_campaign_launch_desk/tier_d/gpt54_nano/seed_07,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,clinic_shift_command,D,gpt54_nano,gpt-5.4-nano,M,7,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/gpt54_nano/seed_07,backend_start_failed,,False,,,,,,,,,,,,failed,,
+backend_backed,clinic_shift_command,D,gpt54_nano,gpt-5.4-nano,M,6,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/gpt54_nano/seed_06,evaluation_timeout,"node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: write EPIPE
+    at afterWriteDispatched (node:internal/stream_base_commons:159:15)
+    at writeGeneric (node:internal/stream_base_commons:150:3)
+    at Socket._writeGeneric (node:net:966:11)
+    at Socket._write (node:net:978:8)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at PipeTransport.send (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/server/utils/pipeTransport.js:52:21)
+    at dispatcherConnection.onmessage (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/cli/driver.js:60:59)
+    at DispatcherConnection.sendEvent (/opt/miniconda3/lib/python3.12/site-packages/playwright/driver/package/lib/server/dispatchers/dispatcher.js:176:10)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -32,
+  code: 'EPIPE',
+  syscall: 'write'
+}
+
+Node.js v24.14.1
+",False,,,,,,,,,,,,,,http://127.0.0.1:56202/#/command
+backend_backed,clinic_shift_command,D,gpt54_nano,gpt-5.4-nano,M,10,,<repository-root>/results_missing_families_full_rerun/backend_backed/runs/clinic_shift_command/tier_d/gpt54_nano/seed_10,backend_start_failed,,False,,,,,,,,,,,,failed,,

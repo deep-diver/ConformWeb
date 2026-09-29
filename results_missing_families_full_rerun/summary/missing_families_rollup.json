@@ -1,0 +1,3375 @@
+{
+  "scope": {
+    "missing_families": [
+      "clinic_shift_command",
+      "campus_registrar_command",
+      "media_campaign_launch_desk"
+    ],
+    "round_mapping": {
+      "0": "@1 original",
+      "1": "@2 repair 1",
+      "2": "@3 repair 2"
+    },
+    "strict_policy": "full-pass denominator is expected_runs; failed or unevaluated runs contribute zero to S_scen/S_step",
+    "evaluated_only_policy": "reported separately as a diagnostic using only runs that produced evaluator scores"
+  },
+  "missing_families": {
+    "completion": {
+      "static_blind_at1": {
+        "expected": 1080,
+        "generated": 1080,
+        "evaluated": 1046,
+        "missing": 0,
+        "failed": 34,
+        "completed": 1080
+      },
+      "public_feedback_repair_at1_at2_at3": {
+        "expected": 3240,
+        "generated": 1080,
+        "evaluated": 2904,
+        "missing": 0,
+        "failed": 323,
+        "completed": 3244
+      },
+      "backend_backed": {
+        "expected": 1080,
+        "generated": 1075,
+        "evaluated": 1008,
+        "missing": 0,
+        "failed": 72,
+        "completed": 1080
+      }
+    },
+    "static_blind_at1": {
+      "overall": {
+        "batch": {
+          "expected_runs": 1080,
+          "evaluated_runs": 1046,
+          "failed_runs": 34,
+          "completed_records": 1080,
+          "full_pass_count": 200,
+          "strict_full_pass_rate": 0.18518518518518517,
+          "evaluated_full_pass_rate": 0.19120458891013384,
+          "strict_S_scen": 0.4277447468980746,
+          "strict_S_step": 0.514947580645461,
+          "evaluated_only_S_scen": 0.4416484958412243,
+          "evaluated_only_S_step": 0.5316858385249501,
+          "recovered_count": 0,
+          "public_feedback_audit_violations": 0,
+          "backend_generation_failures": 0,
+          "backend_evaluation_failures": 0
+        }
+      },
+      "by_family": {
+        "campus_registrar_command": {
+          "batch": {
+            "expected_runs": 360,
+            "evaluated_runs": 359,
+            "failed_runs": 1,
+            "completed_records": 360,
+            "full_pass_count": 70,
+            "strict_full_pass_rate": 0.19444444444444445,
+            "evaluated_full_pass_rate": 0.19498607242339833,
+            "strict_S_scen": 0.43423719104500036,
+            "strict_S_step": 0.5251371495125272,
+            "evaluated_only_S_scen": 0.4354467653933151,
+            "evaluated_only_S_step": 0.526599927087771,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "clinic_shift_command": {
+          "batch": {
+            "expected_runs": 360,
+            "evaluated_runs": 333,
+            "failed_runs": 27,
+            "completed_records": 360,
+            "full_pass_count": 47,
+            "strict_full_pass_rate": 0.13055555555555556,
+            "evaluated_full_pass_rate": 0.14114114114114115,
+            "strict_S_scen": 0.399502100154274,
+            "strict_S_step": 0.47939263962458584,
+            "evaluated_only_S_scen": 0.4318941623289449,
+            "evaluated_only_S_step": 0.5182623131076604,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "media_campaign_launch_desk": {
+          "batch": {
+            "expected_runs": 360,
+            "evaluated_runs": 354,
+            "failed_runs": 6,
+            "completed_records": 360,
+            "full_pass_count": 83,
+            "strict_full_pass_rate": 0.23055555555555557,
+            "evaluated_full_pass_rate": 0.2344632768361582,
+            "strict_S_scen": 0.4494949494949495,
+            "strict_S_step": 0.5403129527992698,
+            "evaluated_only_S_scen": 0.45711350796096556,
+            "evaluated_only_S_step": 0.5494707994568846,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        }
+      },
+      "by_family_tier": {
+        "campus_registrar_command": {
+          "A": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 90,
+              "failed_runs": 0,
+              "completed_records": 90,
+              "full_pass_count": 28,
+              "strict_full_pass_rate": 0.3111111111111111,
+              "evaluated_full_pass_rate": 0.3111111111111111,
+              "strict_S_scen": 0.5,
+              "strict_S_step": 0.5947738725119678,
+              "evaluated_only_S_scen": 0.5,
+              "evaluated_only_S_step": 0.5947738725119678,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "B": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 90,
+              "failed_runs": 0,
+              "completed_records": 90,
+              "full_pass_count": 31,
+              "strict_full_pass_rate": 0.34444444444444444,
+              "evaluated_full_pass_rate": 0.34444444444444444,
+              "strict_S_scen": 0.5101851851851852,
+              "strict_S_step": 0.6053243207409874,
+              "evaluated_only_S_scen": 0.5101851851851852,
+              "evaluated_only_S_step": 0.6053243207409874,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "C": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 89,
+              "failed_runs": 1,
+              "completed_records": 90,
+              "full_pass_count": 8,
+              "strict_full_pass_rate": 0.08888888888888889,
+              "evaluated_full_pass_rate": 0.0898876404494382,
+              "strict_S_scen": 0.3486590038314176,
+              "strict_S_step": 0.43135083574653516,
+              "evaluated_only_S_scen": 0.35257652072839984,
+              "evaluated_only_S_step": 0.43619747435042877,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "D": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 90,
+              "failed_runs": 0,
+              "completed_records": 90,
+              "full_pass_count": 3,
+              "strict_full_pass_rate": 0.03333333333333333,
+              "evaluated_full_pass_rate": 0.03333333333333333,
+              "strict_S_scen": 0.37810457516339874,
+              "strict_S_step": 0.46909956905061856,
+              "evaluated_only_S_scen": 0.37810457516339874,
+              "evaluated_only_S_step": 0.46909956905061856,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          }
+        },
+        "clinic_shift_command": {
+          "A": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 90,
+              "failed_runs": 0,
+              "completed_records": 90,
+              "full_pass_count": 24,
+              "strict_full_pass_rate": 0.26666666666666666,
+              "evaluated_full_pass_rate": 0.26666666666666666,
+              "strict_S_scen": 0.5009661835748792,
+              "strict_S_step": 0.5956331168831168,
+              "evaluated_only_S_scen": 0.5009661835748792,
+              "evaluated_only_S_step": 0.5956331168831168,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "B": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 90,
+              "failed_runs": 0,
+              "completed_records": 90,
+              "full_pass_count": 14,
+              "strict_full_pass_rate": 0.15555555555555556,
+              "evaluated_full_pass_rate": 0.15555555555555556,
+              "strict_S_scen": 0.4922558922558923,
+              "strict_S_step": 0.5815342822161004,
+              "evaluated_only_S_scen": 0.4922558922558923,
+              "evaluated_only_S_step": 0.5815342822161004,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "C": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 83,
+              "failed_runs": 7,
+              "completed_records": 90,
+              "full_pass_count": 8,
+              "strict_full_pass_rate": 0.08888888888888889,
+              "evaluated_full_pass_rate": 0.0963855421686747,
+              "strict_S_scen": 0.2914529914529914,
+              "strict_S_step": 0.3650099907215291,
+              "evaluated_only_S_scen": 0.3160333642261353,
+              "evaluated_only_S_step": 0.39579396584262194,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "D": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 70,
+              "failed_runs": 20,
+              "completed_records": 90,
+              "full_pass_count": 1,
+              "strict_full_pass_rate": 0.011111111111111112,
+              "evaluated_full_pass_rate": 0.014285714285714285,
+              "strict_S_scen": 0.31333333333333335,
+              "strict_S_step": 0.3753931686775967,
+              "evaluated_only_S_scen": 0.4028571428571429,
+              "evaluated_only_S_step": 0.4826483597283386,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          }
+        },
+        "media_campaign_launch_desk": {
+          "A": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 90,
+              "failed_runs": 0,
+              "completed_records": 90,
+              "full_pass_count": 38,
+              "strict_full_pass_rate": 0.4222222222222222,
+              "evaluated_full_pass_rate": 0.4222222222222222,
+              "strict_S_scen": 0.5712962962962963,
+              "strict_S_step": 0.6419499647178218,
+              "evaluated_only_S_scen": 0.5712962962962963,
+              "evaluated_only_S_step": 0.6419499647178218,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "B": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 89,
+              "failed_runs": 1,
+              "completed_records": 90,
+              "full_pass_count": 30,
+              "strict_full_pass_rate": 0.3333333333333333,
+              "evaluated_full_pass_rate": 0.33707865168539325,
+              "strict_S_scen": 0.4157407407407407,
+              "strict_S_step": 0.5126116984954414,
+              "evaluated_only_S_scen": 0.42041198501872656,
+              "evaluated_only_S_step": 0.5183713805010082,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "C": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 90,
+              "failed_runs": 0,
+              "completed_records": 90,
+              "full_pass_count": 15,
+              "strict_full_pass_rate": 0.16666666666666666,
+              "evaluated_full_pass_rate": 0.16666666666666666,
+              "strict_S_scen": 0.4618686868686869,
+              "strict_S_step": 0.5565464111570554,
+              "evaluated_only_S_scen": 0.4618686868686869,
+              "evaluated_only_S_step": 0.5565464111570554,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "D": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 85,
+              "failed_runs": 5,
+              "completed_records": 90,
+              "full_pass_count": 0,
+              "strict_full_pass_rate": 0.0,
+              "evaluated_full_pass_rate": 0.0,
+              "strict_S_scen": 0.34907407407407404,
+              "strict_S_step": 0.45014373682676045,
+              "evaluated_only_S_scen": 0.36960784313725487,
+              "evaluated_only_S_step": 0.4766227801695111,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          }
+        }
+      },
+      "by_tier": {
+        "A": {
+          "batch": {
+            "expected_runs": 270,
+            "evaluated_runs": 270,
+            "failed_runs": 0,
+            "completed_records": 270,
+            "full_pass_count": 90,
+            "strict_full_pass_rate": 0.3333333333333333,
+            "evaluated_full_pass_rate": 0.3333333333333333,
+            "strict_S_scen": 0.5240874932903918,
+            "strict_S_step": 0.6107856513709689,
+            "evaluated_only_S_scen": 0.5240874932903918,
+            "evaluated_only_S_step": 0.6107856513709689,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "B": {
+          "batch": {
+            "expected_runs": 270,
+            "evaluated_runs": 269,
+            "failed_runs": 1,
+            "completed_records": 270,
+            "full_pass_count": 75,
+            "strict_full_pass_rate": 0.2777777777777778,
+            "evaluated_full_pass_rate": 0.2788104089219331,
+            "strict_S_scen": 0.4727272727272727,
+            "strict_S_step": 0.5664901004841765,
+            "evaluated_only_S_scen": 0.474484623183508,
+            "evaluated_only_S_step": 0.5685960116383927,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "C": {
+          "batch": {
+            "expected_runs": 270,
+            "evaluated_runs": 262,
+            "failed_runs": 8,
+            "completed_records": 270,
+            "full_pass_count": 31,
+            "strict_full_pass_rate": 0.11481481481481481,
+            "evaluated_full_pass_rate": 0.1183206106870229,
+            "strict_S_scen": 0.367326894051032,
+            "strict_S_step": 0.45096907920837326,
+            "evaluated_only_S_scen": 0.37854298241900247,
+            "evaluated_only_S_step": 0.4647391274284763,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "D": {
+          "batch": {
+            "expected_runs": 270,
+            "evaluated_runs": 245,
+            "failed_runs": 25,
+            "completed_records": 270,
+            "full_pass_count": 4,
+            "strict_full_pass_rate": 0.014814814814814815,
+            "evaluated_full_pass_rate": 0.0163265306122449,
+            "strict_S_scen": 0.346837327523602,
+            "strict_S_step": 0.4315454915183252,
+            "evaluated_only_S_scen": 0.38222889155662265,
+            "evaluated_only_S_step": 0.475580745754889,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        }
+      },
+      "by_group": {
+        "M": {
+          "batch": {
+            "expected_runs": 360,
+            "evaluated_runs": 340,
+            "failed_runs": 20,
+            "completed_records": 360,
+            "full_pass_count": 8,
+            "strict_full_pass_rate": 0.022222222222222223,
+            "evaluated_full_pass_rate": 0.023529411764705882,
+            "strict_S_scen": 0.13493674885442236,
+            "strict_S_step": 0.2509007916315925,
+            "evaluated_only_S_scen": 0.14287420466938838,
+            "evaluated_only_S_step": 0.26565966172756855,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "T": {
+          "batch": {
+            "expected_runs": 360,
+            "evaluated_runs": 355,
+            "failed_runs": 5,
+            "completed_records": 360,
+            "full_pass_count": 51,
+            "strict_full_pass_rate": 0.14166666666666666,
+            "evaluated_full_pass_rate": 0.14366197183098592,
+            "strict_S_scen": 0.40165515787657846,
+            "strict_S_step": 0.49012598635838484,
+            "evaluated_only_S_scen": 0.40731227277624854,
+            "evaluated_only_S_step": 0.4970291692648409,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "F": {
+          "batch": {
+            "expected_runs": 360,
+            "evaluated_runs": 351,
+            "failed_runs": 9,
+            "completed_records": 360,
+            "full_pass_count": 141,
+            "strict_full_pass_rate": 0.39166666666666666,
+            "evaluated_full_pass_rate": 0.4017094017094017,
+            "strict_S_scen": 0.7466423339632232,
+            "strict_S_step": 0.8038159639464054,
+            "evaluated_only_S_scen": 0.7657870091930494,
+            "evaluated_only_S_step": 0.8244266296886209,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        }
+      },
+      "by_model": {
+        "claude_haiku45": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 116,
+            "failed_runs": 4,
+            "completed_records": 120,
+            "full_pass_count": 4,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "evaluated_full_pass_rate": 0.034482758620689655,
+            "strict_S_scen": 0.19677423727290339,
+            "strict_S_step": 0.3372222081845652,
+            "evaluated_only_S_scen": 0.2035595557995552,
+            "evaluated_only_S_step": 0.3488505601909295,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "claude_opus46": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 120,
+            "failed_runs": 0,
+            "completed_records": 120,
+            "full_pass_count": 58,
+            "strict_full_pass_rate": 0.48333333333333334,
+            "evaluated_full_pass_rate": 0.48333333333333334,
+            "strict_S_scen": 0.8243277830181988,
+            "strict_S_step": 0.8604791157146356,
+            "evaluated_only_S_scen": 0.8243277830181988,
+            "evaluated_only_S_step": 0.8604791157146356,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "claude_sonnet46": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 120,
+            "failed_runs": 0,
+            "completed_records": 120,
+            "full_pass_count": 32,
+            "strict_full_pass_rate": 0.26666666666666666,
+            "evaluated_full_pass_rate": 0.26666666666666666,
+            "strict_S_scen": 0.705259772096161,
+            "strict_S_step": 0.7833131126999934,
+            "evaluated_only_S_scen": 0.705259772096161,
+            "evaluated_only_S_step": 0.7833131126999934,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "gemini31_flash_lite": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 116,
+            "failed_runs": 4,
+            "completed_records": 120,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "evaluated_full_pass_rate": 0.0,
+            "strict_S_scen": 0.011345794905577515,
+            "strict_S_step": 0.10448563588987413,
+            "evaluated_only_S_scen": 0.011737029212666394,
+            "evaluated_only_S_step": 0.10808858885159393,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "gemini31_pro_preview": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 120,
+            "failed_runs": 0,
+            "completed_records": 120,
+            "full_pass_count": 43,
+            "strict_full_pass_rate": 0.35833333333333334,
+            "evaluated_full_pass_rate": 0.35833333333333334,
+            "strict_S_scen": 0.665291798880657,
+            "strict_S_step": 0.7467630411422267,
+            "evaluated_only_S_scen": 0.665291798880657,
+            "evaluated_only_S_step": 0.7467630411422267,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "gemini_flash_latest": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 119,
+            "failed_runs": 1,
+            "completed_records": 120,
+            "full_pass_count": 18,
+            "strict_full_pass_rate": 0.15,
+            "evaluated_full_pass_rate": 0.15126050420168066,
+            "strict_S_scen": 0.44072880886102955,
+            "strict_S_step": 0.5314180856339364,
+            "evaluated_only_S_scen": 0.4444324122968365,
+            "evaluated_only_S_step": 0.535883783832541,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "gpt54": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 111,
+            "failed_runs": 9,
+            "completed_records": 120,
+            "full_pass_count": 40,
+            "strict_full_pass_rate": 0.3333333333333333,
+            "evaluated_full_pass_rate": 0.36036036036036034,
+            "strict_S_scen": 0.7503074199908135,
+            "strict_S_step": 0.8042057349823539,
+            "evaluated_only_S_scen": 0.8111431567468255,
+            "evaluated_only_S_step": 0.8694116053863286,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "gpt54_mini": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 116,
+            "failed_runs": 4,
+            "completed_records": 120,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.008333333333333333,
+            "evaluated_full_pass_rate": 0.008620689655172414,
+            "strict_S_scen": 0.05897689267254485,
+            "strict_S_step": 0.15564676074122474,
+            "evaluated_only_S_scen": 0.061010578626770534,
+            "evaluated_only_S_step": 0.16101389042195663,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "gpt54_nano": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 108,
+            "failed_runs": 12,
+            "completed_records": 120,
+            "full_pass_count": 4,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "evaluated_full_pass_rate": 0.037037037037037035,
+            "strict_S_scen": 0.1966902143847862,
+            "strict_S_step": 0.3109945308203382,
+            "evaluated_only_S_scen": 0.21854468264976246,
+            "evaluated_only_S_step": 0.34554947868926467,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        }
+      }
+    },
+    "public_feedback_repair_at1_at2_at3": {
+      "overall": {
+        "@1": {
+          "expected_runs": 1080,
+          "evaluated_runs": 1047,
+          "failed_runs": 33,
+          "completed_records": 1080,
+          "full_pass_count": 201,
+          "strict_full_pass_rate": 0.18611111111111112,
+          "evaluated_full_pass_rate": 0.19197707736389685,
+          "strict_S_scen": 0.42952942055774834,
+          "strict_S_step": 0.5168982405168939,
+          "evaluated_only_S_scen": 0.4430675971369324,
+          "evaluated_only_S_step": 0.5331901621377703,
+          "recovered_count": 0,
+          "public_feedback_audit_violations": 0,
+          "backend_generation_failures": 0,
+          "backend_evaluation_failures": 0
+        },
+        "@2": {
+          "expected_runs": 1080,
+          "evaluated_runs": 920,
+          "failed_runs": 152,
+          "completed_records": 1080,
+          "full_pass_count": 301,
+          "strict_full_pass_rate": 0.27870370370370373,
+          "evaluated_full_pass_rate": 0.32717391304347826,
+          "strict_S_scen": 0.5030428646442239,
+          "strict_S_step": 0.5794279289199733,
+          "evaluated_only_S_scen": 0.5905285802345237,
+          "evaluated_only_S_step": 0.6801980035147512,
+          "recovered_count": 0,
+          "public_feedback_audit_violations": 0,
+          "backend_generation_failures": 0,
+          "backend_evaluation_failures": 0
+        },
+        "@3": {
+          "expected_runs": 1080,
+          "evaluated_runs": 937,
+          "failed_runs": 134,
+          "completed_records": 1080,
+          "full_pass_count": 344,
+          "strict_full_pass_rate": 0.31851851851851853,
+          "evaluated_full_pass_rate": 0.3671291355389541,
+          "strict_S_scen": 0.556471005764429,
+          "strict_S_step": 0.6340269985262004,
+          "evaluated_only_S_scen": 0.6413966768682852,
+          "evaluated_only_S_step": 0.7307888563589076,
+          "recovered_count": 0,
+          "public_feedback_audit_violations": 0,
+          "backend_generation_failures": 0,
+          "backend_evaluation_failures": 0
+        }
+      },
+      "by_family": {
+        "campus_registrar_command": {
+          "@1": {
+            "expected_runs": 360,
+            "evaluated_runs": 359,
+            "failed_runs": 1,
+            "completed_records": 360,
+            "full_pass_count": 70,
+            "strict_full_pass_rate": 0.19444444444444445,
+            "evaluated_full_pass_rate": 0.19498607242339833,
+            "strict_S_scen": 0.43423719104500036,
+            "strict_S_step": 0.5251371495125272,
+            "evaluated_only_S_scen": 0.4354467653933151,
+            "evaluated_only_S_step": 0.526599927087771,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 360,
+            "evaluated_runs": 320,
+            "failed_runs": 40,
+            "completed_records": 360,
+            "full_pass_count": 113,
+            "strict_full_pass_rate": 0.3138888888888889,
+            "evaluated_full_pass_rate": 0.353125,
+            "strict_S_scen": 0.5044901772969724,
+            "strict_S_step": 0.5880585957644342,
+            "evaluated_only_S_scen": 0.567551449459094,
+            "evaluated_only_S_step": 0.6615659202349885,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 360,
+            "evaluated_runs": 322,
+            "failed_runs": 37,
+            "completed_records": 360,
+            "full_pass_count": 132,
+            "strict_full_pass_rate": 0.36666666666666664,
+            "evaluated_full_pass_rate": 0.40993788819875776,
+            "strict_S_scen": 0.5574637517842386,
+            "strict_S_step": 0.6370460082152537,
+            "evaluated_only_S_scen": 0.6232513995103288,
+            "evaluated_only_S_step": 0.7122253507996625,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "clinic_shift_command": {
+          "@1": {
+            "expected_runs": 360,
+            "evaluated_runs": 333,
+            "failed_runs": 27,
+            "completed_records": 360,
+            "full_pass_count": 48,
+            "strict_full_pass_rate": 0.13333333333333333,
+            "evaluated_full_pass_rate": 0.14414414414414414,
+            "strict_S_scen": 0.40312001002218395,
+            "strict_S_step": 0.48258147705374,
+            "evaluated_only_S_scen": 0.43580541624019886,
+            "evaluated_only_S_step": 0.5217097049229622,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 360,
+            "evaluated_runs": 284,
+            "failed_runs": 69,
+            "completed_records": 360,
+            "full_pass_count": 62,
+            "strict_full_pass_rate": 0.17222222222222222,
+            "evaluated_full_pass_rate": 0.21830985915492956,
+            "strict_S_scen": 0.46057802101280365,
+            "strict_S_step": 0.5339128690889788,
+            "evaluated_only_S_scen": 0.5838312942415821,
+            "evaluated_only_S_step": 0.6767909608170154,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 360,
+            "evaluated_runs": 287,
+            "failed_runs": 66,
+            "completed_records": 360,
+            "full_pass_count": 68,
+            "strict_full_pass_rate": 0.18888888888888888,
+            "evaluated_full_pass_rate": 0.23693379790940766,
+            "strict_S_scen": 0.49783941702419965,
+            "strict_S_step": 0.5784590764998837,
+            "evaluated_only_S_scen": 0.6244675614240832,
+            "evaluated_only_S_step": 0.7255932666897497,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "media_campaign_launch_desk": {
+          "@1": {
+            "expected_runs": 360,
+            "evaluated_runs": 355,
+            "failed_runs": 5,
+            "completed_records": 360,
+            "full_pass_count": 83,
+            "strict_full_pass_rate": 0.23055555555555557,
+            "evaluated_full_pass_rate": 0.23380281690140844,
+            "strict_S_scen": 0.4512310606060606,
+            "strict_S_step": 0.5429760949844148,
+            "evaluated_only_S_scen": 0.4575864276568502,
+            "evaluated_only_S_step": 0.550623645617998,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 360,
+            "evaluated_runs": 316,
+            "failed_runs": 43,
+            "completed_records": 360,
+            "full_pass_count": 126,
+            "strict_full_pass_rate": 0.35,
+            "evaluated_full_pass_rate": 0.3987341772151899,
+            "strict_S_scen": 0.5440603956228957,
+            "strict_S_step": 0.6163123219065069,
+            "evaluated_only_S_scen": 0.6198156405830457,
+            "evaluated_only_S_step": 0.7021279616656407,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 360,
+            "evaluated_runs": 328,
+            "failed_runs": 31,
+            "completed_records": 360,
+            "full_pass_count": 144,
+            "strict_full_pass_rate": 0.4,
+            "evaluated_full_pass_rate": 0.43902439024390244,
+            "strict_S_scen": 0.6141098484848484,
+            "strict_S_step": 0.6865759108634636,
+            "evaluated_only_S_scen": 0.6740230044345897,
+            "evaluated_only_S_step": 0.75355892655746,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        }
+      },
+      "by_family_tier": {
+        "campus_registrar_command": {
+          "A": {
+            "@1": {
+              "expected_runs": 90,
+              "evaluated_runs": 90,
+              "failed_runs": 0,
+              "completed_records": 90,
+              "full_pass_count": 28,
+              "strict_full_pass_rate": 0.3111111111111111,
+              "evaluated_full_pass_rate": 0.3111111111111111,
+              "strict_S_scen": 0.5,
+              "strict_S_step": 0.5947738725119678,
+              "evaluated_only_S_scen": 0.5,
+              "evaluated_only_S_step": 0.5947738725119678,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@2": {
+              "expected_runs": 90,
+              "evaluated_runs": 85,
+              "failed_runs": 5,
+              "completed_records": 90,
+              "full_pass_count": 46,
+              "strict_full_pass_rate": 0.5111111111111111,
+              "evaluated_full_pass_rate": 0.5411764705882353,
+              "strict_S_scen": 0.6842592592592592,
+              "strict_S_step": 0.7544315318720081,
+              "evaluated_only_S_scen": 0.7245098039215686,
+              "evaluated_only_S_step": 0.7988098572762439,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@3": {
+              "expected_runs": 90,
+              "evaluated_runs": 86,
+              "failed_runs": 4,
+              "completed_records": 90,
+              "full_pass_count": 53,
+              "strict_full_pass_rate": 0.5888888888888889,
+              "evaluated_full_pass_rate": 0.6162790697674418,
+              "strict_S_scen": 0.7481481481481481,
+              "strict_S_step": 0.8128958805744521,
+              "evaluated_only_S_scen": 0.7829457364341085,
+              "evaluated_only_S_step": 0.8507049912988451,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "B": {
+            "@1": {
+              "expected_runs": 90,
+              "evaluated_runs": 90,
+              "failed_runs": 0,
+              "completed_records": 90,
+              "full_pass_count": 31,
+              "strict_full_pass_rate": 0.34444444444444444,
+              "evaluated_full_pass_rate": 0.34444444444444444,
+              "strict_S_scen": 0.5101851851851852,
+              "strict_S_step": 0.6053243207409874,
+              "evaluated_only_S_scen": 0.5101851851851852,
+              "evaluated_only_S_step": 0.6053243207409874,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@2": {
+              "expected_runs": 90,
+              "evaluated_runs": 83,
+              "failed_runs": 7,
+              "completed_records": 90,
+              "full_pass_count": 47,
+              "strict_full_pass_rate": 0.5222222222222223,
+              "evaluated_full_pass_rate": 0.5662650602409639,
+              "strict_S_scen": 0.587037037037037,
+              "strict_S_step": 0.6686380440547107,
+              "evaluated_only_S_scen": 0.6365461847389559,
+              "evaluated_only_S_step": 0.7250292043966742,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@3": {
+              "expected_runs": 90,
+              "evaluated_runs": 83,
+              "failed_runs": 7,
+              "completed_records": 90,
+              "full_pass_count": 53,
+              "strict_full_pass_rate": 0.5888888888888889,
+              "evaluated_full_pass_rate": 0.6385542168674698,
+              "strict_S_scen": 0.6425925925925926,
+              "strict_S_step": 0.711928071928072,
+              "evaluated_only_S_scen": 0.6967871485943775,
+              "evaluated_only_S_step": 0.7719701984762225,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "C": {
+            "@1": {
+              "expected_runs": 90,
+              "evaluated_runs": 89,
+              "failed_runs": 1,
+              "completed_records": 90,
+              "full_pass_count": 8,
+              "strict_full_pass_rate": 0.08888888888888889,
+              "evaluated_full_pass_rate": 0.0898876404494382,
+              "strict_S_scen": 0.3486590038314176,
+              "strict_S_step": 0.43135083574653516,
+              "evaluated_only_S_scen": 0.35257652072839984,
+              "evaluated_only_S_step": 0.43619747435042877,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@2": {
+              "expected_runs": 90,
+              "evaluated_runs": 80,
+              "failed_runs": 10,
+              "completed_records": 90,
+              "full_pass_count": 13,
+              "strict_full_pass_rate": 0.14444444444444443,
+              "evaluated_full_pass_rate": 0.1625,
+              "strict_S_scen": 0.4084291187739464,
+              "strict_S_step": 0.49532669612642344,
+              "evaluated_only_S_scen": 0.45948275862068966,
+              "evaluated_only_S_step": 0.5572425331422264,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@3": {
+              "expected_runs": 90,
+              "evaluated_runs": 82,
+              "failed_runs": 7,
+              "completed_records": 90,
+              "full_pass_count": 15,
+              "strict_full_pass_rate": 0.16666666666666666,
+              "evaluated_full_pass_rate": 0.18292682926829268,
+              "strict_S_scen": 0.4793103448275862,
+              "strict_S_step": 0.5699802920583289,
+              "evaluated_only_S_scen": 0.5260723296888141,
+              "evaluated_only_S_step": 0.6255881254298732,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "D": {
+            "@1": {
+              "expected_runs": 90,
+              "evaluated_runs": 90,
+              "failed_runs": 0,
+              "completed_records": 90,
+              "full_pass_count": 3,
+              "strict_full_pass_rate": 0.03333333333333333,
+              "evaluated_full_pass_rate": 0.03333333333333333,
+              "strict_S_scen": 0.37810457516339874,
+              "strict_S_step": 0.46909956905061856,
+              "evaluated_only_S_scen": 0.37810457516339874,
+              "evaluated_only_S_step": 0.46909956905061856,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@2": {
+              "expected_runs": 90,
+              "evaluated_runs": 72,
+              "failed_runs": 18,
+              "completed_records": 90,
+              "full_pass_count": 7,
+              "strict_full_pass_rate": 0.07777777777777778,
+              "evaluated_full_pass_rate": 0.09722222222222222,
+              "strict_S_scen": 0.3382352941176471,
+              "strict_S_step": 0.43383811100459485,
+              "evaluated_only_S_scen": 0.4227941176470588,
+              "evaluated_only_S_step": 0.5422976387557435,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@3": {
+              "expected_runs": 90,
+              "evaluated_runs": 71,
+              "failed_runs": 19,
+              "completed_records": 90,
+              "full_pass_count": 11,
+              "strict_full_pass_rate": 0.12222222222222222,
+              "evaluated_full_pass_rate": 0.15492957746478872,
+              "strict_S_scen": 0.35980392156862745,
+              "strict_S_step": 0.45337978830016207,
+              "evaluated_only_S_scen": 0.45608947804473904,
+              "evaluated_only_S_step": 0.5747067739016138,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          }
+        },
+        "clinic_shift_command": {
+          "A": {
+            "@1": {
+              "expected_runs": 90,
+              "evaluated_runs": 90,
+              "failed_runs": 0,
+              "completed_records": 90,
+              "full_pass_count": 24,
+              "strict_full_pass_rate": 0.26666666666666666,
+              "evaluated_full_pass_rate": 0.26666666666666666,
+              "strict_S_scen": 0.5009661835748792,
+              "strict_S_step": 0.5956331168831168,
+              "evaluated_only_S_scen": 0.5009661835748792,
+              "evaluated_only_S_step": 0.5956331168831168,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@2": {
+              "expected_runs": 90,
+              "evaluated_runs": 84,
+              "failed_runs": 6,
+              "completed_records": 90,
+              "full_pass_count": 31,
+              "strict_full_pass_rate": 0.34444444444444444,
+              "evaluated_full_pass_rate": 0.36904761904761907,
+              "strict_S_scen": 0.5932367149758454,
+              "strict_S_step": 0.6849898420293157,
+              "evaluated_only_S_scen": 0.6356107660455487,
+              "evaluated_only_S_step": 0.7339176878885526,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@3": {
+              "expected_runs": 90,
+              "evaluated_runs": 84,
+              "failed_runs": 6,
+              "completed_records": 90,
+              "full_pass_count": 34,
+              "strict_full_pass_rate": 0.37777777777777777,
+              "evaluated_full_pass_rate": 0.40476190476190477,
+              "strict_S_scen": 0.6265700483091787,
+              "strict_S_step": 0.7180537043365991,
+              "evaluated_only_S_scen": 0.6713250517598344,
+              "evaluated_only_S_step": 0.7693432546463561,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "B": {
+            "@1": {
+              "expected_runs": 90,
+              "evaluated_runs": 90,
+              "failed_runs": 0,
+              "completed_records": 90,
+              "full_pass_count": 14,
+              "strict_full_pass_rate": 0.15555555555555556,
+              "evaluated_full_pass_rate": 0.15555555555555556,
+              "strict_S_scen": 0.4922558922558923,
+              "strict_S_step": 0.5815342822161004,
+              "evaluated_only_S_scen": 0.4922558922558923,
+              "evaluated_only_S_step": 0.5815342822161004,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@2": {
+              "expected_runs": 90,
+              "evaluated_runs": 77,
+              "failed_runs": 13,
+              "completed_records": 90,
+              "full_pass_count": 20,
+              "strict_full_pass_rate": 0.2222222222222222,
+              "evaluated_full_pass_rate": 0.2597402597402597,
+              "strict_S_scen": 0.497979797979798,
+              "strict_S_step": 0.5803523875114784,
+              "evaluated_only_S_scen": 0.5820543093270366,
+              "evaluated_only_S_step": 0.6783339594290008,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@3": {
+              "expected_runs": 90,
+              "evaluated_runs": 79,
+              "failed_runs": 11,
+              "completed_records": 90,
+              "full_pass_count": 23,
+              "strict_full_pass_rate": 0.25555555555555554,
+              "evaluated_full_pass_rate": 0.2911392405063291,
+              "strict_S_scen": 0.52996632996633,
+              "strict_S_step": 0.6295819121955486,
+              "evaluated_only_S_scen": 0.603759110088224,
+              "evaluated_only_S_step": 0.7172452164253085,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "C": {
+            "@1": {
+              "expected_runs": 90,
+              "evaluated_runs": 84,
+              "failed_runs": 6,
+              "completed_records": 90,
+              "full_pass_count": 8,
+              "strict_full_pass_rate": 0.08888888888888889,
+              "evaluated_full_pass_rate": 0.09523809523809523,
+              "strict_S_scen": 0.30491452991452994,
+              "strict_S_step": 0.37813473667215586,
+              "evaluated_only_S_scen": 0.3266941391941392,
+              "evaluated_only_S_step": 0.405144360720167,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@2": {
+              "expected_runs": 90,
+              "evaluated_runs": 65,
+              "failed_runs": 23,
+              "completed_records": 90,
+              "full_pass_count": 8,
+              "strict_full_pass_rate": 0.08888888888888889,
+              "evaluated_full_pass_rate": 0.12307692307692308,
+              "strict_S_scen": 0.37008547008547005,
+              "strict_S_step": 0.4341668338070256,
+              "evaluated_only_S_scen": 0.5124260355029585,
+              "evaluated_only_S_step": 0.6011540775789584,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@3": {
+              "expected_runs": 90,
+              "evaluated_runs": 69,
+              "failed_runs": 19,
+              "completed_records": 90,
+              "full_pass_count": 8,
+              "strict_full_pass_rate": 0.08888888888888889,
+              "evaluated_full_pass_rate": 0.11594202898550725,
+              "strict_S_scen": 0.430982905982906,
+              "strict_S_step": 0.5150607693328144,
+              "evaluated_only_S_scen": 0.5621516164994426,
+              "evaluated_only_S_step": 0.6718183947819318,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "D": {
+            "@1": {
+              "expected_runs": 90,
+              "evaluated_runs": 69,
+              "failed_runs": 21,
+              "completed_records": 90,
+              "full_pass_count": 2,
+              "strict_full_pass_rate": 0.022222222222222223,
+              "evaluated_full_pass_rate": 0.028985507246376812,
+              "strict_S_scen": 0.31434343434343437,
+              "strict_S_step": 0.3750237724435868,
+              "evaluated_only_S_scen": 0.4100131752305666,
+              "evaluated_only_S_step": 0.48916144231772196,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@2": {
+              "expected_runs": 90,
+              "evaluated_runs": 58,
+              "failed_runs": 27,
+              "completed_records": 90,
+              "full_pass_count": 3,
+              "strict_full_pass_rate": 0.03333333333333333,
+              "evaluated_full_pass_rate": 0.05172413793103448,
+              "strict_S_scen": 0.38101010101010097,
+              "strict_S_step": 0.43614241300809553,
+              "evaluated_only_S_scen": 0.5912225705329154,
+              "evaluated_only_S_step": 0.6767727098401483,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@3": {
+              "expected_runs": 90,
+              "evaluated_runs": 55,
+              "failed_runs": 30,
+              "completed_records": 90,
+              "full_pass_count": 3,
+              "strict_full_pass_rate": 0.03333333333333333,
+              "evaluated_full_pass_rate": 0.05454545454545454,
+              "strict_S_scen": 0.40383838383838383,
+              "strict_S_step": 0.45113992013457305,
+              "evaluated_only_S_scen": 0.6608264462809917,
+              "evaluated_only_S_step": 0.7382289602202105,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          }
+        },
+        "media_campaign_launch_desk": {
+          "A": {
+            "@1": {
+              "expected_runs": 90,
+              "evaluated_runs": 90,
+              "failed_runs": 0,
+              "completed_records": 90,
+              "full_pass_count": 38,
+              "strict_full_pass_rate": 0.4222222222222222,
+              "evaluated_full_pass_rate": 0.4222222222222222,
+              "strict_S_scen": 0.5712962962962963,
+              "strict_S_step": 0.6419499647178218,
+              "evaluated_only_S_scen": 0.5712962962962963,
+              "evaluated_only_S_step": 0.6419499647178218,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@2": {
+              "expected_runs": 90,
+              "evaluated_runs": 88,
+              "failed_runs": 2,
+              "completed_records": 90,
+              "full_pass_count": 50,
+              "strict_full_pass_rate": 0.5555555555555556,
+              "evaluated_full_pass_rate": 0.5681818181818182,
+              "strict_S_scen": 0.675,
+              "strict_S_step": 0.7484216555049888,
+              "evaluated_only_S_scen": 0.6903409090909091,
+              "evaluated_only_S_step": 0.7654312385846477,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@3": {
+              "expected_runs": 90,
+              "evaluated_runs": 88,
+              "failed_runs": 2,
+              "completed_records": 90,
+              "full_pass_count": 57,
+              "strict_full_pass_rate": 0.6333333333333333,
+              "evaluated_full_pass_rate": 0.6477272727272727,
+              "strict_S_scen": 0.7273148148148147,
+              "strict_S_step": 0.7935708030946126,
+              "evaluated_only_S_scen": 0.7438446969696969,
+              "evaluated_only_S_step": 0.8116065031649448,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "B": {
+            "@1": {
+              "expected_runs": 90,
+              "evaluated_runs": 89,
+              "failed_runs": 1,
+              "completed_records": 90,
+              "full_pass_count": 30,
+              "strict_full_pass_rate": 0.3333333333333333,
+              "evaluated_full_pass_rate": 0.33707865168539325,
+              "strict_S_scen": 0.4157407407407407,
+              "strict_S_step": 0.5126116984954414,
+              "evaluated_only_S_scen": 0.42041198501872656,
+              "evaluated_only_S_step": 0.5183713805010082,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@2": {
+              "expected_runs": 90,
+              "evaluated_runs": 80,
+              "failed_runs": 10,
+              "completed_records": 90,
+              "full_pass_count": 42,
+              "strict_full_pass_rate": 0.4666666666666667,
+              "evaluated_full_pass_rate": 0.525,
+              "strict_S_scen": 0.5388888888888889,
+              "strict_S_step": 0.6022786011160303,
+              "evaluated_only_S_scen": 0.60625,
+              "evaluated_only_S_step": 0.677563426255534,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@3": {
+              "expected_runs": 90,
+              "evaluated_runs": 82,
+              "failed_runs": 8,
+              "completed_records": 90,
+              "full_pass_count": 50,
+              "strict_full_pass_rate": 0.5555555555555556,
+              "evaluated_full_pass_rate": 0.6097560975609756,
+              "strict_S_scen": 0.6055555555555555,
+              "strict_S_step": 0.6641248064404964,
+              "evaluated_only_S_scen": 0.6646341463414634,
+              "evaluated_only_S_step": 0.7289174704834717,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "C": {
+            "@1": {
+              "expected_runs": 90,
+              "evaluated_runs": 90,
+              "failed_runs": 0,
+              "completed_records": 90,
+              "full_pass_count": 15,
+              "strict_full_pass_rate": 0.16666666666666666,
+              "evaluated_full_pass_rate": 0.16666666666666666,
+              "strict_S_scen": 0.4618686868686869,
+              "strict_S_step": 0.5565464111570554,
+              "evaluated_only_S_scen": 0.4618686868686869,
+              "evaluated_only_S_step": 0.5565464111570554,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@2": {
+              "expected_runs": 90,
+              "evaluated_runs": 77,
+              "failed_runs": 13,
+              "completed_records": 90,
+              "full_pass_count": 34,
+              "strict_full_pass_rate": 0.37777777777777777,
+              "evaluated_full_pass_rate": 0.44155844155844154,
+              "strict_S_scen": 0.5371212121212121,
+              "strict_S_step": 0.5901822343752317,
+              "evaluated_only_S_scen": 0.6278040141676505,
+              "evaluated_only_S_step": 0.6898233908281928,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@3": {
+              "expected_runs": 90,
+              "evaluated_runs": 81,
+              "failed_runs": 9,
+              "completed_records": 90,
+              "full_pass_count": 37,
+              "strict_full_pass_rate": 0.4111111111111111,
+              "evaluated_full_pass_rate": 0.4567901234567901,
+              "strict_S_scen": 0.6050505050505051,
+              "strict_S_step": 0.6717015287596521,
+              "evaluated_only_S_scen": 0.6722783389450055,
+              "evaluated_only_S_step": 0.7463350319551689,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          },
+          "D": {
+            "@1": {
+              "expected_runs": 90,
+              "evaluated_runs": 86,
+              "failed_runs": 4,
+              "completed_records": 90,
+              "full_pass_count": 0,
+              "strict_full_pass_rate": 0.0,
+              "evaluated_full_pass_rate": 0.0,
+              "strict_S_scen": 0.3560185185185185,
+              "strict_S_step": 0.4607963055673406,
+              "evaluated_only_S_scen": 0.37257751937984496,
+              "evaluated_only_S_step": 0.48222869187279827,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@2": {
+              "expected_runs": 90,
+              "evaluated_runs": 71,
+              "failed_runs": 18,
+              "completed_records": 90,
+              "full_pass_count": 0,
+              "strict_full_pass_rate": 0.0,
+              "evaluated_full_pass_rate": 0.0,
+              "strict_S_scen": 0.4252314814814815,
+              "strict_S_step": 0.5243667966297768,
+              "evaluated_only_S_scen": 0.5390258215962441,
+              "evaluated_only_S_step": 0.664690305587041,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            },
+            "@3": {
+              "expected_runs": 90,
+              "evaluated_runs": 77,
+              "failed_runs": 12,
+              "completed_records": 90,
+              "full_pass_count": 0,
+              "strict_full_pass_rate": 0.0,
+              "evaluated_full_pass_rate": 0.0,
+              "strict_S_scen": 0.5185185185185185,
+              "strict_S_step": 0.6169065051590933,
+              "evaluated_only_S_scen": 0.6060606060606061,
+              "evaluated_only_S_step": 0.7210595514846545,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 0
+            }
+          }
+        }
+      },
+      "by_tier": {
+        "A": {
+          "@1": {
+            "expected_runs": 270,
+            "evaluated_runs": 270,
+            "failed_runs": 0,
+            "completed_records": 270,
+            "full_pass_count": 90,
+            "strict_full_pass_rate": 0.3333333333333333,
+            "evaluated_full_pass_rate": 0.3333333333333333,
+            "strict_S_scen": 0.5240874932903918,
+            "strict_S_step": 0.6107856513709689,
+            "evaluated_only_S_scen": 0.5240874932903918,
+            "evaluated_only_S_step": 0.6107856513709689,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 270,
+            "evaluated_runs": 257,
+            "failed_runs": 13,
+            "completed_records": 270,
+            "full_pass_count": 127,
+            "strict_full_pass_rate": 0.4703703703703704,
+            "evaluated_full_pass_rate": 0.49416342412451364,
+            "strict_S_scen": 0.6508319914117016,
+            "strict_S_step": 0.7292810098021042,
+            "evaluated_only_S_scen": 0.6837534540122934,
+            "evaluated_only_S_step": 0.7661707106870355,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 270,
+            "evaluated_runs": 258,
+            "failed_runs": 12,
+            "completed_records": 270,
+            "full_pass_count": 144,
+            "strict_full_pass_rate": 0.5333333333333333,
+            "evaluated_full_pass_rate": 0.5581395348837209,
+            "strict_S_scen": 0.7006776704240473,
+            "strict_S_step": 0.7748401293352212,
+            "evaluated_only_S_scen": 0.7332673295135378,
+            "evaluated_only_S_step": 0.8108792051182547,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "B": {
+          "@1": {
+            "expected_runs": 270,
+            "evaluated_runs": 269,
+            "failed_runs": 1,
+            "completed_records": 270,
+            "full_pass_count": 75,
+            "strict_full_pass_rate": 0.2777777777777778,
+            "evaluated_full_pass_rate": 0.2788104089219331,
+            "strict_S_scen": 0.4727272727272727,
+            "strict_S_step": 0.5664901004841765,
+            "evaluated_only_S_scen": 0.474484623183508,
+            "evaluated_only_S_step": 0.5685960116383927,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 270,
+            "evaluated_runs": 240,
+            "failed_runs": 30,
+            "completed_records": 270,
+            "full_pass_count": 109,
+            "strict_full_pass_rate": 0.40370370370370373,
+            "evaluated_full_pass_rate": 0.45416666666666666,
+            "strict_S_scen": 0.5413019079685747,
+            "strict_S_step": 0.6170896775607398,
+            "evaluated_only_S_scen": 0.6089646464646464,
+            "evaluated_only_S_step": 0.6942258872558323,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 270,
+            "evaluated_runs": 244,
+            "failed_runs": 26,
+            "completed_records": 270,
+            "full_pass_count": 126,
+            "strict_full_pass_rate": 0.4666666666666667,
+            "evaluated_full_pass_rate": 0.5163934426229508,
+            "strict_S_scen": 0.5927048260381593,
+            "strict_S_step": 0.6685449301880391,
+            "evaluated_only_S_scen": 0.6558618976651763,
+            "evaluated_only_S_step": 0.7397833243884038,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "C": {
+          "@1": {
+            "expected_runs": 270,
+            "evaluated_runs": 263,
+            "failed_runs": 7,
+            "completed_records": 270,
+            "full_pass_count": 31,
+            "strict_full_pass_rate": 0.11481481481481481,
+            "evaluated_full_pass_rate": 0.11787072243346007,
+            "strict_S_scen": 0.37181407353821144,
+            "strict_S_step": 0.4553439945252488,
+            "evaluated_only_S_scen": 0.3817102656095707,
+            "evaluated_only_S_step": 0.46746341643276496,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 270,
+            "evaluated_runs": 222,
+            "failed_runs": 46,
+            "completed_records": 270,
+            "full_pass_count": 55,
+            "strict_full_pass_rate": 0.2037037037037037,
+            "evaluated_full_pass_rate": 0.24774774774774774,
+            "strict_S_scen": 0.43854526699354285,
+            "strict_S_step": 0.5065585881028936,
+            "evaluated_only_S_scen": 0.533365865262417,
+            "evaluated_only_S_step": 0.61608476931433,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 270,
+            "evaluated_runs": 232,
+            "failed_runs": 35,
+            "completed_records": 270,
+            "full_pass_count": 60,
+            "strict_full_pass_rate": 0.2222222222222222,
+            "evaluated_full_pass_rate": 0.25862068965517243,
+            "strict_S_scen": 0.505114585286999,
+            "strict_S_step": 0.5855808633835985,
+            "evaluated_only_S_scen": 0.5878488708081455,
+            "evaluated_only_S_step": 0.6814949703171189,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "D": {
+          "@1": {
+            "expected_runs": 270,
+            "evaluated_runs": 245,
+            "failed_runs": 25,
+            "completed_records": 270,
+            "full_pass_count": 5,
+            "strict_full_pass_rate": 0.018518518518518517,
+            "evaluated_full_pass_rate": 0.02040816326530612,
+            "strict_S_scen": 0.34948884267511715,
+            "strict_S_step": 0.434973215687182,
+            "evaluated_only_S_scen": 0.3851509694787006,
+            "evaluated_only_S_step": 0.4793582376960781,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 270,
+            "evaluated_runs": 201,
+            "failed_runs": 63,
+            "completed_records": 270,
+            "full_pass_count": 10,
+            "strict_full_pass_rate": 0.037037037037037035,
+            "evaluated_full_pass_rate": 0.04975124378109453,
+            "strict_S_scen": 0.3814922922030765,
+            "strict_S_step": 0.4647824402141557,
+            "evaluated_only_S_scen": 0.5124523328101027,
+            "evaluated_only_S_step": 0.6243346211831943,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 270,
+            "evaluated_runs": 203,
+            "failed_runs": 61,
+            "completed_records": 270,
+            "full_pass_count": 14,
+            "strict_full_pass_rate": 0.05185185185185185,
+            "evaluated_full_pass_rate": 0.06896551724137931,
+            "strict_S_scen": 0.4273869413085099,
+            "strict_S_step": 0.5071420711979429,
+            "evaluated_only_S_scen": 0.568445685484225,
+            "evaluated_only_S_step": 0.6745239370613033,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        }
+      },
+      "by_group": {
+        "M": {
+          "@1": {
+            "expected_runs": 360,
+            "evaluated_runs": 341,
+            "failed_runs": 19,
+            "completed_records": 360,
+            "full_pass_count": 8,
+            "strict_full_pass_rate": 0.022222222222222223,
+            "evaluated_full_pass_rate": 0.02346041055718475,
+            "strict_S_scen": 0.1373183371735107,
+            "strict_S_step": 0.25408426952525603,
+            "evaluated_only_S_scen": 0.14496950552042184,
+            "evaluated_only_S_step": 0.26824145756332013,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 360,
+            "evaluated_runs": 332,
+            "failed_runs": 28,
+            "completed_records": 360,
+            "full_pass_count": 30,
+            "strict_full_pass_rate": 0.08333333333333333,
+            "evaluated_full_pass_rate": 0.09036144578313253,
+            "strict_S_scen": 0.2636872254289465,
+            "strict_S_step": 0.4131345194413904,
+            "evaluated_only_S_scen": 0.28592590709162874,
+            "evaluated_only_S_step": 0.44797718975572454,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 360,
+            "evaluated_runs": 326,
+            "failed_runs": 34,
+            "completed_records": 360,
+            "full_pass_count": 42,
+            "strict_full_pass_rate": 0.11666666666666667,
+            "evaluated_full_pass_rate": 0.12883435582822086,
+            "strict_S_scen": 0.32408154516456067,
+            "strict_S_step": 0.47657566001563745,
+            "evaluated_only_S_scen": 0.3578814609179197,
+            "evaluated_only_S_step": 0.5262798699559187,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "T": {
+          "@1": {
+            "expected_runs": 360,
+            "evaluated_runs": 354,
+            "failed_runs": 6,
+            "completed_records": 360,
+            "full_pass_count": 51,
+            "strict_full_pass_rate": 0.14166666666666666,
+            "evaluated_full_pass_rate": 0.1440677966101695,
+            "strict_S_scen": 0.40165515787657846,
+            "strict_S_step": 0.489880778084297,
+            "evaluated_only_S_scen": 0.4084628724168594,
+            "evaluated_only_S_step": 0.4981838421196241,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 360,
+            "evaluated_runs": 252,
+            "failed_runs": 108,
+            "completed_records": 360,
+            "full_pass_count": 80,
+            "strict_full_pass_rate": 0.2222222222222222,
+            "evaluated_full_pass_rate": 0.31746031746031744,
+            "strict_S_scen": 0.38340906623308624,
+            "strict_S_step": 0.43005256443976064,
+            "evaluated_only_S_scen": 0.5477272374758375,
+            "evaluated_only_S_step": 0.6143608063425152,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 360,
+            "evaluated_runs": 271,
+            "failed_runs": 88,
+            "completed_records": 360,
+            "full_pass_count": 93,
+            "strict_full_pass_rate": 0.25833333333333336,
+            "evaluated_full_pass_rate": 0.34317343173431736,
+            "strict_S_scen": 0.44292806847981464,
+            "strict_S_step": 0.496423114213972,
+            "evaluated_only_S_scen": 0.5883915300838866,
+            "evaluated_only_S_step": 0.6594550594724351,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "F": {
+          "@1": {
+            "expected_runs": 360,
+            "evaluated_runs": 352,
+            "failed_runs": 8,
+            "completed_records": 360,
+            "full_pass_count": 142,
+            "strict_full_pass_rate": 0.39444444444444443,
+            "evaluated_full_pass_rate": 0.4034090909090909,
+            "strict_S_scen": 0.7496147666231558,
+            "strict_S_step": 0.806729673941129,
+            "evaluated_only_S_scen": 0.7666514658645912,
+            "evaluated_only_S_step": 0.8250644392579729,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 360,
+            "evaluated_runs": 336,
+            "failed_runs": 16,
+            "completed_records": 360,
+            "full_pass_count": 191,
+            "strict_full_pass_rate": 0.5305555555555556,
+            "evaluated_full_pass_rate": 0.5684523809523809,
+            "strict_S_scen": 0.862032302270639,
+            "strict_S_step": 0.8950967028787691,
+            "evaluated_only_S_scen": 0.9236060381471132,
+            "evaluated_only_S_step": 0.9590321816558239,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 360,
+            "evaluated_runs": 340,
+            "failed_runs": 12,
+            "completed_records": 360,
+            "full_pass_count": 209,
+            "strict_full_pass_rate": 0.5805555555555556,
+            "evaluated_full_pass_rate": 0.6147058823529412,
+            "strict_S_scen": 0.9024034036489114,
+            "strict_S_step": 0.9290822213489917,
+            "evaluated_only_S_scen": 0.9554859568047297,
+            "evaluated_only_S_step": 0.9837341167224617,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        }
+      },
+      "by_model": {
+        "claude_haiku45": {
+          "@1": {
+            "expected_runs": 120,
+            "evaluated_runs": 116,
+            "failed_runs": 4,
+            "completed_records": 120,
+            "full_pass_count": 4,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "evaluated_full_pass_rate": 0.034482758620689655,
+            "strict_S_scen": 0.1985370577857239,
+            "strict_S_step": 0.33872452677834725,
+            "evaluated_only_S_scen": 0.20538316322661093,
+            "evaluated_only_S_step": 0.35040468287415233,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 120,
+            "evaluated_runs": 111,
+            "failed_runs": 9,
+            "completed_records": 120,
+            "full_pass_count": 13,
+            "strict_full_pass_rate": 0.10833333333333334,
+            "evaluated_full_pass_rate": 0.11711711711711711,
+            "strict_S_scen": 0.3751850723479615,
+            "strict_S_step": 0.5188632574676394,
+            "evaluated_only_S_scen": 0.40560548361941784,
+            "evaluated_only_S_step": 0.560933251316367,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 120,
+            "evaluated_runs": 112,
+            "failed_runs": 8,
+            "completed_records": 120,
+            "full_pass_count": 20,
+            "strict_full_pass_rate": 0.16666666666666666,
+            "evaluated_full_pass_rate": 0.17857142857142858,
+            "strict_S_scen": 0.49283225415178744,
+            "strict_S_step": 0.6257234602042573,
+            "evaluated_only_S_scen": 0.5280345580197723,
+            "evaluated_only_S_step": 0.6704179930759899,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "claude_opus46": {
+          "@1": {
+            "expected_runs": 120,
+            "evaluated_runs": 120,
+            "failed_runs": 0,
+            "completed_records": 120,
+            "full_pass_count": 58,
+            "strict_full_pass_rate": 0.48333333333333334,
+            "evaluated_full_pass_rate": 0.48333333333333334,
+            "strict_S_scen": 0.8243277830181988,
+            "strict_S_step": 0.8604791157146356,
+            "evaluated_only_S_scen": 0.8243277830181988,
+            "evaluated_only_S_step": 0.8604791157146356,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 120,
+            "evaluated_runs": 109,
+            "failed_runs": 11,
+            "completed_records": 120,
+            "full_pass_count": 67,
+            "strict_full_pass_rate": 0.5583333333333333,
+            "evaluated_full_pass_rate": 0.6146788990825688,
+            "strict_S_scen": 0.8762615476421257,
+            "strict_S_step": 0.897098951311995,
+            "evaluated_only_S_scen": 0.9646916120830742,
+            "evaluated_only_S_step": 0.9876318730040313,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 120,
+            "evaluated_runs": 112,
+            "failed_runs": 8,
+            "completed_records": 120,
+            "full_pass_count": 67,
+            "strict_full_pass_rate": 0.5583333333333333,
+            "evaluated_full_pass_rate": 0.5982142857142857,
+            "strict_S_scen": 0.899901887398718,
+            "strict_S_step": 0.9220449360336211,
+            "evaluated_only_S_scen": 0.9641805936414836,
+            "evaluated_only_S_step": 0.9879052886074512,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "claude_sonnet46": {
+          "@1": {
+            "expected_runs": 120,
+            "evaluated_runs": 120,
+            "failed_runs": 0,
+            "completed_records": 120,
+            "full_pass_count": 32,
+            "strict_full_pass_rate": 0.26666666666666666,
+            "evaluated_full_pass_rate": 0.26666666666666666,
+            "strict_S_scen": 0.705259772096161,
+            "strict_S_step": 0.7833131126999934,
+            "evaluated_only_S_scen": 0.705259772096161,
+            "evaluated_only_S_step": 0.7833131126999934,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 120,
+            "evaluated_runs": 92,
+            "failed_runs": 28,
+            "completed_records": 120,
+            "full_pass_count": 52,
+            "strict_full_pass_rate": 0.43333333333333335,
+            "evaluated_full_pass_rate": 0.5652173913043478,
+            "strict_S_scen": 0.6923866733248623,
+            "strict_S_step": 0.7170830164163745,
+            "evaluated_only_S_scen": 0.9031130521628639,
+            "evaluated_only_S_step": 0.9353256735865755,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 120,
+            "evaluated_runs": 98,
+            "failed_runs": 21,
+            "completed_records": 120,
+            "full_pass_count": 58,
+            "strict_full_pass_rate": 0.48333333333333334,
+            "evaluated_full_pass_rate": 0.5918367346938775,
+            "strict_S_scen": 0.7505866596130839,
+            "strict_S_step": 0.7719528252729889,
+            "evaluated_only_S_scen": 0.9190857056486741,
+            "evaluated_only_S_step": 0.9452483574771293,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "gemini31_flash_lite": {
+          "@1": {
+            "expected_runs": 120,
+            "evaluated_runs": 116,
+            "failed_runs": 4,
+            "completed_records": 120,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "evaluated_full_pass_rate": 0.0,
+            "strict_S_scen": 0.011345794905577515,
+            "strict_S_step": 0.10448563588987413,
+            "evaluated_only_S_scen": 0.011737029212666394,
+            "evaluated_only_S_step": 0.10808858885159393,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 120,
+            "evaluated_runs": 114,
+            "failed_runs": 6,
+            "completed_records": 120,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "evaluated_full_pass_rate": 0.0,
+            "strict_S_scen": 0.04234189723320158,
+            "strict_S_step": 0.19930361329546079,
+            "evaluated_only_S_scen": 0.04457041814021219,
+            "evaluated_only_S_step": 0.20979327715311663,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 120,
+            "evaluated_runs": 111,
+            "failed_runs": 9,
+            "completed_records": 120,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "evaluated_full_pass_rate": 0.0,
+            "strict_S_scen": 0.05936264822134387,
+            "strict_S_step": 0.2472742047247988,
+            "evaluated_only_S_scen": 0.06417583591496635,
+            "evaluated_only_S_step": 0.26732346456735007,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "gemini31_pro_preview": {
+          "@1": {
+            "expected_runs": 120,
+            "evaluated_runs": 120,
+            "failed_runs": 0,
+            "completed_records": 120,
+            "full_pass_count": 43,
+            "strict_full_pass_rate": 0.35833333333333334,
+            "evaluated_full_pass_rate": 0.35833333333333334,
+            "strict_S_scen": 0.665291798880657,
+            "strict_S_step": 0.7467630411422267,
+            "evaluated_only_S_scen": 0.665291798880657,
+            "evaluated_only_S_step": 0.7467630411422267,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 120,
+            "evaluated_runs": 116,
+            "failed_runs": 4,
+            "completed_records": 120,
+            "full_pass_count": 59,
+            "strict_full_pass_rate": 0.49166666666666664,
+            "evaluated_full_pass_rate": 0.5086206896551724,
+            "strict_S_scen": 0.8617383257414896,
+            "strict_S_step": 0.9075183068537064,
+            "evaluated_only_S_scen": 0.8914534404222306,
+            "evaluated_only_S_step": 0.9388120415727997,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 120,
+            "evaluated_runs": 118,
+            "failed_runs": 2,
+            "completed_records": 120,
+            "full_pass_count": 67,
+            "strict_full_pass_rate": 0.5583333333333333,
+            "evaluated_full_pass_rate": 0.5677966101694916,
+            "strict_S_scen": 0.9337991740238135,
+            "strict_S_step": 0.9663787155943905,
+            "evaluated_only_S_scen": 0.949626278668285,
+            "evaluated_only_S_step": 0.9827580158587023,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "gemini_flash_latest": {
+          "@1": {
+            "expected_runs": 120,
+            "evaluated_runs": 119,
+            "failed_runs": 1,
+            "completed_records": 120,
+            "full_pass_count": 18,
+            "strict_full_pass_rate": 0.15,
+            "evaluated_full_pass_rate": 0.15126050420168066,
+            "strict_S_scen": 0.44072880886102955,
+            "strict_S_step": 0.5314331822522939,
+            "evaluated_only_S_scen": 0.4444324122968365,
+            "evaluated_only_S_step": 0.5358990073132376,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 120,
+            "evaluated_runs": 49,
+            "failed_runs": 71,
+            "completed_records": 120,
+            "full_pass_count": 26,
+            "strict_full_pass_rate": 0.21666666666666667,
+            "evaluated_full_pass_rate": 0.5306122448979592,
+            "strict_S_scen": 0.3591533257992216,
+            "strict_S_step": 0.37774643811512826,
+            "evaluated_only_S_scen": 0.8795591652225836,
+            "evaluated_only_S_step": 0.9250933178329671,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 120,
+            "evaluated_runs": 60,
+            "failed_runs": 60,
+            "completed_records": 120,
+            "full_pass_count": 30,
+            "strict_full_pass_rate": 0.25,
+            "evaluated_full_pass_rate": 0.5,
+            "strict_S_scen": 0.44661025419348466,
+            "strict_S_step": 0.47178844148908955,
+            "evaluated_only_S_scen": 0.8932205083869693,
+            "evaluated_only_S_step": 0.9435768829781791,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "gpt54": {
+          "@1": {
+            "expected_runs": 120,
+            "evaluated_runs": 112,
+            "failed_runs": 8,
+            "completed_records": 120,
+            "full_pass_count": 41,
+            "strict_full_pass_rate": 0.3416666666666667,
+            "evaluated_full_pass_rate": 0.36607142857142855,
+            "strict_S_scen": 0.7592247179706116,
+            "strict_S_step": 0.8129468649665248,
+            "evaluated_only_S_scen": 0.8134550549685124,
+            "evaluated_only_S_step": 0.8710144981784194,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 120,
+            "evaluated_runs": 111,
+            "failed_runs": 1,
+            "completed_records": 120,
+            "full_pass_count": 65,
+            "strict_full_pass_rate": 0.5416666666666666,
+            "evaluated_full_pass_rate": 0.5855855855855856,
+            "strict_S_scen": 0.8480970334283016,
+            "strict_S_step": 0.8806728504706055,
+            "evaluated_only_S_scen": 0.916861657760326,
+            "evaluated_only_S_step": 0.9520787572655195,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 120,
+            "evaluated_runs": 110,
+            "failed_runs": 2,
+            "completed_records": 120,
+            "full_pass_count": 75,
+            "strict_full_pass_rate": 0.625,
+            "evaluated_full_pass_rate": 0.6818181818181818,
+            "strict_S_scen": 0.8735091495242027,
+            "strict_S_step": 0.8988230124189632,
+            "evaluated_only_S_scen": 0.952919072208221,
+            "evaluated_only_S_step": 0.9805341953661416,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "gpt54_mini": {
+          "@1": {
+            "expected_runs": 120,
+            "evaluated_runs": 115,
+            "failed_runs": 5,
+            "completed_records": 120,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.008333333333333333,
+            "evaluated_full_pass_rate": 0.008695652173913044,
+            "strict_S_scen": 0.05897689267254485,
+            "strict_S_step": 0.1548960393006036,
+            "evaluated_only_S_scen": 0.06154110539743811,
+            "evaluated_only_S_step": 0.16163064970497767,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 120,
+            "evaluated_runs": 111,
+            "failed_runs": 9,
+            "completed_records": 120,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "evaluated_full_pass_rate": 0.018018018018018018,
+            "strict_S_scen": 0.09868719957517472,
+            "strict_S_step": 0.195328238787779,
+            "evaluated_only_S_scen": 0.10668886440559429,
+            "evaluated_only_S_step": 0.21116566355435568,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 120,
+            "evaluated_runs": 113,
+            "failed_runs": 7,
+            "completed_records": 120,
+            "full_pass_count": 5,
+            "strict_full_pass_rate": 0.041666666666666664,
+            "evaluated_full_pass_rate": 0.04424778761061947,
+            "strict_S_scen": 0.13158729163287547,
+            "strict_S_step": 0.24552807587983747,
+            "evaluated_only_S_scen": 0.13973871677827482,
+            "evaluated_only_S_step": 0.2607377796954026,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "gpt54_nano": {
+          "@1": {
+            "expected_runs": 120,
+            "evaluated_runs": 109,
+            "failed_runs": 11,
+            "completed_records": 120,
+            "full_pass_count": 4,
+            "strict_full_pass_rate": 0.03333333333333333,
+            "evaluated_full_pass_rate": 0.03669724770642202,
+            "strict_S_scen": 0.20207215882923066,
+            "strict_S_step": 0.31904264590754666,
+            "evaluated_only_S_scen": 0.22246476201383192,
+            "evaluated_only_S_step": 0.35123961017344585,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@2": {
+            "expected_runs": 120,
+            "evaluated_runs": 107,
+            "failed_runs": 13,
+            "completed_records": 120,
+            "full_pass_count": 17,
+            "strict_full_pass_rate": 0.14166666666666666,
+            "evaluated_full_pass_rate": 0.1588785046728972,
+            "strict_S_scen": 0.3735347067056764,
+            "strict_S_step": 0.5212366875610709,
+            "evaluated_only_S_scen": 0.4189174280811324,
+            "evaluated_only_S_step": 0.5845645094142851,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          },
+          "@3": {
+            "expected_runs": 120,
+            "evaluated_runs": 103,
+            "failed_runs": 17,
+            "completed_records": 120,
+            "full_pass_count": 22,
+            "strict_full_pass_rate": 0.18333333333333332,
+            "evaluated_full_pass_rate": 0.21359223300970873,
+            "strict_S_scen": 0.42004973312055066,
+            "strict_S_step": 0.5567293151178564,
+            "evaluated_only_S_scen": 0.4893783298491852,
+            "evaluated_only_S_step": 0.6486166778072113,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        }
+      }
+    },
+    "backend_backed": {
+      "overall": {
+        "batch": {
+          "expected_runs": 1080,
+          "evaluated_runs": 1008,
+          "failed_runs": 72,
+          "completed_records": 1080,
+          "full_pass_count": 169,
+          "strict_full_pass_rate": 0.15648148148148147,
+          "evaluated_full_pass_rate": 0.16765873015873015,
+          "strict_S_scen": 0.3791272036750033,
+          "strict_S_step": 0.4550103417127005,
+          "evaluated_only_S_scen": 0.40620771822321783,
+          "evaluated_only_S_step": 0.4875110804064648,
+          "recovered_count": 0,
+          "public_feedback_audit_violations": 0,
+          "backend_generation_failures": 5,
+          "backend_evaluation_failures": 46
+        }
+      },
+      "by_family": {
+        "campus_registrar_command": {
+          "batch": {
+            "expected_runs": 360,
+            "evaluated_runs": 343,
+            "failed_runs": 17,
+            "completed_records": 360,
+            "full_pass_count": 59,
+            "strict_full_pass_rate": 0.1638888888888889,
+            "evaluated_full_pass_rate": 0.17201166180758018,
+            "strict_S_scen": 0.38643908233791596,
+            "strict_S_step": 0.4612207996542633,
+            "evaluated_only_S_scen": 0.40559203977157365,
+            "evaluated_only_S_step": 0.4840801395788187,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 1,
+            "backend_evaluation_failures": 16
+          }
+        },
+        "clinic_shift_command": {
+          "batch": {
+            "expected_runs": 360,
+            "evaluated_runs": 323,
+            "failed_runs": 37,
+            "completed_records": 360,
+            "full_pass_count": 30,
+            "strict_full_pass_rate": 0.08333333333333333,
+            "evaluated_full_pass_rate": 0.09287925696594428,
+            "strict_S_scen": 0.3399471583167235,
+            "strict_S_step": 0.4185966633215273,
+            "evaluated_only_S_scen": 0.37888847366569806,
+            "evaluated_only_S_step": 0.4665473646927239,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 3,
+            "backend_evaluation_failures": 16
+          }
+        },
+        "media_campaign_launch_desk": {
+          "batch": {
+            "expected_runs": 360,
+            "evaluated_runs": 342,
+            "failed_runs": 18,
+            "completed_records": 360,
+            "full_pass_count": 80,
+            "strict_full_pass_rate": 0.2222222222222222,
+            "evaluated_full_pass_rate": 0.23391812865497075,
+            "strict_S_scen": 0.41099537037037037,
+            "strict_S_step": 0.48521356216231076,
+            "evaluated_only_S_scen": 0.43262670565302147,
+            "evaluated_only_S_step": 0.5107511180655903,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 1,
+            "backend_evaluation_failures": 14
+          }
+        }
+      },
+      "by_family_tier": {
+        "campus_registrar_command": {
+          "A": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 87,
+              "failed_runs": 3,
+              "completed_records": 90,
+              "full_pass_count": 27,
+              "strict_full_pass_rate": 0.3,
+              "evaluated_full_pass_rate": 0.3103448275862069,
+              "strict_S_scen": 0.4976851851851852,
+              "strict_S_step": 0.5786679579239102,
+              "evaluated_only_S_scen": 0.5148467432950191,
+              "evaluated_only_S_step": 0.5986220254385278,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 3
+            }
+          },
+          "B": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 88,
+              "failed_runs": 2,
+              "completed_records": 90,
+              "full_pass_count": 24,
+              "strict_full_pass_rate": 0.26666666666666666,
+              "evaluated_full_pass_rate": 0.2727272727272727,
+              "strict_S_scen": 0.4268518518518518,
+              "strict_S_step": 0.4929112708279375,
+              "evaluated_only_S_scen": 0.4365530303030303,
+              "evaluated_only_S_step": 0.5041137997103906,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 2
+            }
+          },
+          "C": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 82,
+              "failed_runs": 8,
+              "completed_records": 90,
+              "full_pass_count": 5,
+              "strict_full_pass_rate": 0.05555555555555555,
+              "evaluated_full_pass_rate": 0.06097560975609756,
+              "strict_S_scen": 0.32873563218390806,
+              "strict_S_step": 0.39993955583663116,
+              "evaluated_only_S_scen": 0.3608074011774601,
+              "evaluated_only_S_step": 0.43895804908898545,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 1,
+              "backend_evaluation_failures": 7
+            }
+          },
+          "D": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 86,
+              "failed_runs": 4,
+              "completed_records": 90,
+              "full_pass_count": 3,
+              "strict_full_pass_rate": 0.03333333333333333,
+              "evaluated_full_pass_rate": 0.03488372093023256,
+              "strict_S_scen": 0.29248366013071897,
+              "strict_S_step": 0.37336441402857445,
+              "evaluated_only_S_scen": 0.3060875512995896,
+              "evaluated_only_S_step": 0.3907302007275779,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 4
+            }
+          }
+        },
+        "clinic_shift_command": {
+          "A": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 84,
+              "failed_runs": 6,
+              "completed_records": 90,
+              "full_pass_count": 18,
+              "strict_full_pass_rate": 0.2,
+              "evaluated_full_pass_rate": 0.21428571428571427,
+              "strict_S_scen": 0.408695652173913,
+              "strict_S_step": 0.4959788834459887,
+              "evaluated_only_S_scen": 0.43788819875776397,
+              "evaluated_only_S_step": 0.5314059465492736,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 2,
+              "backend_evaluation_failures": 4
+            }
+          },
+          "B": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 87,
+              "failed_runs": 3,
+              "completed_records": 90,
+              "full_pass_count": 7,
+              "strict_full_pass_rate": 0.07777777777777778,
+              "evaluated_full_pass_rate": 0.08045977011494253,
+              "strict_S_scen": 0.3643097643097643,
+              "strict_S_step": 0.4557715138396956,
+              "evaluated_only_S_scen": 0.3768721699756183,
+              "evaluated_only_S_step": 0.4714877729376162,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 3
+            }
+          },
+          "C": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 82,
+              "failed_runs": 8,
+              "completed_records": 90,
+              "full_pass_count": 2,
+              "strict_full_pass_rate": 0.022222222222222223,
+              "evaluated_full_pass_rate": 0.024390243902439025,
+              "strict_S_scen": 0.3021367521367522,
+              "strict_S_step": 0.37445503045430084,
+              "evaluated_only_S_scen": 0.33161350844277676,
+              "evaluated_only_S_step": 0.4109872285474034,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 4
+            }
+          },
+          "D": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 70,
+              "failed_runs": 20,
+              "completed_records": 90,
+              "full_pass_count": 3,
+              "strict_full_pass_rate": 0.03333333333333333,
+              "evaluated_full_pass_rate": 0.04285714285714286,
+              "strict_S_scen": 0.28464646464646465,
+              "strict_S_step": 0.34818122554612396,
+              "evaluated_only_S_scen": 0.36597402597402595,
+              "evaluated_only_S_step": 0.4476615757021594,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 1,
+              "backend_evaluation_failures": 5
+            }
+          }
+        },
+        "media_campaign_launch_desk": {
+          "A": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 87,
+              "failed_runs": 3,
+              "completed_records": 90,
+              "full_pass_count": 23,
+              "strict_full_pass_rate": 0.25555555555555554,
+              "evaluated_full_pass_rate": 0.26436781609195403,
+              "strict_S_scen": 0.44953703703703696,
+              "strict_S_step": 0.5415158595813357,
+              "evaluated_only_S_scen": 0.46503831417624514,
+              "evaluated_only_S_step": 0.5601888202565543,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 3
+            }
+          },
+          "B": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 87,
+              "failed_runs": 3,
+              "completed_records": 90,
+              "full_pass_count": 34,
+              "strict_full_pass_rate": 0.37777777777777777,
+              "evaluated_full_pass_rate": 0.39080459770114945,
+              "strict_S_scen": 0.48055555555555557,
+              "strict_S_step": 0.5303762396673549,
+              "evaluated_only_S_scen": 0.49712643678160917,
+              "evaluated_only_S_step": 0.5486650755179534,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 1,
+              "backend_evaluation_failures": 2
+            }
+          },
+          "C": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 86,
+              "failed_runs": 4,
+              "completed_records": 90,
+              "full_pass_count": 23,
+              "strict_full_pass_rate": 0.25555555555555554,
+              "evaluated_full_pass_rate": 0.26744186046511625,
+              "strict_S_scen": 0.46944444444444444,
+              "strict_S_step": 0.5451625657670476,
+              "evaluated_only_S_scen": 0.49127906976744184,
+              "evaluated_only_S_step": 0.5705189641748172,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 3
+            }
+          },
+          "D": {
+            "batch": {
+              "expected_runs": 90,
+              "evaluated_runs": 82,
+              "failed_runs": 8,
+              "completed_records": 90,
+              "full_pass_count": 0,
+              "strict_full_pass_rate": 0.0,
+              "evaluated_full_pass_rate": 0.0,
+              "strict_S_scen": 0.24444444444444444,
+              "strict_S_step": 0.32379958363350486,
+              "evaluated_only_S_scen": 0.2682926829268293,
+              "evaluated_only_S_step": 0.3553897869148224,
+              "recovered_count": 0,
+              "public_feedback_audit_violations": 0,
+              "backend_generation_failures": 0,
+              "backend_evaluation_failures": 6
+            }
+          }
+        }
+      },
+      "by_tier": {
+        "A": {
+          "batch": {
+            "expected_runs": 270,
+            "evaluated_runs": 258,
+            "failed_runs": 12,
+            "completed_records": 270,
+            "full_pass_count": 68,
+            "strict_full_pass_rate": 0.2518518518518518,
+            "evaluated_full_pass_rate": 0.26356589147286824,
+            "strict_S_scen": 0.45197262479871175,
+            "strict_S_step": 0.5387209003170783,
+            "evaluated_only_S_scen": 0.47299460734748905,
+            "evaluated_only_S_step": 0.5637776863783377,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 2,
+            "backend_evaluation_failures": 10
+          }
+        },
+        "B": {
+          "batch": {
+            "expected_runs": 270,
+            "evaluated_runs": 262,
+            "failed_runs": 8,
+            "completed_records": 270,
+            "full_pass_count": 65,
+            "strict_full_pass_rate": 0.24074074074074073,
+            "evaluated_full_pass_rate": 0.2480916030534351,
+            "strict_S_scen": 0.4239057239057239,
+            "strict_S_step": 0.49301967477832936,
+            "evaluated_only_S_scen": 0.43684941013185286,
+            "evaluated_only_S_step": 0.5080737106494234,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 1,
+            "backend_evaluation_failures": 7
+          }
+        },
+        "C": {
+          "batch": {
+            "expected_runs": 270,
+            "evaluated_runs": 250,
+            "failed_runs": 20,
+            "completed_records": 270,
+            "full_pass_count": 30,
+            "strict_full_pass_rate": 0.1111111111111111,
+            "evaluated_full_pass_rate": 0.12,
+            "strict_S_scen": 0.3667722762550349,
+            "strict_S_step": 0.4398523840193265,
+            "evaluated_only_S_scen": 0.39611405835543767,
+            "evaluated_only_S_step": 0.4750405747408727,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 1,
+            "backend_evaluation_failures": 14
+          }
+        },
+        "D": {
+          "batch": {
+            "expected_runs": 270,
+            "evaluated_runs": 238,
+            "failed_runs": 32,
+            "completed_records": 270,
+            "full_pass_count": 6,
+            "strict_full_pass_rate": 0.022222222222222223,
+            "evaluated_full_pass_rate": 0.025210084033613446,
+            "strict_S_scen": 0.27385818974054266,
+            "strict_S_step": 0.3484484077360678,
+            "evaluated_only_S_scen": 0.3106794589493551,
+            "evaluated_only_S_step": 0.3952986138182282,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 1,
+            "backend_evaluation_failures": 15
+          }
+        }
+      },
+      "by_group": {
+        "M": {
+          "batch": {
+            "expected_runs": 360,
+            "evaluated_runs": 310,
+            "failed_runs": 50,
+            "completed_records": 360,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.005555555555555556,
+            "evaluated_full_pass_rate": 0.0064516129032258064,
+            "strict_S_scen": 0.04994406921927537,
+            "strict_S_step": 0.1366826828145898,
+            "evaluated_only_S_scen": 0.05799956425464236,
+            "evaluated_only_S_step": 0.15872827681694301,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 38
+          }
+        },
+        "T": {
+          "batch": {
+            "expected_runs": 360,
+            "evaluated_runs": 345,
+            "failed_runs": 15,
+            "completed_records": 360,
+            "full_pass_count": 58,
+            "strict_full_pass_rate": 0.16111111111111112,
+            "evaluated_full_pass_rate": 0.1681159420289855,
+            "strict_S_scen": 0.42590454346476153,
+            "strict_S_step": 0.506551097942597,
+            "evaluated_only_S_scen": 0.44442213231105554,
+            "evaluated_only_S_step": 0.5285750587227099,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 5,
+            "backend_evaluation_failures": 6
+          }
+        },
+        "F": {
+          "batch": {
+            "expected_runs": 360,
+            "evaluated_runs": 353,
+            "failed_runs": 7,
+            "completed_records": 360,
+            "full_pass_count": 109,
+            "strict_full_pass_rate": 0.30277777777777776,
+            "evaluated_full_pass_rate": 0.3087818696883853,
+            "strict_S_scen": 0.661532998340973,
+            "strict_S_step": 0.7217972443809145,
+            "evaluated_only_S_scen": 0.6746512164383861,
+            "evaluated_only_S_step": 0.7361105041845021,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 2
+          }
+        }
+      },
+      "by_model": {
+        "claude_haiku45": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 113,
+            "failed_runs": 7,
+            "completed_records": 120,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.008333333333333333,
+            "evaluated_full_pass_rate": 0.008849557522123894,
+            "strict_S_scen": 0.06982673982064912,
+            "strict_S_step": 0.18258603468699716,
+            "evaluated_only_S_scen": 0.0741522900750256,
+            "evaluated_only_S_step": 0.1938966740038908,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 3
+          }
+        },
+        "claude_opus46": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 120,
+            "failed_runs": 0,
+            "completed_records": 120,
+            "full_pass_count": 51,
+            "strict_full_pass_rate": 0.425,
+            "evaluated_full_pass_rate": 0.425,
+            "strict_S_scen": 0.7293750989966761,
+            "strict_S_step": 0.7695205960789019,
+            "evaluated_only_S_scen": 0.7293750989966761,
+            "evaluated_only_S_step": 0.7695205960789019,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "claude_sonnet46": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 120,
+            "failed_runs": 0,
+            "completed_records": 120,
+            "full_pass_count": 22,
+            "strict_full_pass_rate": 0.18333333333333332,
+            "evaluated_full_pass_rate": 0.18333333333333332,
+            "strict_S_scen": 0.6933567915197413,
+            "strict_S_step": 0.7752022741004653,
+            "evaluated_only_S_scen": 0.6933567915197413,
+            "evaluated_only_S_step": 0.7752022741004653,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "gemini31_flash_lite": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 114,
+            "failed_runs": 6,
+            "completed_records": 120,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "evaluated_full_pass_rate": 0.0,
+            "strict_S_scen": 0.0,
+            "strict_S_step": 0.062478528714441504,
+            "evaluated_only_S_scen": 0.0,
+            "evaluated_only_S_step": 0.06576687233099106,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 0
+          }
+        },
+        "gemini31_pro_preview": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 119,
+            "failed_runs": 1,
+            "completed_records": 120,
+            "full_pass_count": 38,
+            "strict_full_pass_rate": 0.31666666666666665,
+            "evaluated_full_pass_rate": 0.31932773109243695,
+            "strict_S_scen": 0.594968775403365,
+            "strict_S_step": 0.6618990458509487,
+            "evaluated_only_S_scen": 0.5999685130117967,
+            "evaluated_only_S_step": 0.667461222706839,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 1
+          }
+        },
+        "gemini_flash_latest": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 113,
+            "failed_runs": 7,
+            "completed_records": 120,
+            "full_pass_count": 36,
+            "strict_full_pass_rate": 0.3,
+            "evaluated_full_pass_rate": 0.3185840707964602,
+            "strict_S_scen": 0.5681967323747628,
+            "strict_S_step": 0.6367730078362186,
+            "evaluated_only_S_scen": 0.603394760043996,
+            "evaluated_only_S_step": 0.6762191233658958,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 5,
+            "backend_evaluation_failures": 1
+          }
+        },
+        "gpt54": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 114,
+            "failed_runs": 6,
+            "completed_records": 120,
+            "full_pass_count": 20,
+            "strict_full_pass_rate": 0.16666666666666666,
+            "evaluated_full_pass_rate": 0.17543859649122806,
+            "strict_S_scen": 0.660255120622878,
+            "strict_S_step": 0.7339720912128932,
+            "evaluated_only_S_scen": 0.6950053901293451,
+            "evaluated_only_S_step": 0.7726022012767297,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 1
+          }
+        },
+        "gpt54_mini": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 112,
+            "failed_runs": 8,
+            "completed_records": 120,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "evaluated_full_pass_rate": 0.0,
+            "strict_S_scen": 0.016160106499780412,
+            "strict_S_step": 0.10767801189110712,
+            "evaluated_only_S_scen": 0.0173143998211933,
+            "evaluated_only_S_step": 0.11536929845475763,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 5
+          }
+        },
+        "gpt54_nano": {
+          "batch": {
+            "expected_runs": 120,
+            "evaluated_runs": 83,
+            "failed_runs": 37,
+            "completed_records": 120,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.008333333333333333,
+            "evaluated_full_pass_rate": 0.012048192771084338,
+            "strict_S_scen": 0.08000546783717698,
+            "strict_S_step": 0.16498348504233076,
+            "evaluated_only_S_scen": 0.11567055590917154,
+            "evaluated_only_S_step": 0.23853033982023727,
+            "recovered_count": 0,
+            "public_feedback_audit_violations": 0,
+            "backend_generation_failures": 0,
+            "backend_evaluation_failures": 35
+          }
+        }
+      }
+    },
+    "public_feedback_audit": {
+      "rows": 1080,
+      "violations": 0,
+      "non_ok_rows": 0
+    }
+  },
+  "six_family_public_feedback": {
+    "available": true,
+    "overall": {
+      "@1": {
+        "expected_runs": 2160,
+        "full_pass_count": 249,
+        "strict_full_pass_rate": 0.11527777777777778,
+        "strict_S_scen": 0.3704316832608039,
+        "strict_S_step": 0.47665851974811735
+      },
+      "@2": {
+        "expected_runs": 2160,
+        "full_pass_count": 406,
+        "strict_full_pass_rate": 0.18796296296296297,
+        "strict_S_scen": 0.44004937060752697,
+        "strict_S_step": 0.5374727002426486
+      },
+      "@3": {
+        "expected_runs": 2160,
+        "full_pass_count": 505,
+        "strict_full_pass_rate": 0.2337962962962963,
+        "strict_S_scen": 0.4814365920988265,
+        "strict_S_step": 0.5757593581191178
+      }
+    },
+    "by_tier": {
+      "A": {
+        "@1": {
+          "expected_runs": 540,
+          "full_pass_count": 115,
+          "strict_full_pass_rate": 0.21296296296296297,
+          "strict_S_scen": 0.460252281266774,
+          "strict_S_step": 0.5624718579343787
+        },
+        "@2": {
+          "expected_runs": 540,
+          "full_pass_count": 169,
+          "strict_full_pass_rate": 0.31296296296296294,
+          "strict_S_scen": 0.5605307300053676,
+          "strict_S_step": 0.6526731547564495
+        },
+        "@3": {
+          "expected_runs": 540,
+          "full_pass_count": 200,
+          "strict_full_pass_rate": 0.37037037037037035,
+          "strict_S_scen": 0.6114801395598498,
+          "strict_S_step": 0.6989742971274817
+        }
+      },
+      "B": {
+        "@1": {
+          "expected_runs": 540,
+          "full_pass_count": 86,
+          "strict_full_pass_rate": 0.15925925925925927,
+          "strict_S_scen": 0.3998374550098688,
+          "strict_S_step": 0.5116610883387659
+        },
+        "@2": {
+          "expected_runs": 540,
+          "full_pass_count": 140,
+          "strict_full_pass_rate": 0.25925925925925924,
+          "strict_S_scen": 0.47678122218352104,
+          "strict_S_step": 0.5760190818510781
+        },
+        "@3": {
+          "expected_runs": 540,
+          "full_pass_count": 175,
+          "strict_full_pass_rate": 0.32407407407407407,
+          "strict_S_scen": 0.5168504973102674,
+          "strict_S_step": 0.6094175463223863
+        }
+      },
+      "C": {
+        "@1": {
+          "expected_runs": 540,
+          "full_pass_count": 38,
+          "strict_full_pass_rate": 0.07037037037037037,
+          "strict_S_scen": 0.32770295513645264,
+          "strict_S_step": 0.4350765761402243
+        },
+        "@2": {
+          "expected_runs": 540,
+          "full_pass_count": 76,
+          "strict_full_pass_rate": 0.14074074074074075,
+          "strict_S_scen": 0.3931979742423887,
+          "strict_S_step": 0.48644386004505846
+        },
+        "@3": {
+          "expected_runs": 540,
+          "full_pass_count": 92,
+          "strict_full_pass_rate": 0.17037037037037037,
+          "strict_S_scen": 0.42656919130977605,
+          "strict_S_step": 0.5230055204610844
+        }
+      },
+      "D": {
+        "@1": {
+          "expected_runs": 540,
+          "full_pass_count": 10,
+          "strict_full_pass_rate": 0.018518518518518517,
+          "strict_S_scen": 0.29393404163012005,
+          "strict_S_step": 0.3974245565791004
+        },
+        "@2": {
+          "expected_runs": 540,
+          "full_pass_count": 21,
+          "strict_full_pass_rate": 0.03888888888888889,
+          "strict_S_scen": 0.3296875559988305,
+          "strict_S_step": 0.4347547043180085
+        },
+        "@3": {
+          "expected_runs": 540,
+          "full_pass_count": 38,
+          "strict_full_pass_rate": 0.07037037037037037,
+          "strict_S_scen": 0.37084654021541275,
+          "strict_S_step": 0.47164006856551904
+        }
+      }
+    },
+    "by_model": {
+      "gpt54_nano": {
+        "label": "GPT-5.4 nano",
+        "rounds": {
+          "@1": {
+            "expected_runs": 240,
+            "full_pass_count": 4,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.17184676419678216,
+            "strict_S_step": 0.2928615192153869
+          },
+          "@2": {
+            "expected_runs": 240,
+            "full_pass_count": 18,
+            "strict_full_pass_rate": 0.075,
+            "strict_S_scen": 0.30184758447984433,
+            "strict_S_step": 0.4671628994656276
+          },
+          "@3": {
+            "expected_runs": 240,
+            "full_pass_count": 24,
+            "strict_full_pass_rate": 0.1,
+            "strict_S_scen": 0.3538736628784774,
+            "strict_S_step": 0.5204186416710439
+          }
+        }
+      },
+      "claude_haiku45": {
+        "label": "Claude Haiku 4.5",
+        "rounds": {
+          "@1": {
+            "expected_runs": 240,
+            "full_pass_count": 4,
+            "strict_full_pass_rate": 0.016666666666666666,
+            "strict_S_scen": 0.16998206905851915,
+            "strict_S_step": 0.32359169942804833
+          },
+          "@2": {
+            "expected_runs": 240,
+            "full_pass_count": 14,
+            "strict_full_pass_rate": 0.058333333333333334,
+            "strict_S_scen": 0.33464663106684267,
+            "strict_S_step": 0.5097400914506304
+          },
+          "@3": {
+            "expected_runs": 240,
+            "full_pass_count": 23,
+            "strict_full_pass_rate": 0.09583333333333334,
+            "strict_S_scen": 0.4383460643459767,
+            "strict_S_step": 0.6089263415847224
+          }
+        }
+      },
+      "gemini31_flash_lite": {
+        "label": "Gemini 3.1 Flash Lite",
+        "rounds": {
+          "@1": {
+            "expected_runs": 240,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.011288318908727453,
+            "strict_S_step": 0.10717645696490287
+          },
+          "@2": {
+            "expected_runs": 240,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.047680270026394654,
+            "strict_S_step": 0.21900633793827395
+          },
+          "@3": {
+            "expected_runs": 240,
+            "full_pass_count": 0,
+            "strict_full_pass_rate": 0.0,
+            "strict_S_scen": 0.0663073490853956,
+            "strict_S_step": 0.2563917696201984
+          }
+        }
+      },
+      "gpt54_mini": {
+        "label": "GPT-5.4 mini",
+        "rounds": {
+          "@1": {
+            "expected_runs": 240,
+            "full_pass_count": 1,
+            "strict_full_pass_rate": 0.004166666666666667,
+            "strict_S_scen": 0.03923888294345508,
+            "strict_S_step": 0.1328036193096833
+          },
+          "@2": {
+            "expected_runs": 240,
+            "full_pass_count": 2,
+            "strict_full_pass_rate": 0.008333333333333333,
+            "strict_S_scen": 0.07953690852118218,
+            "strict_S_step": 0.18943391973470863
+          },
+          "@3": {
+            "expected_runs": 240,
+            "full_pass_count": 5,
+            "strict_full_pass_rate": 0.020833333333333332,
+            "strict_S_scen": 0.10935304811011504,
+            "strict_S_step": 0.23063407623700752
+          }
+        }
+      },
+      "claude_sonnet46": {
+        "label": "Claude Sonnet 4.6",
+        "rounds": {
+          "@1": {
+            "expected_runs": 240,
+            "full_pass_count": 43,
+            "strict_full_pass_rate": 0.17916666666666667,
+            "strict_S_scen": 0.5788553828499513,
+            "strict_S_step": 0.6782885943507232
+          },
+          "@2": {
+            "expected_runs": 240,
+            "full_pass_count": 70,
+            "strict_full_pass_rate": 0.2916666666666667,
+            "strict_S_scen": 0.6019077938383348,
+            "strict_S_step": 0.649253635566883
+          },
+          "@3": {
+            "expected_runs": 240,
+            "full_pass_count": 79,
+            "strict_full_pass_rate": 0.32916666666666666,
+            "strict_S_scen": 0.5977540316857525,
+            "strict_S_step": 0.6316334898249814
+          }
+        }
+      },
+      "gemini_flash_latest": {
+        "label": "Gemini 3.1 Flash",
+        "rounds": {
+          "@1": {
+            "expected_runs": 240,
+            "full_pass_count": 22,
+            "strict_full_pass_rate": 0.09166666666666666,
+            "strict_S_scen": 0.373721516060129,
+            "strict_S_step": 0.48729192789753195
+          },
+          "@2": {
+            "expected_runs": 240,
+            "full_pass_count": 35,
+            "strict_full_pass_rate": 0.14583333333333334,
+            "strict_S_scen": 0.3195454022319758,
+            "strict_S_step": 0.3521642176534368
+          },
+          "@3": {
+            "expected_runs": 240,
+            "full_pass_count": 47,
+            "strict_full_pass_rate": 0.19583333333333333,
+            "strict_S_scen": 0.38655642759890785,
+            "strict_S_step": 0.4203576574186675
+          }
+        }
+      },
+      "gpt54": {
+        "label": "GPT-5.4",
+        "rounds": {
+          "@1": {
+            "expected_runs": 240,
+            "full_pass_count": 48,
+            "strict_full_pass_rate": 0.2,
+            "strict_S_scen": 0.6626334047984417,
+            "strict_S_step": 0.7578251372165375
+          },
+          "@2": {
+            "expected_runs": 240,
+            "full_pass_count": 94,
+            "strict_full_pass_rate": 0.39166666666666666,
+            "strict_S_scen": 0.8080529298061335,
+            "strict_S_step": 0.8733455343943842
+          },
+          "@3": {
+            "expected_runs": 240,
+            "full_pass_count": 126,
+            "strict_full_pass_rate": 0.525,
+            "strict_S_scen": 0.8477091437979765,
+            "strict_S_step": 0.8947711511789059
+          }
+        }
+      },
+      "claude_opus46": {
+        "label": "Claude Opus 4.6",
+        "rounds": {
+          "@1": {
+            "expected_runs": 240,
+            "full_pass_count": 69,
+            "strict_full_pass_rate": 0.2875,
+            "strict_S_scen": 0.7082644131512834,
+            "strict_S_step": 0.786499416071157
+          },
+          "@2": {
+            "expected_runs": 240,
+            "full_pass_count": 86,
+            "strict_full_pass_rate": 0.35833333333333334,
+            "strict_S_scen": 0.6512983791188022,
+            "strict_S_step": 0.6909685647872671
+          },
+          "@3": {
+            "expected_runs": 240,
+            "full_pass_count": 91,
+            "strict_full_pass_rate": 0.37916666666666665,
+            "strict_S_scen": 0.6634804282130545,
+            "strict_S_step": 0.699392541241327
+          }
+        }
+      },
+      "gemini31_pro_preview": {
+        "label": "Gemini 3.1 Pro Preview",
+        "rounds": {
+          "@1": {
+            "expected_runs": 240,
+            "full_pass_count": 58,
+            "strict_full_pass_rate": 0.24166666666666667,
+            "strict_S_scen": 0.6180543973799459,
+            "strict_S_step": 0.7235883072790851
+          },
+          "@2": {
+            "expected_runs": 240,
+            "full_pass_count": 87,
+            "strict_full_pass_rate": 0.3625,
+            "strict_S_scen": 0.8159284363782326,
+            "strict_S_step": 0.886179101192626
+          },
+          "@3": {
+            "expected_runs": 240,
+            "full_pass_count": 110,
+            "strict_full_pass_rate": 0.4583333333333333,
+            "strict_S_scen": 0.8695491731737824,
+            "strict_S_step": 0.9193085542952066
+          }
+        }
+      }
+    },
+    "source_paths": [
+      "<repository-root>/results_iterative_repair_public_feedback_ad_subset/public_feedback_ad_20260709_aggregate.json",
+      "<repository-root>/results_missing_families_full_rerun/summary/repair_at1_at2_at3_summary.csv"
+    ]
+  }
+}
