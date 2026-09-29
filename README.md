@@ -2,6 +2,8 @@
 
 > **Do LLM-Generated Web Apps Behave Correctly? A Contract-Grounded Benchmark for Behavioral Conformance**
 
+**Accepted to the EMNLP 2026 Main Conference.**
+
 This repository contains the benchmark implementation, frozen experiment aggregates, reproducibility audits, and public presentation assets for ConformWeb.
 
 ## Release Status

@@ -1,10 +1,10 @@
 archive_path,source_path,size_bytes,sha256,reason,release
 .gitattributes,.gitattributes,182,4a95ac096be33914363482f24f305908d0640051e5673ee4ac99ff5da357bc35,retained public benchmark artifact,2026-05-26-initial-pack
 .gitignore,.gitignore,55,416a16c7b88070e532a0aba0ade265b519c0f411d5b8c3cd635282bf39a1b20d,public release metadata and provenance,2026-09-29-refresh
-CURRENT_RELEASE.md,CURRENT_RELEASE.md,2344,431b1c680a7cd26e2da2be49bdb7be5d386a5e97cd65abfe667679ff864f2894,public release metadata and provenance,2026-09-29-refresh
+CURRENT_RELEASE.md,CURRENT_RELEASE.md,2409,3fdd76c9cf26606408620b2669540faabb33ff422f0e153484f8546298b251a6,public release metadata and provenance,2026-09-29-refresh
 EXCLUDED_PATTERNS.md,EXCLUDED_PATTERNS.md,926,750407b24755402d846f39eb95e7e40f12691f112526af5ab74229c70d57969e,public release metadata and provenance,2026-09-29-refresh
 LICENSE,LICENSE,11357,c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4,retained public benchmark artifact,2026-05-26-initial-pack
-README.md,README.md,5314,3ecf6ec79f7d3f9aa655bea42e4362e2fa21d50bfc9dd7539f992b0cbbf225d2,project frontmatter / build metadata,2026-09-29-refresh
+README.md,README.md,5363,5d86b89a74b57e292441e43a55679391185bbaeb9483cca0c01ac233a028ec5f,project frontmatter / build metadata,2026-09-29-refresh
 cohorts/stayflow-tier-b-model-tier-f.yaml,cohorts/stayflow-tier-b-model-tier-f.yaml,4521,3a815e454b0baec8ba04c82dec1e4b77d0110736febac6b846f6b760dac393d6,top-level cohort configs,2026-05-26-initial-pack
 cohorts/stayflow-tier-b-model-tier-m.yaml,cohorts/stayflow-tier-b-model-tier-m.yaml,4034,7fda7e1ec530af5b18d3ce763dcca9f92bb757d74c3c28948bc0bbe943155907,top-level cohort configs,2026-05-26-initial-pack
 cohorts/stayflow-tier-b-model-tier-t.yaml,cohorts/stayflow-tier-b-model-tier-t.yaml,4126,68b32a6bf71ab4c85ae10e52618aff1600903bc477c07f0e06dd797f15906d6e,top-level cohort configs,2026-05-26-initial-pack

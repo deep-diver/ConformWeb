@@ -2,6 +2,8 @@
 
 Release date: 2026-09-29 (Asia/Seoul)
 
+Publication status: Accepted to the EMNLP 2026 Main Conference.
+
 ## Source Provenance
 
 - Source workspace branch: `exp/missing-families-full-rerun`
