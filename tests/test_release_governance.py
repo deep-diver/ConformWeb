@@ -4,7 +4,7 @@ from pathlib import Path
 import pytest
 
 from detoxbench.cohorts import cohort_fingerprint, load_cohort_manifest
-from detoxbench.cli import build_parser
+from detoxbench.cli import build_parser, main
 from detoxbench.core.models import AssertionResult, RunResult, ScenarioResult, StepResult
 from detoxbench.dsl.compiler import DslCompileError
 from detoxbench.dsl.scenario_sets import discover_scenario_paths, load_scenario_bundles
@@ -171,7 +171,10 @@ targets:
     json.dumps(fingerprint)
 
 
-def test_target_inventory_reports_runnable_scenario_sets(tmp_path: Path) -> None:
+def test_target_inventory_reports_runnable_scenario_sets(
+    tmp_path: Path,
+    capsys: pytest.CaptureFixture[str],
+) -> None:
     root = tmp_path / "targets" / "web"
     ready = root / "example_family" / "tier_a"
     public_only = root / "example_family" / "tier_b"
@@ -207,6 +210,25 @@ def test_target_inventory_reports_runnable_scenario_sets(tmp_path: Path) -> None
         "legacy_scenarios": 0,
         "scenario_total": 4,
     }
+
+    assert main(["list-targets", "--targets-root", str(root), "--json"]) == 0
+    released = json.loads(capsys.readouterr().out)
+    assert released["summary"]["target_slots"] == 1
+    assert [item["target"] for item in released["targets"]] == [
+        "example_family/tier_a"
+    ]
+
+    assert main(
+        [
+            "list-targets",
+            "--targets-root",
+            str(root),
+            "--include-partial",
+            "--json",
+        ]
+    ) == 0
+    discovered = json.loads(capsys.readouterr().out)
+    assert discovered["summary"]["target_slots"] == 3
 
 
 def test_evaluate_cli_accepts_failure_only_screenshots() -> None:

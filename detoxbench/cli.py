@@ -38,6 +38,11 @@ def build_parser() -> argparse.ArgumentParser:
         default=Path("targets/web"),
         help="Directory containing family/tier target directories.",
     )
+    list_targets.add_argument(
+        "--include-partial",
+        action="store_true",
+        help="Include retained target directories outside the supported release set.",
+    )
     list_targets.add_argument("--json", action="store_true")
 
     validate_target = subparsers.add_parser(
@@ -192,13 +197,19 @@ def main(argv: list[str] | None = None) -> int:
 
 def list_targets_command(args: argparse.Namespace) -> int:
     targets_root = args.targets_root.resolve()
-    inventory = discover_target_inventory(targets_root)
+    discovered = discover_target_inventory(targets_root)
+    inventory = (
+        discovered
+        if args.include_partial
+        else [item for item in discovered if item.status == "ready"]
+    )
     summary = summarize_target_inventory(inventory)
     if args.json:
         print(
             json.dumps(
                 {
                     "targets_root": str(targets_root),
+                    "include_partial": args.include_partial,
                     "summary": summary,
                     "targets": [item.to_dict() for item in inventory],
                 },
@@ -231,12 +242,9 @@ def list_targets_command(args: argparse.Namespace) -> int:
     for row in rows:
         print("  ".join(value.ljust(widths[index]) for index, value in enumerate(row)))
     print()
+    label = "discovered targets" if args.include_partial else "released targets"
     print(
-        "Summary: "
-        f"{summary['target_slots']} slots, "
-        f"{summary['status_counts'].get('ready', 0)} ready, "
-        f"{summary['status_counts'].get('public-only', 0)} public-only, "
-        f"{summary['status_counts'].get('unavailable', 0)} unavailable; "
+        f"Summary: {summary['target_slots']} {label}; "
         f"{summary['public_scenarios']} public + "
         f"{summary['private_scenarios']} private = "
         f"{summary['scenario_total']} scenarios"

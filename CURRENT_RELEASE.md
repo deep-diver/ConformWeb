@@ -29,22 +29,19 @@ the public manifest rather than represented as a single source-repository commit
 - Backend-backed generation runner and compact full-run accounting artifacts.
 - Repair runners, fixed-denominator snapshots, and compact six-family summaries.
 - Current static/backend generator code and prompt templates.
-- Poster-ready screen and provenance asset pack based on the current 756-scenario target tree.
+- Retained screen and provenance assets used for paper presentation.
 
-## Accounting Boundaries
+## Release Scope
 
-The retained primary result aggregate is a fixed 2,160-run experiment. The current
-`targets/web` YAML tree contains 756 scoring scenarios: 288 public and 468 private, with zero
-scenarios marked `kind: probe`. However, those files are distributed across 21 complete
-targets, two public-only targets, and one unavailable target slot; they are not a complete
-24-target executable snapshot. The older retained primary-result inventory records 779
-scoring scenarios and zero probes. These are separate artifact surfaces and are not silently
-treated as the same frozen scenario snapshot.
+The current supported public release contains 21 complete targets and 732 scoring
+scenarios: 264 public and 468 private. Each released target includes its contract,
+public scenarios, private scenarios, and reference app. Run `conformweb list-targets`
+for the machine-derived inventory.
 
-The exact current per-family/per-tier count is stored in
-`reports/conformweb_visualizations/tables/current_target_scenario_inventory_756.csv`.
+The retained primary result aggregate remains the fixed 2,160-run paper experiment.
+Its accounting and provenance are documented under `reports/conformweb_visualizations/`.
 
-See the following audits before quoting benchmark counts:
+Detailed provenance audits:
 
 - `reports/conformweb_visualizations/run_accounting_and_provenance_appendix.md`
 - `reports/conformweb_visualizations/probe_scenario_audit.md`

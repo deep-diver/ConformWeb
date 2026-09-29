@@ -1,18 +1,18 @@
 archive_path,source_path,size_bytes,sha256,reason,release
 .gitattributes,.gitattributes,182,4a95ac096be33914363482f24f305908d0640051e5673ee4ac99ff5da357bc35,retained public benchmark artifact,2026-05-26-initial-pack
-.github/workflows/ci.yml,.github/workflows/ci.yml,1556,9ccff50e9b9fb7b70fd43ff07719463d4f5ac8bc705929e090d15a3f49565026,continuous integration configuration,2026-09-29-usability-refresh
+.github/workflows/ci.yml,.github/workflows/ci.yml,1518,8e570dc4d8370ee0ee0453d3ba0825af8a3c640d3ccef25416dc371e32860cee,continuous integration configuration,2026-09-29-usability-refresh
 .gitignore,.gitignore,90,b45631a39f1ac0db5272b78e900f1d972bd7451bd4e9daef4868e7b5710598e9,public release metadata and provenance,2026-09-29-usability-refresh
 CITATION.cff,CITATION.cff,996,777f6f8980c9bdeeac59a6e5762d9d487a9d11ffa350f357418d14cc9443f325,public release metadata and provenance,2026-09-29-usability-refresh
-CURRENT_RELEASE.md,CURRENT_RELEASE.md,2961,1ef960bf569c2f5ee49723c0660965fb8f3da4193275cbb64433526ff19a57bc,public release metadata and provenance,2026-09-29-usability-refresh
+CURRENT_RELEASE.md,CURRENT_RELEASE.md,2631,b1b48b193decb5bc22f5fb4f50bc069c0703bc125cfcdc4d5253b268f9caa721,public release metadata and provenance,2026-09-29-usability-refresh
 EXCLUDED_PATTERNS.md,EXCLUDED_PATTERNS.md,926,750407b24755402d846f39eb95e7e40f12691f112526af5ab74229c70d57969e,public release metadata and provenance,2026-09-29-refresh
 LICENSE,LICENSE,11357,c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4,retained public benchmark artifact,2026-05-26-initial-pack
-README.md,README.md,6567,a59b7a3393f8e64005fa7994f8d217f87f91d616adb16c2340d1638a8b54013d,public release metadata and provenance,2026-09-29-usability-refresh
+README.md,README.md,6065,c960287e6a3d56153cc1b9dbda2c72595e45256939d648c3391cfb2ecde56b6d,public release metadata and provenance,2026-09-29-usability-refresh
 cohorts/stayflow-tier-b-model-tier-f.yaml,cohorts/stayflow-tier-b-model-tier-f.yaml,4521,3a815e454b0baec8ba04c82dec1e4b77d0110736febac6b846f6b760dac393d6,top-level cohort configs,2026-05-26-initial-pack
 cohorts/stayflow-tier-b-model-tier-m.yaml,cohorts/stayflow-tier-b-model-tier-m.yaml,4034,7fda7e1ec530af5b18d3ce763dcca9f92bb757d74c3c28948bc0bbe943155907,top-level cohort configs,2026-05-26-initial-pack
 cohorts/stayflow-tier-b-model-tier-t.yaml,cohorts/stayflow-tier-b-model-tier-t.yaml,4126,68b32a6bf71ab4c85ae10e52618aff1600903bc477c07f0e06dd797f15906d6e,top-level cohort configs,2026-05-26-initial-pack
 detoxbench/__init__.py,detoxbench/__init__.py,132,8bd14191a2ad27c162edcdae49fb3cb7bbc424d0b2ae7bd6a044a3bafa69c10b,core ConformWeb evaluator/compiler source,2026-09-29-usability-refresh
 detoxbench/__main__.py,detoxbench/__main__.py,91,ca42b75d38778cc2687f72207692ccbd9d642c04863e30f74c507277bbe7ddd0,core ConformWeb evaluator/compiler source,2026-05-26-initial-pack
-detoxbench/cli.py,detoxbench/cli.py,18207,acbfed73f8351e14b4447fd6498d36014350490628dce9d5236d8422d0664aeb,core ConformWeb evaluator/compiler source,2026-09-29-usability-refresh
+detoxbench/cli.py,detoxbench/cli.py,18457,e7fe2e97a932fe7b9eb3e47c9994ce7c3c5f4db9fdb7f63c11bd79ed4c58d405,core ConformWeb evaluator/compiler source,2026-09-29-usability-refresh
 detoxbench/cohorts.py,detoxbench/cohorts.py,3900,59fe7c36bf87c5f52d98a4ae6e78dd1feea498abce0568b1da94a1c1080eaca4,core ConformWeb evaluator/compiler source,2026-05-26-initial-pack
 detoxbench/core/__init__.py,detoxbench/core/__init__.py,55,93d9c5f63fc5828c26205a25138104e6853b662179dc92ff4250380c388453e1,core ConformWeb evaluator/compiler source,2026-05-26-initial-pack
 detoxbench/core/assertions.py,detoxbench/core/assertions.py,59676,ce9e35b515abe700fc68b4bd1cd17fb35401274d305e69960ff1ef802595ece0,core ConformWeb evaluator/compiler source,2026-05-26-initial-pack
@@ -29,7 +29,7 @@ detoxbench/dsl/scenario_sets.py,detoxbench/dsl/scenario_sets.py,5256,10bfbd96d44
 detoxbench/dsl/web_bridge.py,detoxbench/dsl/web_bridge.py,19551,b2d32d1db78c8e47cc262efacd24f23fa6517dbf0564159ef8ace3d0ab0c139b,core ConformWeb evaluator/compiler source,2026-05-26-initial-pack
 detoxbench/gallery.py,detoxbench/gallery.py,11687,96b2caef57290c2f4996d3c40c710b452dfd41af36a0240017c8841420a448de,core ConformWeb evaluator/compiler source,2026-09-29-usability-refresh
 detoxbench/known_bad.py,detoxbench/known_bad.py,5229,5957db29851bbf6daed1af080c0fb3edff7da325d5ce7ec61692a750df3cff10,core ConformWeb evaluator/compiler source,2026-05-26-initial-pack
-detoxbench/target_inventory.py,detoxbench/target_inventory.py,4315,9831278e51b453818e351f9b4e686d56556ea8b22dee2020712b834243740d46,core ConformWeb evaluator/compiler source,2026-09-29-usability-refresh
+detoxbench/target_inventory.py,detoxbench/target_inventory.py,4450,7397aed2e2d8a4ca696aaeebd93891403dd776b68afce6c36a3abbdc9ffc6fa1,core ConformWeb evaluator/compiler source,2026-09-29-usability-refresh
 detoxbench/web/__init__.py,detoxbench/web/__init__.py,35,392f9362753cd6b48e9d8da1e2f2358a766503b0a7396da5b46d6fa9d264c89b,core ConformWeb evaluator/compiler source,2026-05-26-initial-pack
 detoxbench/web/evaluator.py,detoxbench/web/evaluator.py,23615,707d889ff78d0c084077b27b7c4afa381c5701243c9083cf21e7f7ad93ea29c9,core ConformWeb evaluator/compiler source,2026-09-29-usability-refresh
 detoxbench/web/local_server.py,detoxbench/web/local_server.py,1715,0b84635716f4d3a67bbc2faf193f09c3d992bf5a6e6923484cb4b7a9baefa1ef,core ConformWeb evaluator/compiler source,2026-05-26-initial-pack
@@ -39,7 +39,7 @@ docs/candidate-workflow.md,docs/candidate-workflow.md,7212,9c8ce531e8729b85fa782
 docs/dashboard.md,docs/dashboard.md,2857,78f55ddbce85971936dc844f82cac41e15e0a5ee9b81a20c92937cb2f03fe80c,project design documentation,2026-05-26-initial-pack
 docs/dsl-v3-roadmap.md,docs/dsl-v3-roadmap.md,5250,e3b67b52856b9342fdff5eb1de7f30bb7743f588a0208ebe466684f98d34e061,project design documentation,2026-05-26-initial-pack
 docs/evaluator-stabilization.md,docs/evaluator-stabilization.md,5827,f0cf1e5d2da6c3e4bb3eb06ce70f5be347120f35ff13e913fad29ede3a867267,public protocol and usage documentation,2026-09-29-usability-refresh
-docs/getting-started.md,docs/getting-started.md,6169,ddc6b9bd9179358627730d2e78832a4a28b950ef0a4a18215c7551854352ec5b,public protocol and usage documentation,2026-09-29-usability-refresh
+docs/getting-started.md,docs/getting-started.md,5662,9165f6f2cb3f8db7f1f613bd2da83f69bc5f88ae01f8bcf9a3d490dab2d2e19b,public protocol and usage documentation,2026-09-29-usability-refresh
 docs/maturity.md,docs/maturity.md,15776,65313751ba32dce99bad9dbb3a6d31103faccbf5e9ab97f2304e12c223c59e99,project design documentation,2026-05-26-initial-pack
 docs/model-tiers.md,docs/model-tiers.md,1630,08b4763b4ccd5c2b87824d793d7fd1be2abc49f2c773204203053162124026bd,project design documentation,2026-05-26-initial-pack
 docs/paper-execution-plan.md,docs/paper-execution-plan.md,10691,4243ad7434be178df1dc01f95a1ae03a61d20bb8d6a0b51d121f40e4a5e2d035,project design documentation,2026-05-26-initial-pack
@@ -541,7 +541,7 @@ tests/test_assertions.py,tests/test_assertions.py,16335,b7f23115307afd471415c9e5
 tests/test_dashboard.py,tests/test_dashboard.py,10112,fcbcb0873cb54cacf7bc52fdf5cfc8439ede2bfe26fde4883f759255bd1767de,evaluator/compiler regression tests,2026-09-29-usability-refresh
 tests/test_dsl_compiler.py,tests/test_dsl_compiler.py,127261,4bc64f431a41bf9dfb35146aa7fab92af64f64b88049ca47601d9b8a97d93281,test suite for evaluator/compiler/scoring,2026-05-26-initial-pack
 tests/test_gallery.py,tests/test_gallery.py,5475,8891de50dd41e85edf58d4ed069f2a04e35d161efd32741f6f18d31a085ae6c9,test suite for evaluator/compiler/scoring,2026-05-26-initial-pack
-tests/test_release_governance.py,tests/test_release_governance.py,7949,cda8ad630450c7f6f78f9b904beeb82aaeca7698328d67c4c28ffd00a5bdc654,evaluator/compiler regression tests,2026-09-29-usability-refresh
+tests/test_release_governance.py,tests/test_release_governance.py,8579,8c0001a416bfe7b7deb4185f25afd97b9f5f7c66955b04fc574a9be74e905049,evaluator/compiler regression tests,2026-09-29-usability-refresh
 tests/test_scoring.py,tests/test_scoring.py,5176,75772badfcd81a2c6177555309ec4505b487ae3c74606982bca9ec5ecac15bc9,test suite for evaluator/compiler/scoring,2026-05-26-initial-pack
 tools/audit_private_admissibility.py,tools/audit_private_admissibility.py,50220,9efdc29c65e52eb93c421a2a2abf449661fc40762fd957a9ad0f64b0aeaff211,reproduction and figure-generation scripts,2026-05-26-initial-pack
 tools/build_conformweb_figure_pack.py,tools/build_conformweb_figure_pack.py,73949,3d2347786f404a4901b9f685328c2b407c296c41d84ff68cbe03e07ef27749b1,reproduction and figure-generation scripts,2026-05-26-initial-pack

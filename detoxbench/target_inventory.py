@@ -62,12 +62,14 @@ def inspect_target(target_dir: Path, *, root: Path | None = None) -> TargetInven
         status = "invalid"
     elif not contract.is_file() or not (public.is_file() or private.is_file() or legacy.is_file()):
         status = "unavailable"
-    elif legacy.is_file() or (public.is_file() and private.is_file()):
+    elif reference_app.is_dir() and (legacy.is_file() or (public.is_file() and private.is_file())):
         status = "ready"
-    elif public.is_file():
+    elif public.is_file() and not private.is_file():
         status = "public-only"
-    else:
+    elif private.is_file() and not public.is_file():
         status = "private-only"
+    else:
+        status = "partial"
 
     try:
         target = str(target_dir.relative_to(root))

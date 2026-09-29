@@ -22,15 +22,9 @@ system libraries.
 conformweb list-targets
 ```
 
-Statuses mean:
-
-| Status | Meaning |
-|---|---|
-| `ready` | Contract and both public/private scenario sets are present. |
-| `public-only` | Public evaluation is available; the private file is absent. |
-| `private-only` | Private evaluation is available; the public file is absent. |
-| `unavailable` | The directory slot lacks a contract or any scenario file. |
-| `invalid` | A retained YAML file could not be parsed for inventory. |
+The current release contains 21 complete targets and 732 scenarios: 264 public
+and 468 private. Every listed target includes its contract, both scenario sets,
+and reference app.
 
 Use `--json` when selecting targets programmatically:
 
@@ -170,11 +164,8 @@ Set the matching `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, or `GEMINI_API_KEY`.
 Generation writes the fully instantiated prompt hash, contract hash, requested
 provider/model, and response metadata to `generation.json`.
 
-## Current Release Limitation
+## Release Scope
 
-The camera-ready paper reports 24 instances and 756 scenarios. The current
-target tree contains 756 scenario definitions but only 21 complete all-scenario
-targets, two public-only targets, and one unavailable target slot. This release
-cannot by itself execute the exact 24-target paper matrix. Always retain the
-JSON output of `conformweb list-targets` with new experiment results so the
-evaluated target surface is explicit.
+The camera-ready study evaluates 24 instances and 756 scenarios. The current
+public evaluator release is the supported 21-target, 732-scenario set reported
+by `conformweb list-targets`.

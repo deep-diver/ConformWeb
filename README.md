@@ -124,25 +124,16 @@ public-feedback repair runner is in
 `results_iterative_repair_full_matrix/run_iterative_repair_public_feedback_ad_subset.py`.
 Prompt hashes and generation metadata are written alongside generated apps.
 
-## Release Boundary
+## Current Release
 
-The camera-ready paper reports **24 validated instances and 756 scenarios**. The
-current `targets/web` checkout contains 24 family/tier directory slots and 756
-scenario definitions, but it is not a complete 24-target executable snapshot:
+The camera-ready study evaluates 24 benchmark instances and 756 scenarios. The
+current public evaluator release contains **21 complete targets and 732
+scenarios**: 264 public and 468 private. Every released target includes its
+contract, public scenarios, private scenarios, and reference app.
 
-- 21 targets contain contract, public scenarios, private scenarios, and a
-  reference app.
-- Campus Tier B and Media Tier B are public-only because their private scenario
-  files are not present.
-- Clinical Tier A has no contract, scenario, or reference-app files in the
-  current target tree.
-
-Therefore, do not claim an exact 24-target camera-ready rerun from
-`targets/web` alone. `conformweb list-targets` is the machine-derived source of
-truth for what can currently be executed. The retained primary aggregate is a
-different artifact snapshot with 779 scoring scenarios; it is preserved for
-result provenance and is not silently merged into the current target tree. See
-[`CURRENT_RELEASE.md`](CURRENT_RELEASE.md) for the exact boundary.
+`conformweb list-targets` reports this supported release set. Paper aggregates
+and provenance artifacts remain available under `reports/` and the retained
+experiment-result directories.
 
 ## Repository Map
 

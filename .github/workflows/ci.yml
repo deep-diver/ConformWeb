@@ -27,16 +27,14 @@ jobs:
           set -euo pipefail
           conformweb list-targets
           for target in targets/web/*/tier_*; do
-            if [[ ! -f "$target/contract.dsl.yaml" ]]; then
+            if [[ ! -f "$target/contract.dsl.yaml" \
+              || ! -f "$target/scenarios.public.dsl.yaml" \
+              || ! -f "$target/scenarios.private.dsl.yaml" ]]; then
               continue
-            fi
-            scenario_set=all
-            if [[ ! -f "$target/scenarios.private.dsl.yaml" ]]; then
-              scenario_set=public
             fi
             conformweb validate-target \
               --target "$target" \
-              --scenario-set "$scenario_set" >/dev/null
+              --scenario-set all >/dev/null
           done
       - name: Install Chromium
         run: playwright install --with-deps chromium
